@@ -38,14 +38,14 @@ export default TabNavigator(
                     case 'Home':
                         iconName =
                             Platform.OS === 'ios'
-                                ? `ios-information-circle${focused ? '' : '-outline'}`
-                                : 'md-information-circle';
+                                ? `ios-home${focused ? '' : '-outline'}`
+                                : 'md-home';
                         break;
                     case 'ZRM':
                         iconName =
                             Platform.OS === 'ios'
-                                ? `ios-information-circle${focused ? '' : '-outline'}`
-                                : 'md-information-circle';
+                                ? `ios-images${focused ? '' : '-outline'}`
+                                : 'md-images';
                         break;
                     case 'BackgroundInfo':
                         iconName =
@@ -56,14 +56,14 @@ export default TabNavigator(
                     case 'Donate':
                         iconName =
                             Platform.OS === 'ios'
-                                ? `ios-information-circle${focused ? '' : '-outline'}`
-                                : 'md-information-circle';
+                                ? `ios-cash${focused ? '' : '-outline'}`
+                                : 'md-cash';
                         break;
                     case 'Contact':
                         iconName =
                             Platform.OS === 'ios'
-                                ? `ios-information-circle${focused ? '' : '-outline'}`
-                                : 'md-information-circle';
+                                ? `ios-contact${focused ? '' : '-outline'}`
+                                : 'md-contact';
                 }
                 return (
                     <Ionicons
