@@ -16,8 +16,8 @@ export default class HomeScreen extends React.Component {
                         <Image
                             source={
                                 __DEV__
-                                    ? require('../assets/images/robot-dev.png')
-                                    : require('../assets/images/robot-prod.png')
+                                    ? require('../assets/images/red-flag.jpg')
+                                    : require('../assets/images/red-flag.jpg')
                             }
                             style={styles.welcomeImage}
                         />
@@ -138,6 +138,7 @@ const styles = StyleSheet.create({
         color: 'rgba(90,100,109, 1)',
         lineHeight: 24,
         marginBottom: 20,
+        textAlign: 'center',
     },
     getStartedText: {
         fontSize: 16,
