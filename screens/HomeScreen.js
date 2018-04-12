@@ -32,17 +32,17 @@ export default class HomeScreen extends React.Component {
                             a process which uses images and symbols to increase self management abilities.</Text>
 
                         <Text style={styles.getStartedText}>When you want to dive in directly click on</Text>
-                        <MonoText style={styles.codeHighlightText}>'ZRM'.</MonoText>
+                        <MonoText style={styles.codeHighlightText}>'ZRM'</MonoText>
 
                         <Text style={styles.getStartedText}>When you want to have more Background Information of what ZRM is and how and why
                             it works, click on</Text>
-                        <MonoText style={styles.codeHighlightText}>'Info'.</MonoText>
+                        <MonoText style={styles.codeHighlightText}>'Info'</MonoText>
 
                         <Text style={styles.getStartedText}>There is also the possibility to donate for this app. For this go to </Text>
                         <MonoText style={styles.codeHighlightText}>'Donate'</MonoText>
 
-                        <Text style={styles.getStartedText}>If you want to know more about me, then click on </Text>
-                        <MonoText style={styles.codeHighlightText}>'Contact'.</MonoText>
+                        <Text style={styles.getStartedText}>If you want to know more about the developer, then click on </Text>
+                        <MonoText style={styles.codeHighlightText}>'Contact'</MonoText>
                     </View>
                 </ScrollView>
             </View>
