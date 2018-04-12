@@ -8,8 +8,8 @@ import Colors from '../constants/Colors';
 import HomeScreen from '../screens/HomeScreen';
 import ZRMScreen from '../screens/ZRMScreen';
 import DonateScreen from '../screens/DonateScreen';
-import BackgroundInfoScreen from '../screens/BackgroundInfoScreen';
 import ContactScreen from '../screens/ContactScreen';
+import InfoScreen from '../screens/InfoScreen';
 
 export default TabNavigator(
     {
@@ -19,8 +19,8 @@ export default TabNavigator(
         ZRM: {
             screen: ZRMScreen,
         },
-        BackgroundInfo: {
-            screen: BackgroundInfoScreen,
+        Info: {
+            screen: InfoScreen,
         },
         Donate: {
             screen: DonateScreen,
@@ -47,7 +47,7 @@ export default TabNavigator(
                                 ? `ios-images${focused ? '' : '-outline'}`
                                 : 'md-images';
                         break;
-                    case 'BackgroundInfo':
+                    case 'Info':
                         iconName =
                             Platform.OS === 'ios'
                                 ? `ios-information-circle${focused ? '' : '-outline'}`
