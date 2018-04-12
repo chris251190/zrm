@@ -24,11 +24,10 @@ export default class HomeScreen extends React.Component {
                     </View>
 
                     <View style={styles.getStartedContainer}>
-                        {this._maybeRenderDevelopmentModeWarning()}
 
-                        <View><Text style={styles.getStartedText}>Welcome to the ZRM App!</Text></View>
+                        <View><Text style={styles.homeTitle}>Welcome to the ZRM App!</Text></View>
 
-                        <Text style={styles.getStartedText}>This is an app to guide you through the process of ZRM
+                        <Text style={styles.introduction}>This is an app to guide you through the process of ZRM
                             (Zürcher Ressourcenmodell). It is
                             a process which uses images and symbols to increase self management abilities.</Text>
 
@@ -120,15 +119,29 @@ const styles = StyleSheet.create({
     },
     codeHighlightText: {
         color: 'rgba(96,100,109, 0.8)',
+        marginBottom: 20,
     },
     codeHighlightContainer: {
         backgroundColor: 'rgba(0,0,0,0.05)',
         borderRadius: 3,
         paddingHorizontal: 4,
     },
-    getStartedText: {
-        fontSize: 17,
+    homeTitle: {
+        fontSize: 20,
         color: 'rgba(96,100,109, 1)',
+        lineHeight: 24,
+        textAlign: 'center',
+        marginBottom: 20,
+    },
+    introduction: {
+        fontSize: 15,
+        color: 'rgba(90,100,109, 1)',
+        lineHeight: 24,
+        marginBottom: 20,
+    },
+    getStartedText: {
+        fontSize: 16,
+        color: 'rgba(90,100,109, 1)',
         lineHeight: 24,
         textAlign: 'center',
     },
