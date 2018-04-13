@@ -31,7 +31,7 @@ export default class ContactScreen extends React.Component {
                             This is me, Christian. I'm a 27 years old developer. I love travelling, learning new
                             languages and
                             cultures, painting, cooking and of course programming! I made this app to learn React Native
-                            in an autodidactive way.
+                            in an autodidactic way.
 
                             If you have any questions regarding this app or just want to get in contact you can use one
                             of the icons below :)

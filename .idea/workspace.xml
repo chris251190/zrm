@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8addc38-23d6-4a35-bd62-a8326e49badc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/ContactScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/ContactScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/DonateScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/DonateScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/InfoScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/InfoScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/ZRMScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/ZRMScreen.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -88,8 +84,8 @@
       <file leaf-file-name="ContactScreen.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/screens/ContactScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="115" column="19" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="19" />
+            <state relative-caret-position="91">
+              <caret line="33" column="46" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -254,12 +250,12 @@
       <workItem from="1523474867003" duration="3365000" />
       <workItem from="1523552697035" duration="8748000" />
       <workItem from="1523562318826" duration="3250000" />
-      <workItem from="1523637192102" duration="1852000" />
+      <workItem from="1523637192102" duration="2754000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22419000" />
+    <option name="totallyTimeSpent" value="23321000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -469,8 +465,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/screens/ContactScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="115" column="19" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="19" />
+        <state relative-caret-position="91">
+          <caret line="33" column="46" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
