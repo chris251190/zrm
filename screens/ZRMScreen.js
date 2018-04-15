@@ -30,23 +30,31 @@ export default class ZRMScreen extends React.Component {
                     <View style={styles.getStartedContainer}>
                         <Text style={styles.getStartedText}>{this._displayContent()}</Text>
 
-                        <TouchableOpacity onPress={this._handleBefore}>
-                            <Ionicons
-                                name={"ios-arrow-back"}
-                                size={50}
-                                style={{marginRight: 10, width: 50}}/>
-                        </TouchableOpacity>
+                        {this._renderBeforeArrow()}
 
-                        <TouchableOpacity onPress={this._handleNext}>
-                            <Ionicons
-                                name={"ios-arrow-forward"}
-                                size={50}
-                                style={{marginRight: 10, width: 50}}/>
-                        </TouchableOpacity>
+                        {this._renderNextArrow()}
                     </View>
                 </ScrollView>
             </View>
         );
+    }
+
+    _renderNextArrow() {
+        return this.state.phase < 6 ? <TouchableOpacity onPress={this._handleNext}>
+            <Ionicons
+                name={"ios-arrow-forward"}
+                size={50}
+                style={{marginRight: 10, width: 50}}/>
+        </TouchableOpacity> : null;
+    }
+
+    _renderBeforeArrow() {
+        return this.state.phase > 0 ? <TouchableOpacity onPress={this._handleBefore}>
+            <Ionicons
+                name={"ios-arrow-back"}
+                size={50}
+                style={{marginRight: 10, width: 50}}/>
+        </TouchableOpacity> : null;
     }
 
     _displayContent() {
