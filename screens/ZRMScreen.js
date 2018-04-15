@@ -30,9 +30,10 @@ export default class ZRMScreen extends React.Component {
                     <View style={styles.getStartedContainer}>
                         <Text style={styles.getStartedText}>{this._displayContent()}</Text>
 
+                        <View style={{flex: 1, flexDirection: 'row'}}>
                         {this._renderBeforeArrow()}
-
                         {this._renderNextArrow()}
+                        </View>
                     </View>
                 </ScrollView>
             </View>
