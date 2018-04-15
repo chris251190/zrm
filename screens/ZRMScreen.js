@@ -42,7 +42,6 @@ export default class ZRMScreen extends React.Component {
     }
 
     _displayContent() {
-        let content = this.state.phase === 0 ? 1 : 2;
         return (
             <Text>
                 ZRM page {this.state.phase}
