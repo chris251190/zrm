@@ -29,6 +29,14 @@ export default class ZRMScreen extends React.Component {
 
                     <View style={styles.getStartedContainer}>
                         <Text style={styles.getStartedText}>{this._displayContent()}</Text>
+
+                        <TouchableOpacity onPress={this._handleBefore}>
+                            <Ionicons
+                                name={"ios-arrow-back"}
+                                size={50}
+                                style={{marginRight: 10, width: 50}}/>
+                        </TouchableOpacity>
+
                         <TouchableOpacity onPress={this._handleNext}>
                             <Ionicons
                                 name={"ios-arrow-forward"}
@@ -52,6 +60,12 @@ export default class ZRMScreen extends React.Component {
     _handleNext = () => {
         this.setState(previousState => {
             return { phase: previousState.phase + 1 };
+        });
+    }
+
+    _handleBefore = () => {
+        this.setState(previousState => {
+            return { phase: previousState.phase - 1 };
         });
     }
 }
