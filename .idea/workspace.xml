@@ -2,25 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8addc38-23d6-4a35-bd62-a8326e49badc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/images/angel.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/autopista.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/cheesecake.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/churros.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/flowers.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/guell.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/hafencity_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/hafencity_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/heartdoor.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/landscape.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/lion.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/nature.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/palmera.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/stairs.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/street.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/sunrise.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/town.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/windows.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/zrm/ZRMPhaseOne.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/zrm/ZRMPhaseOne.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/zrm/ZRMPhaseTwo.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/zrm/ZRMPhaseTwo.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -35,56 +18,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="landscape.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/images/landscape.jpg">
-          <provider selected="true" editor-type-id="images" />
+      <file leaf-file-name="HomeScreen.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/screens/HomeScreen.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="133" column="25" lean-forward="true" selection-start-line="129" selection-start-column="7" selection-end-line="133" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="lion.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/images/lion.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file leaf-file-name="nature.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/images/nature.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file leaf-file-name="palmera.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/images/palmera.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file leaf-file-name="stairs.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/images/stairs.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file leaf-file-name="street.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/images/street.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file leaf-file-name="sunrise.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/images/sunrise.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file leaf-file-name="town.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/images/town.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file leaf-file-name="windows.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/images/windows.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file leaf-file-name="ZRMPhaseTwo.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ZRMPhaseTwo.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMPhaseTwo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="84" column="10" lean-forward="true" selection-start-line="84" selection-start-column="10" selection-end-line="84" selection-end-column="10" />
+            <state relative-caret-position="74">
+              <caret line="90" selection-start-line="90" selection-end-line="104" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZRMPhaseOne.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMPhaseOne.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="63">
+              <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZRMScreen.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMScreen.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="121">
+              <caret line="39" column="69" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="69" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,9 +84,9 @@
         <option value="$PROJECT_DIR$/screens/zrm/ZRMPhaseSix.js" />
         <option value="$PROJECT_DIR$/screens/zrm/ZRMPhaseThree.js" />
         <option value="$PROJECT_DIR$/screens/zrm/ZRMHome.js" />
-        <option value="$PROJECT_DIR$/screens/zrm/ZRMPhaseOne.js" />
         <option value="$PROJECT_DIR$/screens/zrm/ZRMScreen.js" />
         <option value="$PROJECT_DIR$/screens/zrm/ZRMPhaseTwo.js" />
+        <option value="$PROJECT_DIR$/screens/zrm/ZRMPhaseOne.js" />
       </list>
     </option>
   </component>
@@ -257,7 +228,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32659000" />
+    <option name="totallyTimeSpent" value="35763000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -268,10 +239,10 @@
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32838285" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32838285" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.37458745" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.37458745" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -467,13 +438,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMPhaseOne.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMHome.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -519,26 +483,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screens/HomeScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="19" column="76" selection-start-line="19" selection-start-column="76" selection-end-line="19" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -599,10 +543,37 @@
     <entry file="file://$PROJECT_DIR$/assets/images/windows.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="39" column="69" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screens/HomeScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="133" column="25" lean-forward="true" selection-start-line="129" selection-start-column="7" selection-end-line="133" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMPhaseTwo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="84" column="10" lean-forward="true" selection-start-line="84" selection-start-column="10" selection-end-line="84" selection-end-column="10" />
+        <state relative-caret-position="74">
+          <caret line="90" selection-start-line="90" selection-end-line="104" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMPhaseOne.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
         </state>
       </provider>
     </entry>

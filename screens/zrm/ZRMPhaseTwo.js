@@ -6,8 +6,9 @@ export default class ZRMPhaseTwo extends React.Component {
     render() {
         return (
             <Text>
-                ZRM Phase Two
-                <View>
+                /*TODO(clehr) make title visible*/
+                <View><Text style={styles.header}>Choose an image</Text></View>
+                <View style={{flex: 1, flexDirection: 'row', width: 300, flexWrap: 'wrap', alignItems: 'flex-start'}}>
                     <Image
                         source={require('../../assets/images/angel.jpg')}
                         style={styles.image}
@@ -20,6 +21,7 @@ export default class ZRMPhaseTwo extends React.Component {
                         source={require('../../assets/images/cheesecake.jpg')}
                         style={styles.image}
                     />
+
                     <Image
                         source={require('../../assets/images/churros.jpg')}
                         style={styles.image}
@@ -88,11 +90,17 @@ export default class ZRMPhaseTwo extends React.Component {
 
 const styles = StyleSheet.create({
     image: {
-        width: 300,
-        height: 200,
+        width: 100,
+        height: 70,
+        marginBottom: 20,
         resizeMode: 'contain',
-        marginTop: 3,
-        marginLeft: -10,
+    },
+    header: {
+        fontSize: 20,
+        color: 'rgba(96,100,109, 1)',
+        lineHeight: 24,
+        textAlign: 'center',
+        marginBottom: 20,
     }
 });
 
