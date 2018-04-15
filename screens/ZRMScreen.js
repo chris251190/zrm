@@ -50,22 +50,50 @@ export default class ZRMScreen extends React.Component {
     }
 
     _displayContent() {
+        let pageZero = "ZRM Page 0";
+        let pageOne = "ZRM Page 1";
+        let pageTwo = "ZRM Page 2";
+        let pageThree = "ZRM Page 3";
+        let pageFour = "ZRM Page 4";
+        let pageFive = "ZRM Page 5";
+        let pageSix = "ZRM Page 6";
+
+        let phase = this.state.phase;
+
+        let content;
+
+        if (phase === 0) {
+            content = pageZero;
+        } else if (phase === 1) {
+            content = pageOne;
+        } else if (phase === 2) {
+            content = pageTwo;
+        } else if (phase === 3) {
+            content = pageThree;
+        } else if (phase === 4) {
+            content = pageFour;
+        } else if (phase === 5) {
+            content = pageFive;
+        } else if (phase === 6) {
+            content = pageSix;
+        }
+
         return (
             <Text>
-                ZRM page {this.state.phase}
+                {content}
             </Text>
         );
     };
 
     _handleNext = () => {
         this.setState(previousState => {
-            return { phase: previousState.phase + 1 };
+            return {phase: previousState.phase + 1};
         });
     }
 
     _handleBefore = () => {
         this.setState(previousState => {
-            return { phase: previousState.phase - 1 };
+            return {phase: previousState.phase - 1};
         });
     }
 }
