@@ -50,7 +50,7 @@ export default class ZRMScreen extends React.Component {
     _renderNextArrow() {
         return this.state.phase < 6 ? <TouchableOpacity onPress={this._handleNext}>
             <Ionicons
-                name={"ios-arrow-forward"}
+                name={Platform.OS === 'ios' ? "ios-arrow-forward" : "md-arrow-forward"}
                 size={50}
                 style={{marginRight: 10, width: 50}}/>
         </TouchableOpacity> : null;
@@ -59,7 +59,7 @@ export default class ZRMScreen extends React.Component {
     _renderBeforeArrow() {
         return this.state.phase > 0 ? <TouchableOpacity onPress={this._handleBefore}>
             <Ionicons
-                name={"ios-arrow-back"}
+                name={Platform.OS === 'ios' ? "ios-arrow-back" : "md-arrow-back"}
                 size={50}
                 style={{marginRight: 10, width: 50}}/>
         </TouchableOpacity> : null;
