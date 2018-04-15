@@ -32,6 +32,6 @@ export default class ZRMPhaseOne extends React.Component {
 
 const styles = StyleSheet.create({
     text: {
-        fontSize: 16,
+        fontSize: 15,
     }
 });
