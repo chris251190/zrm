@@ -96,7 +96,7 @@ export default class ZRMScreen extends React.Component {
         this.setState(previousState => {
             return {phase: previousState.phase + 1};
         });
-    }
+    };
 
     _handleBefore = () => {
         this.setState(previousState => {
