@@ -1,6 +1,13 @@
 import React from 'react';
 import {Image, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View,} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
+import ZRMHome from './ZRMHome';
+import ZRMPhaseTwo from './ZRMPhaseTwo';
+import ZRMPhaseThree from './ZRMPhaseThree';
+import ZRMPhaseFour from './ZRMPhaseFour';
+import ZRMPhaseFive from './ZRMPhaseFive';
+import ZRMPhaseSix from './ZRMPhaseSix';
+import ZRMPhaseOne from './ZRMPhaseOne';
 
 export default class ZRMScreen extends React.Component {
     constructor(props) {
@@ -20,8 +27,8 @@ export default class ZRMScreen extends React.Component {
                         <Image
                             source={
                                 __DEV__
-                                    ? require('../assets/images/robot-dev.png')
-                                    : require('../assets/images/robot-prod.png')
+                                    ? require('../../assets/images/robot-dev.png')
+                                    : require('../../assets/images/robot-prod.png')
                             }
                             style={styles.welcomeImage}
                         />
@@ -59,32 +66,23 @@ export default class ZRMScreen extends React.Component {
     }
 
     _displayContent() {
-        let pageZero = "ZRM Page 0";
-        let pageOne = "ZRM Page 1";
-        let pageTwo = "ZRM Page 2";
-        let pageThree = "ZRM Page 3";
-        let pageFour = "ZRM Page 4";
-        let pageFive = "ZRM Page 5";
-        let pageSix = "ZRM Page 6";
-
         let phase = this.state.phase;
-
         let content;
 
         if (phase === 0) {
-            content = pageZero;
+            content = <ZRMHome/>;
         } else if (phase === 1) {
-            content = pageOne;
+            content = <ZRMPhaseOne/>;
         } else if (phase === 2) {
-            content = pageTwo;
+            content = <ZRMPhaseTwo/>;
         } else if (phase === 3) {
-            content = pageThree;
+            content = <ZRMPhaseThree/>;
         } else if (phase === 4) {
-            content = pageFour;
+            content = <ZRMPhaseFour/>;
         } else if (phase === 5) {
-            content = pageFive;
+            content = <ZRMPhaseFive/>;
         } else if (phase === 6) {
-            content = pageSix;
+            content = <ZRMPhaseSix/>;
         }
 
         return (

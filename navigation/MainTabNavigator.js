@@ -6,7 +6,7 @@ import {TabBarBottom, TabNavigator} from 'react-navigation';
 import Colors from '../constants/Colors';
 
 import HomeScreen from '../screens/HomeScreen';
-import ZRMScreen from '../screens/ZRMScreen';
+import ZRMScreen from '../screens/zrm/ZRMScreen';
 import DonateScreen from '../screens/DonateScreen';
 import ContactScreen from '../screens/ContactScreen';
 import InfoScreen from '../screens/InfoScreen';
