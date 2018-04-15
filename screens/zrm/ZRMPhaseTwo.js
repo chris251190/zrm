@@ -2,11 +2,11 @@ import React from 'react';
 import {Image, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View,} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 
+//TODO(clehr) make title on this page visible
 export default class ZRMPhaseTwo extends React.Component {
     render() {
         return (
             <Text>
-                /*TODO(clehr) make title visible*/
                 <View><Text style={styles.header}>Choose an image</Text></View>
                 <View style={{flex: 1, flexDirection: 'row', width: 300, flexWrap: 'wrap', alignItems: 'flex-start'}}>
                     <Image

@@ -1,7 +1,6 @@
 import React from 'react';
 import {Image, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View,} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
-import ZRMHome from './ZRMHome';
 import ZRMPhaseTwo from './ZRMPhaseTwo';
 import ZRMPhaseThree from './ZRMPhaseThree';
 import ZRMPhaseFour from './ZRMPhaseFour';
@@ -37,7 +36,7 @@ export default class ZRMScreen extends React.Component {
                     <View style={styles.getStartedContainer}>
                         <Text style={styles.getStartedText}>{this._displayContent()}</Text>
 
-                        <View style={{flex: 1, flexDirection: 'row'}}>
+                        <View style={{flex: 1, flexDirection: 'row', alignItems: 'flex-start'}}>
                         {this._renderBeforeArrow()}
                         {this._renderNextArrow()}
                         </View>
@@ -48,7 +47,7 @@ export default class ZRMScreen extends React.Component {
     }
 
     _renderNextArrow() {
-        return this.state.phase < 6 ? <TouchableOpacity onPress={this._handleNext}>
+        return this.state.phase < 5 ? <TouchableOpacity onPress={this._handleNext}>
             <Ionicons
                 name={Platform.OS === 'ios' ? "ios-arrow-forward" : "md-arrow-forward"}
                 size={50}
@@ -70,27 +69,24 @@ export default class ZRMScreen extends React.Component {
         let content;
 
         if (phase === 0) {
-            content = <ZRMHome/>;
-        } else if (phase === 1) {
             content = <ZRMPhaseOne/>;
-        } else if (phase === 2) {
+        } else if (phase === 1) {
             content = <ZRMPhaseTwo/>;
-        } else if (phase === 3) {
+        } else if (phase === 2) {
             content = <ZRMPhaseThree/>;
-        } else if (phase === 4) {
+        } else if (phase === 3) {
             content = <ZRMPhaseFour/>;
-        } else if (phase === 5) {
+        } else if (phase === 4) {
             content = <ZRMPhaseFive/>;
-        } else if (phase === 6) {
+        } else if (phase === 5) {
             content = <ZRMPhaseSix/>;
         }
-
-        return (
-            <Text>
-                {content}
-            </Text>
-        );
-    };
+            return (
+                <Text>
+                    {content}
+                </Text>
+            );
+        };
 
     _handleNext = () => {
         this.setState(previousState => {

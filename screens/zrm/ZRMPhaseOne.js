@@ -5,7 +5,13 @@ import {Ionicons} from '@expo/vector-icons';
 export default class ZRMPhaseOne extends React.Component {
     render() {
         return (
-            <Text style={styles.text}>Now you will view a series of different pictures. You will choose one picture that
+            <Text style={styles.text}>
+                Welcome! {"\n"}{"\n"}
+
+                The online tool will guide you step-by-step through the process of formulating a “motto goal” that can
+                be used in accordance with the ZRM method of self-management. {"\n"}{"\n"}
+
+                Now you will view a series of different pictures. You will choose one picture that
                 will serve as your resource. {"\n"}{"\n"}
 
                 Tune out the rational part of your brain for the moment and let your intuition take over for
