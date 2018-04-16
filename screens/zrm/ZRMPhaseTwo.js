@@ -2,7 +2,6 @@ import React from 'react';
 import {Image, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View,} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 
-//TODO(clehr) make title on this page visible
 export default class ZRMPhaseTwo extends React.Component {
     render() {
         return (

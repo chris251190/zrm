@@ -2,7 +2,7 @@ import React from 'react';
 import {Image, Platform, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View,} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 
-export default class ZRMScreen extends React.Component {
+export default class ZRMPhaseThree extends React.Component {
     static navigationOptions = {
         header: null,
     };
