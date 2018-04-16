@@ -1,11 +1,10 @@
 import React from 'react';
-import {Image, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View,} from 'react-native';
+import {Image, Platform, ScrollView, StyleSheet, TouchableOpacity, View,} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 import ZRMPhaseTwo from './ZRMPhaseTwo';
 import ZRMPhaseThree from './ZRMPhaseThree';
 import ZRMPhaseFour from './ZRMPhaseFour';
 import ZRMPhaseFive from './ZRMPhaseFive';
-import ZRMPhaseSix from './ZRMPhaseSix';
 import ZRMPhaseOne from './ZRMPhaseOne';
 
 export default class ZRMScreen extends React.Component {
@@ -47,7 +46,7 @@ export default class ZRMScreen extends React.Component {
     }
 
     _renderNextArrow() {
-        return this.state.phase < 5 ? <TouchableOpacity onPress={this._handleNext}>
+        return this.state.phase < 4 ? <TouchableOpacity onPress={this._handleNext}>
             <Ionicons
                 name={Platform.OS === 'ios' ? "ios-arrow-forward" : "md-arrow-forward"}
                 size={50}
@@ -78,8 +77,6 @@ export default class ZRMScreen extends React.Component {
             content = <ZRMPhaseFour/>;
         } else if (phase === 4) {
             content = <ZRMPhaseFive/>;
-        } else if (phase === 5) {
-            content = <ZRMPhaseSix/>;
         }
         return (
             <View>{content}</View>
