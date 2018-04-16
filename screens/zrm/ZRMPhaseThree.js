@@ -9,10 +9,10 @@ export default class ZRMScreen extends React.Component {
 
     render() {
         return (
-            <View style={styles.container}>
-                <Text style={styles.homeTitle}>Welcome to the ZRM App!</Text>
+            <View>
+                <Text style={styles.homeTitle}>Write down positive resources you see in the image</Text>
                 <Image source={require('../../assets/images/angel.jpg')} style={styles.image}/>
-                <TextInput style={{backgroundColor: '#ededed', height: 60}} value={'Hello'}/>
+                <TextInput style={{backgroundColor: '#ededed', height: 30}} value={'Hello'}/>
             </View>
         );
     }

@@ -34,11 +34,11 @@ export default class ZRMScreen extends React.Component {
                     </View>
 
                     <View style={styles.getStartedContainer}>
-                        <Text style={styles.getStartedText}>{this._displayContent()}</Text>
+                        {this._displayContent()}
 
                         <View style={{flex: 1, flexDirection: 'row', alignItems: 'flex-start'}}>
-                        {this._renderBeforeArrow()}
-                        {this._renderNextArrow()}
+                            {this._renderBeforeArrow()}
+                            {this._renderNextArrow()}
                         </View>
                     </View>
                 </ScrollView>
@@ -81,12 +81,10 @@ export default class ZRMScreen extends React.Component {
         } else if (phase === 5) {
             content = <ZRMPhaseSix/>;
         }
-            return (
-                <Text>
-                    {content}
-                </Text>
-            );
-        };
+        return (
+            <View>{content}</View>
+        );
+    };
 
     _handleNext = () => {
         this.setState(previousState => {

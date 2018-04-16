@@ -5,7 +5,7 @@ import {Ionicons} from '@expo/vector-icons';
 export default class ZRMScreen extends React.Component {
     render() {
         return (
-            <Text>ZRM Phase Four</Text>
+            <View style={{backgroundColor: 'red', height: 30}}><Text>ZRM Phase Four</Text></View>
         );
     }
 };

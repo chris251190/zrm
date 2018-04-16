@@ -8,7 +8,14 @@ export default class ZRMPhaseTwo extends React.Component {
         return (
             <View>
                 <View><Text style={styles.header}>Choose an image</Text></View>
-                <View style={{flex: 1, flexDirection: 'row', width: 300, flexWrap: 'wrap', alignItems: 'flex-start'}}>
+                <View style={{
+                    flex: 1,
+                    flexDirection: 'row',
+                    width: 300,
+                    height: 200,
+                    flexWrap: 'wrap',
+                    alignItems: 'flex-start'
+                }}>
                     <Image
                         source={require('../../assets/images/angel.jpg')}
                         style={styles.image}
@@ -90,9 +97,9 @@ export default class ZRMPhaseTwo extends React.Component {
 
 const styles = StyleSheet.create({
     image: {
-        width: 100,
-        height: 70,
-        marginBottom: 20,
+        width: 90,
+        height: 60,
+        marginBottom: 10,
         resizeMode: 'contain',
     },
     header: {
