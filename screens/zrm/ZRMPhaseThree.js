@@ -1,5 +1,15 @@
 import React from 'react';
-import {Image, Platform, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View,} from 'react-native';
+import {
+    FlatList,
+    Image,
+    Platform,
+    ScrollView,
+    StyleSheet,
+    Text,
+    TextInput,
+    TouchableOpacity,
+    View,
+} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 
 export default class ZRMPhaseThree extends React.Component {
@@ -12,7 +22,23 @@ export default class ZRMPhaseThree extends React.Component {
             <View>
                 <Text style={styles.homeTitle}>Write down positive resources you see in the image</Text>
                 <Image source={require('../../assets/images/angel.jpg')} style={styles.image}/>
-                <TextInput style={{backgroundColor: '#ededed', height: 30}} value={'Hello'}/>
+                <TextInput style={{backgroundColor: '#ededed', height: 30, marginBottom: 20}} value={'hope'}/>
+
+                <View style={styles.container}>
+                    <Text>your ideas:</Text>
+                    <FlatList
+                        data={[
+                            {key: '- angel'},
+                            {key: '- sky'},
+                            {key: '- heaven'},
+                            {key: '- light'},
+                            {key: '- high'},
+                            {key: '- fly'},
+                            {key: '- justice'},
+                        ]}
+                        renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
+                    />
+                </View>
             </View>
         );
     }
