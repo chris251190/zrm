@@ -18,8 +18,7 @@ export default class ZRMPhaseOne extends React.Component {
                 this task. Choose the picture that gives you a strong, positive feeling (makes you feel happy or calm,
                 makes you smile, etc.).{"\n"}{"\n"}
 
-                You don’t have to understand why the picture gives you such a good feeling. You
-                will see one picture at a time and the series of pictures will be presented twice. Just pay attention to
+                You don’t have to understand why the picture gives you such a good feeling. Just pay attention to
                 which picture gives you an especially good feeling. {"\n"}{"\n"}
 
                 At the end of each run-through, you will see an
