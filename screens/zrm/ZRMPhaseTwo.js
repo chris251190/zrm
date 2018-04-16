@@ -6,7 +6,7 @@ import {Ionicons} from '@expo/vector-icons';
 export default class ZRMPhaseTwo extends React.Component {
     render() {
         return (
-            <Text>
+            <View>
                 <View><Text style={styles.header}>Choose an image</Text></View>
                 <View style={{flex: 1, flexDirection: 'row', width: 300, flexWrap: 'wrap', alignItems: 'flex-start'}}>
                     <Image
@@ -83,7 +83,7 @@ export default class ZRMPhaseTwo extends React.Component {
                         style={styles.image}
                     />
                 </View>
-            </Text>
+            </View>
         );
     }
 };
