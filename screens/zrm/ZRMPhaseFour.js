@@ -41,7 +41,7 @@ export default class ZRMPhaseFour extends React.Component {
                         I want to be like ...  {"\n"}{"\n"}
 
                         * Example for a new motto{"\n"}
-                        I want to feel like a bear who has thick fur.{"\n"}
+                        I want to feel like a bear that has thick fur.{"\n"}
                         I want to act like a young woman on the Vespa, cool and with fullspeed.{"\n"}
                         I want to be like the lotus and grow at my own pace.{"\n"}
                         I want to go step for step at my own pace.  {"\n"}
