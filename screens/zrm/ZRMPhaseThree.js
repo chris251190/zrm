@@ -9,11 +9,7 @@ export default class ZRMScreen extends React.Component {
 
                 <View>
                     <Image
-                        source={
-                            __DEV__
-                                ? require('../../assets/images/me.jpg')
-                                : require('../../assets/images/me.jpg')
-                        }
+                        source={require('../../assets/images/angel.jpg')}
                         style={styles.image}
                     />
                 </View>
