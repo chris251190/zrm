@@ -1,0 +1,128 @@
+Index: screens/zrm/ZRMPhaseTwo.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import React from 'react';\nimport {Image, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View,} from 'react-native';\nimport {Ionicons} from '@expo/vector-icons';\n\nexport default class ZRMPhaseTwo extends React.Component {\n    render() {\n        return (\n            <View>\n                <View><Text style={styles.header}>Choose an image</Text></View>\n                <View style={{\n                    flex: 1,\n                    flexDirection: 'row',\n                    width: 300,\n                    height: 200,\n                    flexWrap: 'wrap',\n                    alignItems: 'flex-start'\n                }}>\n                    <Image\n                        source={require('../../assets/images/angel.jpg')}\n                        style={styles.image}\n                    />\n                    <Image\n                        source={require('../../assets/images/autopista.jpg')}\n                        style={styles.image}\n                    />\n                    <Image\n                        source={require('../../assets/images/cheesecake.jpg')}\n                        style={styles.image}\n                    />\n\n                    <Image\n                        source={require('../../assets/images/churros.jpg')}\n                        style={styles.image}\n                    />\n                    <Image\n                        source={require('../../assets/images/flowers.jpg')}\n                        style={styles.image}\n                    />\n                    <Image\n                        source={require('../../assets/images/guell.jpg')}\n                        style={styles.image}\n                    />\n                    <Image\n                        source={require('../../assets/images/hafencity_1.jpg')}\n                        style={styles.image}\n                    />\n                    <Image\n                        source={require('../../assets/images/hafencity_2.jpg')}\n                        style={styles.image}\n                    />\n                    <Image\n                        source={require('../../assets/images/heartdoor.jpg')}\n                        style={styles.image}\n                    />\n                    <Image\n                        source={require('../../assets/images/landscape.jpg')}\n                        style={styles.image}\n                    />\n                    <Image\n                        source={require('../../assets/images/lion.jpg')}\n                        style={styles.image}\n                    />\n                    <Image\n                        source={require('../../assets/images/nature.jpg')}\n                        style={styles.image}\n                    />\n                    <Image\n                        source={require('../../assets/images/palmera.jpg')}\n                        style={styles.image}\n                    />\n                    <Image\n                        source={require('../../assets/images/stairs.jpg')}\n                        style={styles.image}\n                    />\n                    <Image\n                        source={require('../../assets/images/street.jpg')}\n                        style={styles.image}\n                    />\n                    <Image\n                        source={require('../../assets/images/sunrise.jpg')}\n                        style={styles.image}\n                    />\n                    <Image\n                        source={require('../../assets/images/town.jpg')}\n                        style={styles.image}\n                    />\n                    <Image\n                        source={require('../../assets/images/windows.jpg')}\n                        style={styles.image}\n                    />\n                </View>\n            </View>\n        );\n    }\n};\n\nconst styles = StyleSheet.create({\n    image: {\n        width: 90,\n        height: 60,\n        marginBottom: 10,\n        resizeMode: 'contain',\n    },\n    header: {\n        fontSize: 20,\n        color: 'rgba(96,100,109, 1)',\n        lineHeight: 24,\n        textAlign: 'center',\n        marginBottom: 20,\n    }\n});\n\n\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- screens/zrm/ZRMPhaseTwo.js	(revision 2e7bb708099dac178373700c072d901051e0a383)
++++ screens/zrm/ZRMPhaseTwo.js	(date 1524074248328)
+@@ -1,8 +1,29 @@
+ import React from 'react';
+-import {Image, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View,} from 'react-native';
++import {FlatList, Image, Modal, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View,} from 'react-native';
+ import {Ionicons} from '@expo/vector-icons';
+ 
+ export default class ZRMPhaseTwo extends React.Component {
++    imageData = [
++        {imageName: 'angel.jpg'},
++        {imageName: 'autopista.jpg'},
++        {imageName: 'cheesecake.jpg'},
++        {imageName: 'churros.jpg'},
++        {imageName: 'flowers.jpg'},
++        {imageName: 'guell.jpg'},
++        {imageName: 'hafencity_1.jpg'},
++        {imageName: 'hafencity_2.jpg'},
++        {imageName: 'heartdoor.jpg'},
++        {imageName: 'landscape.jpg'},
++        {imageName: 'lion.jpg'},
++        {imageName: 'nature.jpg'},
++        {imageName: 'palmera.jpg'},
++        {imageName: 'stairs.jpg'},
++        {imageName: 'street.jpg'},
++        {imageName: 'sunrise.jpg'},
++        {imageName: 'town.jpg'},
++        {imageName: 'windows.jpg'},
++    ];
++
+     render() {
+         return (
+             <View>
+@@ -15,80 +36,15 @@
+                     flexWrap: 'wrap',
+                     alignItems: 'flex-start'
+                 }}>
+-                    <Image
+-                        source={require('../../assets/images/angel.jpg')}
+-                        style={styles.image}
+-                    />
+-                    <Image
+-                        source={require('../../assets/images/autopista.jpg')}
+-                        style={styles.image}
+-                    />
+-                    <Image
+-                        source={require('../../assets/images/cheesecake.jpg')}
+-                        style={styles.image}
+-                    />
+-
+-                    <Image
+-                        source={require('../../assets/images/churros.jpg')}
+-                        style={styles.image}
+-                    />
+-                    <Image
+-                        source={require('../../assets/images/flowers.jpg')}
+-                        style={styles.image}
+-                    />
+-                    <Image
+-                        source={require('../../assets/images/guell.jpg')}
+-                        style={styles.image}
+-                    />
+-                    <Image
+-                        source={require('../../assets/images/hafencity_1.jpg')}
+-                        style={styles.image}
+-                    />
+-                    <Image
+-                        source={require('../../assets/images/hafencity_2.jpg')}
+-                        style={styles.image}
+-                    />
+-                    <Image
+-                        source={require('../../assets/images/heartdoor.jpg')}
+-                        style={styles.image}
+-                    />
+-                    <Image
+-                        source={require('../../assets/images/landscape.jpg')}
+-                        style={styles.image}
+-                    />
+-                    <Image
+-                        source={require('../../assets/images/lion.jpg')}
+-                        style={styles.image}
+-                    />
+-                    <Image
+-                        source={require('../../assets/images/nature.jpg')}
+-                        style={styles.image}
+-                    />
+-                    <Image
+-                        source={require('../../assets/images/palmera.jpg')}
+-                        style={styles.image}
+-                    />
+-                    <Image
+-                        source={require('../../assets/images/stairs.jpg')}
+-                        style={styles.image}
+-                    />
+-                    <Image
+-                        source={require('../../assets/images/street.jpg')}
+-                        style={styles.image}
+-                    />
+-                    <Image
+-                        source={require('../../assets/images/sunrise.jpg')}
+-                        style={styles.image}
+-                    />
+-                    <Image
+-                        source={require('../../assets/images/town.jpg')}
+-                        style={styles.image}
+-                    />
+-                    <Image
+-                        source={require('../../assets/images/windows.jpg')}
+-                        style={styles.image}
++                    <FlatList
++                        data={this.imageData}
++                        renderItem={({item}) => <Image
++                            source={require(`../../assets/images/angel.jpg`)}
++                            style={styles.image}
++                        />}
+                     />
+                 </View>
++                <Modal open={true}>...</Modal>
+             </View>
+         );
+     }

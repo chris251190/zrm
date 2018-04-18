@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View,} from 'react-native';
+import {FlatList, Image, Modal, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View,} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 
 export default class ZRMPhaseTwo extends React.Component {
@@ -15,84 +15,40 @@ export default class ZRMPhaseTwo extends React.Component {
                     flexWrap: 'wrap',
                     alignItems: 'flex-start'
                 }}>
-                    <Image
-                        source={require('../../assets/images/angel.jpg')}
-                        style={styles.image}
-                    />
-                    <Image
-                        source={require('../../assets/images/autopista.jpg')}
-                        style={styles.image}
-                    />
-                    <Image
-                        source={require('../../assets/images/cheesecake.jpg')}
-                        style={styles.image}
-                    />
-
-                    <Image
-                        source={require('../../assets/images/churros.jpg')}
-                        style={styles.image}
-                    />
-                    <Image
-                        source={require('../../assets/images/flowers.jpg')}
-                        style={styles.image}
-                    />
-                    <Image
-                        source={require('../../assets/images/guell.jpg')}
-                        style={styles.image}
-                    />
-                    <Image
-                        source={require('../../assets/images/hafencity_1.jpg')}
-                        style={styles.image}
-                    />
-                    <Image
-                        source={require('../../assets/images/hafencity_2.jpg')}
-                        style={styles.image}
-                    />
-                    <Image
-                        source={require('../../assets/images/heartdoor.jpg')}
-                        style={styles.image}
-                    />
-                    <Image
-                        source={require('../../assets/images/landscape.jpg')}
-                        style={styles.image}
-                    />
-                    <Image
-                        source={require('../../assets/images/lion.jpg')}
-                        style={styles.image}
-                    />
-                    <Image
-                        source={require('../../assets/images/nature.jpg')}
-                        style={styles.image}
-                    />
-                    <Image
-                        source={require('../../assets/images/palmera.jpg')}
-                        style={styles.image}
-                    />
-                    <Image
-                        source={require('../../assets/images/stairs.jpg')}
-                        style={styles.image}
-                    />
-                    <Image
-                        source={require('../../assets/images/street.jpg')}
-                        style={styles.image}
-                    />
-                    <Image
-                        source={require('../../assets/images/sunrise.jpg')}
-                        style={styles.image}
-                    />
-                    <Image
-                        source={require('../../assets/images/town.jpg')}
-                        style={styles.image}
-                    />
-                    <Image
-                        source={require('../../assets/images/windows.jpg')}
-                        style={styles.image}
+                    <FlatList
+                        data={imageData}
+                        renderItem={({item}) => this.renderImage(item)}
                     />
                 </View>
             </View>
         );
     }
+
+    renderImage(item) {
+        return <Image key={item.key} source={item.imageName} style={styles.image}/>;
+    }
 };
+
+const imageData = [
+    {key: 1, imageName: require('../../assets/images/angel.jpg')},
+    {key: 2, imageName: require('../../assets/images/autopista.jpg')},
+    {key: 3, imageName: require('../../assets/images/cheesecake.jpg')},
+    {key: 4, imageName: require('../../assets/images/churros.jpg')},
+    {key: 5, imageName: require('../../assets/images/flowers.jpg')},
+    {key: 6, imageName: require('../../assets/images/guell.jpg')},
+    {key: 7, imageName: require('../../assets/images/hafencity_1.jpg')},
+    {key: 8, imageName: require('../../assets/images/hafencity_2.jpg')},
+    {key: 9, imageName: require('../../assets/images/heartdoor.jpg')},
+    {key: 10, imageName: require('../../assets/images/landscape.jpg')},
+    {key: 11, imageName: require('../../assets/images/lion.jpg')},
+    {key: 12, imageName: require('../../assets/images/nature.jpg')},
+    {key: 13, imageName: require('../../assets/images/palmera.jpg')},
+    {key: 14, imageName: require('../../assets/images/stairs.jpg')},
+    {key: 15, imageName: require('../../assets/images/street.jpg')},
+    {key: 16, imageName: require('../../assets/images/sunrise.jpg')},
+    {key: 17, imageName: require('../../assets/images/town.jpg')},
+    {key: 18, imageName: require('../../assets/images/windows.jpg')},
+];
 
 const styles = StyleSheet.create({
     image: {
