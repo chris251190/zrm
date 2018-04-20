@@ -1,8 +1,16 @@
 import React from 'react';
-import {FlatList, Image, Modal, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View,} from 'react-native';
+import {FlatList, Image, Modal, StyleSheet, Text, TouchableHighlight, View,} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 
 export default class ZRMPhaseTwo extends React.Component {
+    state = {
+        modalVisible: false,
+    };
+
+    setModalVisible(visible) {
+        this.setState({modalVisible: visible});
+    }
+
     render() {
         return (
             <View>
@@ -15,6 +23,9 @@ export default class ZRMPhaseTwo extends React.Component {
                     flexWrap: 'wrap',
                     alignItems: 'flex-start'
                 }}>
+                    <View style={{marginTop: 22}}>
+                        {this.renderModal()}
+                    </View>
                     <FlatList
                         data={imageData}
                         renderItem={({item}) => this.renderImage(item)}
@@ -25,8 +36,44 @@ export default class ZRMPhaseTwo extends React.Component {
         );
     }
 
+    renderModalLink() {
+        return <TouchableHighlight
+            onPress={() => {
+                this.setModalVisible(true);
+            }}>
+            <Text>Show Modal</Text>
+        </TouchableHighlight>;
+    }
+
+    renderModal() {
+        return <Modal style={{backgroundColor: 'black'}}
+                      animationType="slide"
+                      transparent={false}
+                      visible={this.state.modalVisible}
+                      onRequestClose={() => {
+                          alert('Modal has been closed.');
+                      }}>
+            <View style={{marginTop: 22}}>
+                <View style={{justifyContent: 'center', alignItems: 'center'}}>
+                    <Text>Is this your image?</Text>
+                    <Image source={require('../../assets/images/hafencity_2.jpg')} style={styles.modalImage}/>
+                    <TouchableHighlight
+                        onPress={() => {
+                            this.setModalVisible(!this.state.modalVisible);
+                        }}>
+                        <Text>X</Text>
+                    </TouchableHighlight>
+                </View>
+            </View>
+        </Modal>;
+    }
+
     renderImage(item) {
-        return <Image key={item.key} source={item.imageName} style={styles.image}/>;
+        return <TouchableHighlight onPress={() => {
+            this.setModalVisible(true);
+        }}>
+            <Image key={item.key} source={item.imageName} style={styles.image}/>
+        </TouchableHighlight>;
     }
 };
 
@@ -57,6 +104,11 @@ const styles = StyleSheet.create({
         height: 60,
         marginBottom: 10,
         marginRight: 10,
+        resizeMode: 'contain',
+    },
+    modalImage: {
+        width: 400,
+        height: 500,
         resizeMode: 'contain',
     },
     header: {
