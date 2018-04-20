@@ -14,7 +14,7 @@ import {Ionicons} from '@expo/vector-icons';
 
 export default class ZRMPhaseFour extends React.Component {
     state = {
-        motto: 'test'
+        motto: null,
     };
 
     render() {
@@ -52,7 +52,10 @@ export default class ZRMPhaseFour extends React.Component {
                     </Text>
                     <TextInput
                         style={{backgroundColor: '#ededed', height: 20}}
-                        onChangeText={(motto) => this.setState({motto})}
+                        onChangeText={(motto) => {
+                            this.setState({motto});
+                            this.props.handler(motto);
+                        }}
                         value={this.state.motto}/>
                 </View>
             </View>

@@ -13,15 +13,22 @@ export default class ZRMScreen extends React.Component {
         this.state = {
             phase: 0,
             currentImage: null,
-            motto: 'test',
+            motto: null,
         };
-        this.handler = this.handler.bind(this);
+        this.currentImageHandler = this.currentImageHandler.bind(this);
+        this.mottoHandler = this.mottoHandler.bind(this);
     }
 
-    handler(chosenImage) {
+    currentImageHandler(chosenImage) {
         this.setState({
             currentImage: chosenImage,
             phase: this.state.phase += 1,
+        });
+    }
+
+    mottoHandler(motto) {
+        this.setState({
+            motto: motto,
         });
     }
 
@@ -87,11 +94,11 @@ export default class ZRMScreen extends React.Component {
         if (phase === 0) {
             content = <ZRMPhaseOne/>;
         } else if (phase === 1) {
-            content = <ZRMPhaseTwo handler={this.handler}/>;
+            content = <ZRMPhaseTwo handler={this.currentImageHandler}/>;
         } else if (phase === 2) {
             content = <ZRMPhaseThree chosenImage={this.state.currentImage}/>;
         } else if (phase === 3) {
-            content = <ZRMPhaseFour chosenImage={this.state.currentImage}/>;
+            content = <ZRMPhaseFour handler={this.mottoHandler} chosenImage={this.state.currentImage}/>;
         } else if (phase === 4) {
             content = <ZRMPhaseFive chosenImage={this.state.currentImage} motto={this.state.motto}/>;
         }
