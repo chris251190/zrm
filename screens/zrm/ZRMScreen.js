@@ -17,9 +17,9 @@ export default class ZRMScreen extends React.Component {
         this.handler = this.handler.bind(this);
     }
 
-    handler() {
+    handler(chosenImage) {
         this.setState({
-            currentImage: require('../../assets/images/lion.jpg'),
+            currentImage: chosenImage,
             phase: this.state.phase += 1,
     });
     }
