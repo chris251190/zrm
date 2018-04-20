@@ -59,12 +59,12 @@ export default class ZRMPhaseTwo extends React.Component {
                         }}>
                         <Text>Close (X)</Text>
                     </TouchableHighlight>
-                    <TouchableHighlight
+                    <TouchableHighlight style={{marginTop:10}}
                         onPress={() => {
                             this.props.handler(this.state.currentImage);
                             this.setModalVisible(!this.state.modalVisible);
                         }}>
-                        <Text>Choose (X)</Text>
+                        <Text>Choose (Y)</Text>
                     </TouchableHighlight>
                 </View>
             </View>
