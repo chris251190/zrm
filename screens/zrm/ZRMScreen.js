@@ -14,6 +14,14 @@ export default class ZRMScreen extends React.Component {
             phase: 0,
             currentImage: null,
         };
+        this.handler = this.handler.bind(this);
+    }
+
+    handler(e) {
+        e.preventDefault();
+        this.setState({
+            currentImage: require('../../assets/images/lion.jpg'),
+        });
     }
 
     static navigationOptions = {

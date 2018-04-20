@@ -5,7 +5,7 @@ import {Ionicons} from '@expo/vector-icons';
 export default class ZRMPhaseTwo extends React.Component {
     state = {
         modalVisible: false,
-        currentImage: require('../../assets/images/lion.jpg'),
+        currentImage: null,
     };
 
     setModalVisible(visible) {
