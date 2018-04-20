@@ -5,10 +5,15 @@ import {Ionicons} from '@expo/vector-icons';
 export default class ZRMPhaseTwo extends React.Component {
     state = {
         modalVisible: false,
+        currentImage: require('../../assets/images/lion.jpg'),
     };
 
     setModalVisible(visible) {
         this.setState({modalVisible: visible});
+    }
+
+    setCurrentImage(currentImage) {
+        this.setState({currentImage: currentImage});
     }
 
     render() {
@@ -37,7 +42,7 @@ export default class ZRMPhaseTwo extends React.Component {
     }
 
     renderModal() {
-        return <Modal style={{backgroundColor: 'black'}}
+        return <Modal
                       animationType="slide"
                       transparent={false}
                       visible={this.state.modalVisible}
@@ -47,12 +52,12 @@ export default class ZRMPhaseTwo extends React.Component {
             <View style={{marginTop: 22}}>
                 <View style={{justifyContent: 'center', alignItems: 'center'}}>
                     <Text>Is this your image?</Text>
-                    <Image source={require('../../assets/images/hafencity_2.jpg')} style={styles.modalImage}/>
+                    <Image source={this.state.currentImage} style={styles.modalImage}/>
                     <TouchableHighlight
                         onPress={() => {
                             this.setModalVisible(!this.state.modalVisible);
                         }}>
-                        <Text>X</Text>
+                        <Text>Close (X)</Text>
                     </TouchableHighlight>
                 </View>
             </View>
@@ -62,6 +67,7 @@ export default class ZRMPhaseTwo extends React.Component {
     renderImage(item) {
         return <TouchableHighlight onPress={() => {
             this.setModalVisible(true);
+            this.setCurrentImage(item.imageName);
         }}>
             <Image key={item.key} source={item.imageName} style={styles.image}/>
         </TouchableHighlight>;
