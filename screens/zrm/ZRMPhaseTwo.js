@@ -36,15 +36,6 @@ export default class ZRMPhaseTwo extends React.Component {
         );
     }
 
-    renderModalLink() {
-        return <TouchableHighlight
-            onPress={() => {
-                this.setModalVisible(true);
-            }}>
-            <Text>Show Modal</Text>
-        </TouchableHighlight>;
-    }
-
     renderModal() {
         return <Modal style={{backgroundColor: 'black'}}
                       animationType="slide"
