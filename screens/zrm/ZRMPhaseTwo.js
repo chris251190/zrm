@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
         height: 60,
         marginBottom: 10,
         marginRight: 10,
+        resizeMode: 'contain',
     },
     header: {
         fontSize: 20,
