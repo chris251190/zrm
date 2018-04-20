@@ -13,6 +13,7 @@ export default class ZRMScreen extends React.Component {
         this.state = {
             phase: 0,
             currentImage: null,
+            motto: 'test',
         };
         this.handler = this.handler.bind(this);
     }
@@ -21,7 +22,7 @@ export default class ZRMScreen extends React.Component {
         this.setState({
             currentImage: chosenImage,
             phase: this.state.phase += 1,
-    });
+        });
     }
 
     static navigationOptions = {
@@ -92,7 +93,7 @@ export default class ZRMScreen extends React.Component {
         } else if (phase === 3) {
             content = <ZRMPhaseFour chosenImage={this.state.currentImage}/>;
         } else if (phase === 4) {
-            content = <ZRMPhaseFive chosenImage={this.state.currentImage}/>;
+            content = <ZRMPhaseFive chosenImage={this.state.currentImage} motto={this.state.motto}/>;
         }
         return (
             <View>{content}</View>

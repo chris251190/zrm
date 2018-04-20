@@ -7,7 +7,8 @@ export default class ZRMPhaseFive extends React.Component {
         return (
             <View>
                 <Image source={this.props.chosenImage} style={styles.image}/>
-                <Text style={{fontSize: 20}}>'Your new Motto' {"\n"}</Text>
+                <Text style={{fontSize: 20}}>Your new motto:{"\n"}</Text>
+                <Text style={{fontSize: 20}}>'{this.props.motto}'{"\n"}</Text>
                 <Text>Further steps you can do to strengthen your new motto: {"\n"}</Text>
                 <Text>1. Create an embodiment that fits your motto {"\n"}</Text>
                 <Text>2. Find symbols that remind you of your new motto so your unconscious will perceive them.</Text>
