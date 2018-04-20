@@ -6,7 +6,7 @@ export default class ZRMPhaseFive extends React.Component {
     render() {
         return (
             <View>
-                <Image source={require('../../assets/images/angel.jpg')} style={styles.image}/>
+                <Image source={this.props.chosenImage} style={styles.image}/>
                 <Text style={{fontSize: 20}}>'Your new Motto' {"\n"}</Text>
                 <Text>Further steps you can do to strengthen your new motto: {"\n"}</Text>
                 <Text>1. Create an embodiment that fits your motto {"\n"}</Text>

@@ -21,7 +21,7 @@ export default class ZRMPhaseThree extends React.Component {
         return (
             <View>
                 <Text style={styles.homeTitle}>Write down positive resources you see in the image</Text>
-                <Image source={require('../../assets/images/angel.jpg')} style={styles.image}/>
+                <Image source={this.props.chosenImage} style={styles.image}/>
                 <TextInput style={{backgroundColor: '#ededed', height: 30, marginBottom: 20}} value={'hope'}/>
 
                 <View style={styles.container}>

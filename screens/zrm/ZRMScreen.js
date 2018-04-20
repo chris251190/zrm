@@ -88,11 +88,11 @@ export default class ZRMScreen extends React.Component {
         } else if (phase === 1) {
             content = <ZRMPhaseTwo handler={this.handler}/>;
         } else if (phase === 2) {
-            content = <ZRMPhaseThree/>;
+            content = <ZRMPhaseThree chosenImage={this.state.currentImage}/>;
         } else if (phase === 3) {
-            content = <ZRMPhaseFour/>;
+            content = <ZRMPhaseFour chosenImage={this.state.currentImage}/>;
         } else if (phase === 4) {
-            content = <ZRMPhaseFive/>;
+            content = <ZRMPhaseFive chosenImage={this.state.currentImage}/>;
         }
         return (
             <View>{content}</View>

@@ -16,7 +16,7 @@ export default class ZRMPhaseFour extends React.Component {
     render() {
         return (
             <View style={{height: 500}}>
-                <Image source={require('../../assets/images/angel.jpg')} style={styles.image}/>
+                <Image source={this.props.chosenImage} style={styles.image}/>
 
                 <View>
                     <Text style={styles.text}>your favorite ideas:</Text>
