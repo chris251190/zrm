@@ -9,7 +9,7 @@ export default class ZRMPhaseTwo extends React.Component {
                 <View><Text style={styles.header}>Choose an image</Text></View>
                 <View style={{
                     flex: 1,
-                    flexDirection: 'row',
+                    flexDirection: 'column',
                     width: 300,
                     height: 200,
                     flexWrap: 'wrap',
@@ -18,6 +18,7 @@ export default class ZRMPhaseTwo extends React.Component {
                     <FlatList
                         data={imageData}
                         renderItem={({item}) => this.renderImage(item)}
+                        numColumns={3}
                     />
                 </View>
             </View>
@@ -55,7 +56,7 @@ const styles = StyleSheet.create({
         width: 90,
         height: 60,
         marginBottom: 10,
-        resizeMode: 'contain',
+        marginRight: 10,
     },
     header: {
         fontSize: 20,
