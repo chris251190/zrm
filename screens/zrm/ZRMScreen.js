@@ -17,11 +17,11 @@ export default class ZRMScreen extends React.Component {
         this.handler = this.handler.bind(this);
     }
 
-    handler(e) {
-        e.preventDefault();
+    handler() {
         this.setState({
             currentImage: require('../../assets/images/lion.jpg'),
-        });
+            phase: this.state.phase += 1,
+    });
     }
 
     static navigationOptions = {
@@ -86,7 +86,7 @@ export default class ZRMScreen extends React.Component {
         if (phase === 0) {
             content = <ZRMPhaseOne/>;
         } else if (phase === 1) {
-            content = <ZRMPhaseTwo/>;
+            content = <ZRMPhaseTwo handler={this.handler}/>;
         } else if (phase === 2) {
             content = <ZRMPhaseThree/>;
         } else if (phase === 3) {

@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8addc38-23d6-4a35-bd62-a8326e49badc" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/zrm/ZRMPhaseTwo.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/zrm/ZRMPhaseTwo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/zrm/ZRMScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/zrm/ZRMScreen.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -17,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ZRMPhaseTwo.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ZRMPhaseTwo.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMPhaseTwo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+            <state relative-caret-position="1449">
+              <caret line="63" column="49" selection-start-line="63" selection-start-column="49" selection-end-line="63" selection-end-column="49" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -29,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ZRMScreen.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ZRMScreen.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="22" column="66" selection-start-line="22" selection-start-column="66" selection-end-line="22" selection-end-column="66" />
+            <state relative-caret-position="191">
+              <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -48,6 +50,7 @@
       <find>introduction</find>
       <find>welcomeContainer</find>
       <find>color</find>
+      <find>ZRMPhas</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -68,8 +71,8 @@
         <option value="$PROJECT_DIR$/screens/zrm/ZRMPhaseFour.js" />
         <option value="$PROJECT_DIR$/screens/InfoScreen.js" />
         <option value="$PROJECT_DIR$/screens/zrm/ZRMPhaseOne.js" />
-        <option value="$PROJECT_DIR$/screens/zrm/ZRMScreen.js" />
         <option value="$PROJECT_DIR$/screens/zrm/ZRMPhaseTwo.js" />
+        <option value="$PROJECT_DIR$/screens/zrm/ZRMScreen.js" />
       </list>
     </option>
   </component>
@@ -241,7 +244,7 @@
       <workItem from="1524244363726" duration="1275000" />
       <workItem from="1524245873058" duration="193000" />
       <workItem from="1524246200240" duration="33000" />
-      <workItem from="1524246429095" duration="4278000" />
+      <workItem from="1524246429095" duration="5312000" />
     </task>
     <task id="LOCAL-00001" summary="use view instead of Text">
       <created>1523902409578</created>
@@ -261,7 +264,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64224000" />
+    <option name="totallyTimeSpent" value="65258000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -273,8 +276,8 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32838285" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.44839254" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19833459" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.44839254" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19833459" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Tail" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -666,20 +669,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMScreen.js">
+    <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMPhaseTwo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="22" column="66" selection-start-line="22" selection-start-column="66" selection-end-line="22" selection-end-column="66" />
+        <state relative-caret-position="1449">
+          <caret line="63" column="49" selection-start-line="63" selection-start-column="49" selection-end-line="63" selection-end-column="49" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMPhaseTwo.js">
+    <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        <state relative-caret-position="191">
+          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
