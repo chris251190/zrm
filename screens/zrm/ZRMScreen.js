@@ -10,7 +10,10 @@ import ZRMPhaseOne from './ZRMPhaseOne';
 export default class ZRMScreen extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {phase: 0};
+        this.state = {
+            phase: 0,
+            currentImage: null,
+        };
     }
 
     static navigationOptions = {
@@ -46,12 +49,17 @@ export default class ZRMScreen extends React.Component {
     }
 
     _renderNextArrow() {
-        return this.state.phase < 4 ? <TouchableOpacity onPress={this._handleNext}>
-            <Ionicons
-                name={Platform.OS === 'ios' ? "ios-arrow-forward" : "md-arrow-forward"}
-                size={50}
-                style={{marginRight: 10, width: 50}}/>
-        </TouchableOpacity> : null;
+        return this.shouldRenderNextArrow() ?
+            <TouchableOpacity onPress={this._handleNext}>
+                <Ionicons
+                    name={Platform.OS === 'ios' ? "ios-arrow-forward" : "md-arrow-forward"}
+                    size={50}
+                    style={{marginRight: 10, width: 50}}/>
+            </TouchableOpacity> : null;
+    }
+
+    shouldRenderNextArrow() {
+        return this.state.phase < 4 && this.state.phase !== 1 || (this.state.phase === 1 && this.state.currentImage !== null);
     }
 
     _renderBeforeArrow() {
