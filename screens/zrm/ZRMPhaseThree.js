@@ -53,12 +53,24 @@ export default class ZRMPhaseThree extends React.Component {
             </Text>
             <TouchableHighlight style={{alignSelf: 'flex-end'}}
                                 onPress={() => {
-                                    this.setState({associations: [{key: 'justice'}, {key: 'justice'}]});
+                                    this.handlePress(item);
                                 }}>
                 <Ionicons name={Platform.OS === 'ios' ? "ios-trash" : "md-trash"} size={20}/>
             </TouchableHighlight>
             {this.lineSeparator()}
         </View>;
+    }
+
+    handlePress(item) {
+        let array = this.state.associations;
+        let index = array.indexOf(item);
+        array.splice(index, 1);
+
+        if (array.length === 0) {
+            this.setState({associations: []});
+        } else {
+            this.setState({associations: array});
+        }
     }
 
     lineSeparator() {
