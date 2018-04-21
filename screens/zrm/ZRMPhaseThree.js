@@ -6,13 +6,24 @@ import {
     ScrollView,
     StyleSheet,
     Text,
-    TextInput,
+    TextInput, TouchableHighlight,
     TouchableOpacity,
     View,
 } from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 
 export default class ZRMPhaseThree extends React.Component {
+    state = {
+        associations: [
+            {key: 'angel'},
+            {key: 'sky'},
+            {key: 'heaven'},
+            {key: 'light'},
+            {key: 'high'},
+            {key: 'fly'},
+            {key: 'justice'},
+        ],
+    };
     static navigationOptions = {
         header: null,
     };
@@ -27,20 +38,34 @@ export default class ZRMPhaseThree extends React.Component {
                 <View style={styles.container}>
                     <Text>your ideas:</Text>
                     <FlatList
-                        data={[
-                            {key: '- angel'},
-                            {key: '- sky'},
-                            {key: '- heaven'},
-                            {key: '- light'},
-                            {key: '- high'},
-                            {key: '- fly'},
-                            {key: '- justice'},
-                        ]}
-                        renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
+                        data={this.state.associations}
+                        renderItem={({item}) => this.renderListItem(item)}
                     />
                 </View>
             </View>
         );
+    }
+
+    renderListItem(item) {
+        return <View>
+            <Text style={styles.item}>
+                - {item.key}
+                <TouchableHighlight
+                    onPress={() => {console.log("Hey");}}>
+                    <Text>Close (X)</Text>
+                </TouchableHighlight>
+            </Text>
+            {this.lineSeparator()}
+        </View>;
+    }
+
+    lineSeparator() {
+        return <View
+            style={{
+                borderBottomColor: 'black',
+                borderBottomWidth: 1,
+            }}
+        />;
     }
 };
 
@@ -62,6 +87,10 @@ const styles = StyleSheet.create({
         lineHeight: 24,
         textAlign: 'center',
         marginBottom: 20,
+    },
+    item: {
+      marginBottom: 10,
+      marginTop: 10,
     },
 });
 
