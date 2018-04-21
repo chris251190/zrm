@@ -50,11 +50,13 @@ export default class ZRMPhaseThree extends React.Component {
         return <View>
             <Text style={styles.item}>
                 - {item.key}
-                <TouchableHighlight
-                    onPress={() => {console.log("Hey");}}>
-                    <Text>Close (X)</Text>
-                </TouchableHighlight>
             </Text>
+            <TouchableHighlight style={{alignSelf: 'flex-end'}}
+                                onPress={() => {
+                                    console.log("Hey");
+                                }}>
+                <Ionicons name={Platform.OS === 'ios' ? "ios-trash" : "md-trash"} size={20}/>
+            </TouchableHighlight>
             {this.lineSeparator()}
         </View>;
     }
@@ -89,8 +91,7 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
     item: {
-      marginBottom: 10,
-      marginTop: 10,
+        marginTop: 15,
     },
 });
 
