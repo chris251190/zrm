@@ -23,9 +23,7 @@ export default class ZRMPhaseThree extends React.Component {
             {key: 'fly'},
             {key: 'justice'},
         ],
-    };
-    static navigationOptions = {
-        header: null,
+        inputValue: 'test',
     };
 
     render() {
@@ -33,7 +31,15 @@ export default class ZRMPhaseThree extends React.Component {
             <View>
                 <Text style={styles.homeTitle}>Write down positive resources you see in the image</Text>
                 <Image source={this.props.chosenImage} style={styles.image}/>
-                <TextInput style={{backgroundColor: '#ededed', height: 30, marginBottom: 20}} value={'hope'}/>
+                <Text>Insert your ideas here:</Text>
+                <TextInput
+                    value={this.state.inputValue}
+                    style={{backgroundColor: '#ededed', height: 30, marginBottom: 20}}
+                    onChangeText={(inputValue) => this.setState({inputValue: inputValue})}
+                    onSubmitEditing={() => {
+                        console.log("Cheeseburger");
+                        this.setState({inputValue: ''});
+                    }}/>
 
                 <View style={styles.container}>
                     <Text>your ideas:</Text>
