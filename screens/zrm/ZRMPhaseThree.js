@@ -53,7 +53,7 @@ export default class ZRMPhaseThree extends React.Component {
             </Text>
             <TouchableHighlight style={{alignSelf: 'flex-end'}}
                                 onPress={() => {
-                                    console.log("Hey");
+                                    this.setState({associations: [{key: 'justice'}, {key: 'justice'}]});
                                 }}>
                 <Ionicons name={Platform.OS === 'ios' ? "ios-trash" : "md-trash"} size={20}/>
             </TouchableHighlight>

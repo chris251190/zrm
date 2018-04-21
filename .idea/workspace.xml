@@ -20,8 +20,8 @@
       <file leaf-file-name="ZRMPhaseTwo.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMPhaseTwo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="29" column="18" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="29" selection-end-column="18" />
+            <state relative-caret-position="105">
+              <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="47" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -44,8 +44,8 @@
       <file leaf-file-name="ZRMPhaseThree.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMPhaseThree.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="55">
-              <caret line="93" column="21" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
+            <state relative-caret-position="170">
+              <caret line="55" column="101" selection-start-line="55" selection-start-column="101" selection-end-line="55" selection-end-column="101" />
             </state>
           </provider>
         </entry>
@@ -94,6 +94,7 @@
       <find>welcomeContainer</find>
       <find>color</find>
       <find>ZRMPhas</find>
+      <find>setsta</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -289,7 +290,7 @@
       <workItem from="1524246200240" duration="33000" />
       <workItem from="1524246429095" duration="7585000" />
       <workItem from="1524299967194" duration="28000" />
-      <workItem from="1524300126749" duration="2909000" />
+      <workItem from="1524300126749" duration="3274000" />
     </task>
     <task id="LOCAL-00001" summary="use view instead of Text">
       <created>1523902409578</created>
@@ -309,7 +310,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70468000" />
+    <option name="totallyTimeSpent" value="70833000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -685,16 +686,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMPhaseTwo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="29" column="18" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="29" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/screens/ContactScreen.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
@@ -712,10 +703,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMPhaseTwo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMPhaseThree.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="93" column="21" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
+        <state relative-caret-position="170">
+          <caret line="55" column="101" selection-start-line="55" selection-start-column="101" selection-end-line="55" selection-end-column="101" />
         </state>
       </provider>
     </entry>
