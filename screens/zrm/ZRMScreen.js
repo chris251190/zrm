@@ -6,6 +6,8 @@ import ZRMPhaseThree from './ZRMPhaseThree';
 import ZRMPhaseFour from './ZRMPhaseFour';
 import ZRMPhaseFive from './ZRMPhaseFive';
 import ZRMPhaseOne from './ZRMPhaseOne';
+import {swipeDirections} from 'react-native-swipe-gestures';
+import GestureRecognizer from 'react-native-swipe-gestures';
 
 export default class ZRMScreen extends React.Component {
     constructor(props) {
@@ -40,31 +42,65 @@ export default class ZRMScreen extends React.Component {
         });
     }
 
+    onSwipe(gestureName, gestureState) {
+        const {SWIPE_UP, SWIPE_DOWN, SWIPE_LEFT, SWIPE_RIGHT} = swipeDirections;
+        this.setState({gestureName: gestureName});
+        switch (gestureName) {
+            case SWIPE_LEFT:
+                if (this.shouldRenderNextArrow()) {
+                    this.setState(previousState => {
+                        return {phase: previousState.phase + 1};
+                    });
+                }
+                break;
+            case SWIPE_RIGHT:
+                if (this.shouldRenderBeforeArrow()) {
+                    this.setState(previousState => {
+                        return {phase: previousState.phase - 1};
+                    });
+                }
+                break;
+        }
+    }
+
     render() {
+        const config = {
+            velocityThreshold: 0.3,
+            directionalOffsetThreshold: 80
+        };
         return (
-            <View style={styles.container}>
-                <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-                    <View style={styles.welcomeContainer}>
-                        <Image
-                            source={
-                                __DEV__
-                                    ? require('../../assets/images/red-flag.jpg')
-                                    : require('../../assets/images/red-flag.jpg')
-                            }
-                            style={styles.welcomeImage}
-                        />
-                    </View>
-
-                    <View style={styles.getStartedContainer}>
-                        {this._displayContent()}
-
-                        <View style={{flex: 1, flexDirection: 'row', alignItems: 'flex-start'}}>
-                            {this._renderBeforeArrow()}
-                            {this._renderNextArrow()}
+            <GestureRecognizer
+                onSwipe={(direction, state) => this.onSwipe(direction, state)}
+                config={config}
+                style={{
+                    flex: 1,
+                    backgroundColor: this.state.backgroundColor
+                }}
+            >
+                <View style={styles.container}>
+                    <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+                        <View style={styles.welcomeContainer}>
+                            <Image
+                                source={
+                                    __DEV__
+                                        ? require('../../assets/images/red-flag.jpg')
+                                        : require('../../assets/images/red-flag.jpg')
+                                }
+                                style={styles.welcomeImage}
+                            />
                         </View>
-                    </View>
-                </ScrollView>
-            </View>
+
+                        <View style={styles.getStartedContainer}>
+                            {this._displayContent()}
+
+                            <View style={{flex: 1, flexDirection: 'row', alignItems: 'flex-start'}}>
+                                {this._renderBeforeArrow()}
+                                {this._renderNextArrow()}
+                            </View>
+                        </View>
+                    </ScrollView>
+                </View>
+            </GestureRecognizer>
         );
     }
 
@@ -83,12 +119,16 @@ export default class ZRMScreen extends React.Component {
     }
 
     _renderBeforeArrow() {
-        return this.state.phase > 0 ? <TouchableOpacity onPress={this._handleBefore}>
+        return this.shouldRenderBeforeArrow() ? <TouchableOpacity onPress={this._handleBefore}>
             <Ionicons
                 name={Platform.OS === 'ios' ? "ios-arrow-back" : "md-arrow-back"}
                 size={50}
                 style={{marginRight: 10, width: 50}}/>
         </TouchableOpacity> : null;
+    }
+
+    shouldRenderBeforeArrow() {
+        return this.state.phase > 0;
     }
 
     _displayContent() {
@@ -102,7 +142,8 @@ export default class ZRMScreen extends React.Component {
         } else if (phase === 2) {
             content = <ZRMPhaseThree handler={this.associationsHandler} chosenImage={this.state.currentImage}/>;
         } else if (phase === 3) {
-            content = <ZRMPhaseFour handler={this.mottoHandler} chosenImage={this.state.currentImage} associations={this.state.associations}/>;
+            content = <ZRMPhaseFour handler={this.mottoHandler} chosenImage={this.state.currentImage}
+                                    associations={this.state.associations}/>;
         } else if (phase === 4) {
             content = <ZRMPhaseFive chosenImage={this.state.currentImage} motto={this.state.motto}/>;
         }
