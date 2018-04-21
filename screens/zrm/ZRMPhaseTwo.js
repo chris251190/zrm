@@ -24,7 +24,7 @@ export default class ZRMPhaseTwo extends React.Component {
                     flex: 1,
                     flexDirection: 'column',
                     width: 300,
-                    height: 200,
+                    height: 500,
                     flexWrap: 'wrap',
                     alignItems: 'flex-start'
                 }}>

@@ -91,10 +91,13 @@ export default class ZRMScreen extends React.Component {
                         </View>
 
                         <View style={styles.getStartedContainer}>
-                            {this._displayContent()}
-
-                            <View style={{flex: 1, flexDirection: 'row', alignItems: 'flex-start'}}>
+                            <View style={{width:30}}>
                                 {this._renderBeforeArrow()}
+                            </View>
+
+                            <View style={{width: 300}}>{this._displayContent()}</View>
+
+                            <View style={{width:30}}>
                                 {this._renderNextArrow()}
                             </View>
                         </View>
@@ -109,8 +112,8 @@ export default class ZRMScreen extends React.Component {
             <TouchableOpacity onPress={this._handleNext}>
                 <Ionicons
                     name={Platform.OS === 'ios' ? "ios-arrow-forward" : "md-arrow-forward"}
-                    size={50}
-                    style={{marginRight: 10, width: 50}}/>
+                    size={30}
+                    style={{marginLeft: 30, width: 20}}/>
             </TouchableOpacity> : null;
     }
 
@@ -122,8 +125,8 @@ export default class ZRMScreen extends React.Component {
         return this.shouldRenderBeforeArrow() ? <TouchableOpacity onPress={this._handleBefore}>
             <Ionicons
                 name={Platform.OS === 'ios' ? "ios-arrow-back" : "md-arrow-back"}
-                size={50}
-                style={{marginRight: 10, width: 50}}/>
+                size={30}
+                style={{marginRight: 10, width: 20}}/>
         </TouchableOpacity> : null;
     }
 
@@ -193,8 +196,11 @@ const styles = StyleSheet.create({
         marginLeft: -10,
     },
     getStartedContainer: {
-        alignItems: 'center',
-        marginHorizontal: 50,
+        marginLeft: 20,
+        marginRight: 20,
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'flex-start',
     },
     homeScreenFilename: {
         marginVertical: 7,
