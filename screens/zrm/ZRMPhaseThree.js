@@ -30,7 +30,7 @@ export default class ZRMPhaseThree extends React.Component {
                     onChangeText={(inputValue) => this.setState({inputValue: inputValue})}
                     onSubmitEditing={() => {
                         this.setState({associations: [...this.state.associations, {key: this.state.inputValue}]});
-                        this.props.handler(this.state.associations);
+                        this.props.handler([...this.state.associations, {key: this.state.inputValue}]);
                         this.setState({inputValue: ''});
                     }}/>
 
