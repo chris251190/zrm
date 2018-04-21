@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, Platform, ScrollView, StyleSheet, TouchableOpacity, View,} from 'react-native';
+import {Image, KeyboardAvoidingView, Platform, ScrollView, StyleSheet, TouchableOpacity, View,} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 import ZRMPhaseTwo from './ZRMPhaseTwo';
 import ZRMPhaseThree from './ZRMPhaseThree';
@@ -77,7 +77,7 @@ export default class ZRMScreen extends React.Component {
                     backgroundColor: this.state.backgroundColor
                 }}
             >
-                <View style={styles.container}>
+                <KeyboardAvoidingView style={styles.container} keyboardVerticalOffset={100} behavior="padding">
                     <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
                         <View style={styles.welcomeContainer}>
                             <Image
@@ -102,7 +102,7 @@ export default class ZRMScreen extends React.Component {
                             </View>
                         </View>
                     </ScrollView>
-                </View>
+                </KeyboardAvoidingView>
             </GestureRecognizer>
         );
     }

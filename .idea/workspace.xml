@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f8addc38-23d6-4a35-bd62-a8326e49badc" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/zrm/ZRMPhaseTwo.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/zrm/ZRMPhaseTwo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/zrm/ZRMScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/zrm/ZRMScreen.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -22,8 +21,8 @@
       <file leaf-file-name="ZRMScreen.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="199" column="24" selection-start-line="199" selection-start-column="24" selection-end-line="199" selection-end-column="24" />
+            <state relative-caret-position="115">
+              <caret line="79" column="89" selection-start-line="79" selection-start-column="89" selection-end-line="79" selection-end-column="89" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -31,11 +30,38 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="HomeScreen.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/screens/HomeScreen.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="65" column="6" lean-forward="true" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainTabNavigator.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/navigation/MainTabNavigator.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="33">
+              <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ZRMPhaseTwo.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMPhaseTwo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="76" column="29" lean-forward="true" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
+            <state relative-caret-position="1454">
+              <caret line="79" column="30" lean-forward="true" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZRMPhaseThree.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMPhaseThree.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="552">
+              <caret line="36" column="47" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -52,7 +78,7 @@
       <file leaf-file-name="ZRMPhaseFour.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMPhaseFour.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
+            <state relative-caret-position="881">
               <caret line="78" column="6" selection-start-line="78" selection-start-column="6" selection-end-line="78" selection-end-column="6" />
             </state>
           </provider>
@@ -95,11 +121,11 @@
         <option value="$PROJECT_DIR$/screens/InfoScreen.js" />
         <option value="$PROJECT_DIR$/screens/zrm/ZRMPhaseOne.js" />
         <option value="$PROJECT_DIR$/screens/zrm/ZRMPhaseFive.js" />
-        <option value="$PROJECT_DIR$/screens/zrm/ZRMPhaseThree.js" />
         <option value="$PROJECT_DIR$/screens/DonateScreen.js" />
         <option value="$PROJECT_DIR$/app.json" />
         <option value="$PROJECT_DIR$/screens/zrm/ZRMPhaseFour.js" />
         <option value="$PROJECT_DIR$/screens/zrm/ZRMPhaseTwo.js" />
+        <option value="$PROJECT_DIR$/screens/zrm/ZRMPhaseThree.js" />
         <option value="$PROJECT_DIR$/screens/zrm/ZRMScreen.js" />
       </list>
     </option>
@@ -150,52 +176,7 @@
             <path>
               <item name="zrm" type="b2602c69:ProjectViewProjectNode" />
               <item name="zrm" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zrm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zrm" type="462c0819:PsiDirectoryNode" />
-              <item name="constants" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zrm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zrm" type="462c0819:PsiDirectoryNode" />
               <item name="navigation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zrm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zrm" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zrm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zrm" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="react-native" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zrm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zrm" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="react-native" type="462c0819:PsiDirectoryNode" />
-              <item name="Libraries" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zrm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zrm" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="react-native" type="462c0819:PsiDirectoryNode" />
-              <item name="Libraries" type="462c0819:PsiDirectoryNode" />
-              <item name="Lists" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zrm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zrm" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="react-native" type="462c0819:PsiDirectoryNode" />
-              <item name="Libraries" type="462c0819:PsiDirectoryNode" />
-              <item name="Lists" type="462c0819:PsiDirectoryNode" />
-              <item name="ListView" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zrm" type="b2602c69:ProjectViewProjectNode" />
@@ -276,7 +257,7 @@
       <workItem from="1524299967194" duration="28000" />
       <workItem from="1524300126749" duration="11519000" />
       <workItem from="1524312537967" duration="2129000" />
-      <workItem from="1524315047038" duration="1458000" />
+      <workItem from="1524315047038" duration="4223000" />
     </task>
     <task id="LOCAL-00001" summary="use view instead of Text">
       <created>1523902409578</created>
@@ -296,7 +277,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82665000" />
+    <option name="totallyTimeSpent" value="85430000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -308,7 +289,7 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3282572" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.33502537" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3604061" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21044663" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Tail" order="7" />
@@ -623,20 +604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screens/HomeScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="63" column="4" selection-start-line="63" selection-start-column="4" selection-end-line="70" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/navigation/MainTabNavigator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="62" column="34" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMPhaseOne.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="759">
@@ -648,13 +615,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="9" column="60" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMPhaseThree.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="30" column="44" lean-forward="true" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -672,13 +632,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMPhaseFour.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="78" column="6" selection-start-line="78" selection-start-column="6" selection-end-line="78" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/screens/ContactScreen.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
@@ -688,15 +641,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMPhaseTwo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="76" column="29" lean-forward="true" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
+        <state relative-caret-position="1454">
+          <caret line="79" column="30" lean-forward="true" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMPhaseFour.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="881">
+          <caret line="78" column="6" selection-start-line="78" selection-start-column="6" selection-end-line="78" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMPhaseThree.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="36" column="47" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screens/HomeScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="65" column="6" lean-forward="true" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/navigation/MainTabNavigator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="199" column="24" selection-start-line="199" selection-start-column="24" selection-end-line="199" selection-end-column="24" />
+        <state relative-caret-position="115">
+          <caret line="79" column="89" selection-start-line="79" selection-start-column="89" selection-end-line="79" selection-end-column="89" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
