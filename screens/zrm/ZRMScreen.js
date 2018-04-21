@@ -14,9 +14,11 @@ export default class ZRMScreen extends React.Component {
             phase: 0,
             currentImage: null,
             motto: null,
+            associations: null,
         };
         this.currentImageHandler = this.currentImageHandler.bind(this);
         this.mottoHandler = this.mottoHandler.bind(this);
+        this.associationsHandler = this.associationsHandler.bind(this);
     }
 
     currentImageHandler(chosenImage) {
@@ -32,9 +34,11 @@ export default class ZRMScreen extends React.Component {
         });
     }
 
-    static navigationOptions = {
-        header: null,
-    };
+    associationsHandler(associations) {
+        this.setState({
+            associations: associations,
+        });
+    }
 
     render() {
         return (
@@ -96,9 +100,9 @@ export default class ZRMScreen extends React.Component {
         } else if (phase === 1) {
             content = <ZRMPhaseTwo handler={this.currentImageHandler}/>;
         } else if (phase === 2) {
-            content = <ZRMPhaseThree chosenImage={this.state.currentImage}/>;
+            content = <ZRMPhaseThree handler={this.associationsHandler} chosenImage={this.state.currentImage}/>;
         } else if (phase === 3) {
-            content = <ZRMPhaseFour handler={this.mottoHandler} chosenImage={this.state.currentImage}/>;
+            content = <ZRMPhaseFour handler={this.mottoHandler} chosenImage={this.state.currentImage} associations={this.state.associations}/>;
         } else if (phase === 4) {
             content = <ZRMPhaseFive chosenImage={this.state.currentImage} motto={this.state.motto}/>;
         }

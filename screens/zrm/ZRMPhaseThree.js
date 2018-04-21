@@ -14,16 +14,8 @@ import {Ionicons} from '@expo/vector-icons';
 
 export default class ZRMPhaseThree extends React.Component {
     state = {
-        associations: [
-            {key: 'angel'},
-            {key: 'sky'},
-            {key: 'heaven'},
-            {key: 'light'},
-            {key: 'high'},
-            {key: 'fly'},
-            {key: 'justice'},
-        ],
-        inputValue: 'test',
+        associations: [],
+        inputValue: '',
     };
 
     render() {
@@ -38,6 +30,7 @@ export default class ZRMPhaseThree extends React.Component {
                     onChangeText={(inputValue) => this.setState({inputValue: inputValue})}
                     onSubmitEditing={() => {
                         this.setState({associations: [...this.state.associations, {key: this.state.inputValue}]});
+                        this.props.handler(this.state.associations);
                         this.setState({inputValue: ''});
                     }}/>
 
@@ -74,8 +67,10 @@ export default class ZRMPhaseThree extends React.Component {
 
         if (array.length === 0) {
             this.setState({associations: []});
+            this.props.handler(this.state.associations);
         } else {
             this.setState({associations: array});
+            this.props.handler(this.state.associations);
         }
     }
 
