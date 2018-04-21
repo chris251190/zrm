@@ -37,7 +37,6 @@ export default class ZRMPhaseThree extends React.Component {
                     style={{backgroundColor: '#ededed', height: 30, marginBottom: 20}}
                     onChangeText={(inputValue) => this.setState({inputValue: inputValue})}
                     onSubmitEditing={() => {
-                        console.log("Cheeseburger");
                         this.setState({inputValue: ''});
                     }}/>
 
