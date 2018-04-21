@@ -37,6 +37,7 @@ export default class ZRMPhaseThree extends React.Component {
                     style={{backgroundColor: '#ededed', height: 30, marginBottom: 20}}
                     onChangeText={(inputValue) => this.setState({inputValue: inputValue})}
                     onSubmitEditing={() => {
+                        this.setState({associations: [...this.state.associations, {key: this.state.inputValue}]});
                         this.setState({inputValue: ''});
                     }}/>
 
