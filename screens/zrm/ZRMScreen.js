@@ -17,6 +17,7 @@ export default class ZRMScreen extends React.Component {
             currentImage: null,
             motto: null,
             associations: null,
+            renderWishElements: false,
         };
         this.currentImageHandler = this.currentImageHandler.bind(this);
         this.mottoHandler = this.mottoHandler.bind(this);
@@ -88,7 +89,7 @@ export default class ZRMScreen extends React.Component {
                                 {this._renderBeforeArrow()}
                             </View>
 
-                            <View style={{width: 300}}>{this._displayContent()}</View>
+                            <View style={{width: 300}}>{this._renderContent()}</View>
 
                             <View style={{width: 30}}>
                                 {this._renderNextArrow()}
@@ -138,7 +139,7 @@ export default class ZRMScreen extends React.Component {
         return this.state.phase > 0;
     }
 
-    _displayContent() {
+    _renderContent() {
         let phase = this.state.phase;
         let content;
 
