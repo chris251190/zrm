@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View,} from 'react-native';
+import {StyleSheet, Text, View,} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 
 export default class ZRMPhaseOne extends React.Component {

@@ -1,15 +1,5 @@
 import React from 'react';
-import {
-    FlatList,
-    Image,
-    Platform,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    View,
-} from 'react-native';
+import {FlatList, Image, StyleSheet, Text, TextInput, View,} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 
 export default class ZRMPhaseFour extends React.Component {

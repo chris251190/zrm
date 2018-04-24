@@ -1,13 +1,23 @@
 import React from 'react';
-import {Image, KeyboardAvoidingView, Platform, ScrollView, StyleSheet, TouchableOpacity, View,} from 'react-native';
+import {
+    Image,
+    KeyboardAvoidingView,
+    Platform,
+    ScrollView,
+    StyleSheet,
+    Text, TouchableHighlight,
+    TouchableOpacity,
+    View,
+} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
-import ZRMPhaseTwo from './ZRMPhaseTwo';
-import ZRMPhaseThree from './ZRMPhaseThree';
-import ZRMPhaseFour from './ZRMPhaseFour';
-import ZRMPhaseFive from './ZRMPhaseFive';
-import ZRMPhaseOne from './ZRMPhaseOne';
+import ZRMPhaseTwo from './zrm/ZRMPhaseTwo';
+import ZRMPhaseThree from './zrm/ZRMPhaseThree';
+import ZRMPhaseFour from './zrm/ZRMPhaseFour';
+import ZRMPhaseFive from './zrm/ZRMPhaseFive';
+import ZRMPhaseOne from './zrm/ZRMPhaseOne';
 import {swipeDirections} from 'react-native-swipe-gestures';
 import GestureRecognizer from 'react-native-swipe-gestures';
+import WishPhaseOne from './wishelements/WishPhaseOne';
 
 export default class ZRMScreen extends React.Component {
     constructor(props) {
@@ -43,8 +53,8 @@ export default class ZRMScreen extends React.Component {
         });
     }
 
-    onSwipe(gestureName, gestureState) {
-        const {SWIPE_UP, SWIPE_DOWN, SWIPE_LEFT, SWIPE_RIGHT} = swipeDirections;
+    onSwipe(gestureName) {
+        const {SWIPE_LEFT, SWIPE_RIGHT} = swipeDirections;
         this.setState({gestureName: gestureName});
         switch (gestureName) {
             case SWIPE_LEFT:
@@ -123,7 +133,7 @@ export default class ZRMScreen extends React.Component {
     }
 
     shouldRenderNextArrow() {
-        return this.state.phase < 4 && this.state.phase !== 1 || (this.state.phase === 1 && this.state.currentImage !== null);
+        return this.state.phase !== 0 && this.state.phase < 5 && this.state.phase !== 2 || (this.state.phase === 2 && this.state.currentImage !== null);
     }
 
     _renderBeforeArrow() {
@@ -141,24 +151,54 @@ export default class ZRMScreen extends React.Component {
 
     _renderContent() {
         let phase = this.state.phase;
+        let renderWish = this.state.renderWishElements;
         let content;
 
-        if (phase === 0) {
+        if (phase === 1) {
             content = <ZRMPhaseOne/>;
-        } else if (phase === 1) {
-            content = <ZRMPhaseTwo handler={this.currentImageHandler}/>;
+
+            if (renderWish) {
+                content = <WishPhaseOne/>;
+            }
         } else if (phase === 2) {
-            content = <ZRMPhaseThree handler={this.associationsHandler} chosenImage={this.state.currentImage}/>;
+            content = <ZRMPhaseTwo handler={this.currentImageHandler}/>;
         } else if (phase === 3) {
+            content = <ZRMPhaseThree handler={this.associationsHandler} chosenImage={this.state.currentImage}/>;
+        } else if (phase === 4) {
             content = <ZRMPhaseFour handler={this.mottoHandler} chosenImage={this.state.currentImage}
                                     associations={this.state.associations}/>;
-        } else if (phase === 4) {
+        } else if (phase === 5) {
             content = <ZRMPhaseFive chosenImage={this.state.currentImage} motto={this.state.motto}/>;
         }
         return (
-            <View>{content}</View>
+            <View>
+                {this._renderStart()}
+                {content}
+            </View>
         );
     };
+
+    _renderStart() {
+        let content = null;
+
+        if (this.state.phase === 0) {
+            content = <View>
+                <TouchableHighlight onPress={() => {
+                    this.setState({renderWishElements: false});
+                    this._handleNext();
+                }}>
+                    <Text>ZRM</Text>
+                </TouchableHighlight>
+                <TouchableHighlight onPress={() => {
+                    this.setState({renderWishElements: true});
+                    this._handleNext();
+                }}>
+                    <Text>Wishelements</Text>
+                </TouchableHighlight>
+            </View>;
+        }
+        return content;
+    }
 
     _handleNext = () => {
         this.setState(previousState => {
