@@ -19,6 +19,9 @@ import {swipeDirections} from 'react-native-swipe-gestures';
 import GestureRecognizer from 'react-native-swipe-gestures';
 import WishPhaseOne from './wishelements/WishPhaseOne';
 import WishPhaseTwo from './wishelements/WishPhaseTwo';
+import WishPhaseThree from './wishelements/WishPhaseThree';
+import WishPhaseFour from './wishelements/WishPhaseFour';
+import WishPhaseFive from './wishelements/WishPhaseFive';
 
 export default class ZRMScreen extends React.Component {
     constructor(props) {
@@ -169,11 +172,23 @@ export default class ZRMScreen extends React.Component {
             }
         } else if (phase === 3) {
             content = <ZRMPhaseThree handler={this.associationsHandler} chosenImage={this.state.currentImage}/>;
+
+            if (renderWish) {
+                content = <WishPhaseThree handler={this.associationsHandler} chosenImage={image}/>;
+            }
         } else if (phase === 4) {
             content = <ZRMPhaseFour handler={this.mottoHandler} chosenImage={this.state.currentImage}
                                     associations={this.state.associations}/>;
+
+            if (renderWish) {
+                content = <WishPhaseFour handler={this.mottoHandler} chosenImage={image}
+                                         associations={this.state.associations}/>;
+            }
         } else if (phase === 5) {
             content = <ZRMPhaseFive chosenImage={this.state.currentImage} motto={this.state.motto}/>;
+            if (renderWish) {
+                content = <WishPhaseFive chosenImage={image} motto={this.state.motto}/>;
+            }
         }
         return (
             <View>
@@ -217,6 +232,8 @@ export default class ZRMScreen extends React.Component {
         });
     }
 }
+
+const image = require('../../assets/images/autopista.jpg');
 
 const styles = StyleSheet.create({
     container: {
