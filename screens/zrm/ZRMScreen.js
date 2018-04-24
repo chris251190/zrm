@@ -168,13 +168,13 @@ export default class ZRMScreen extends React.Component {
             content = <ZRMPhaseTwo handler={this.currentImageHandler}/>;
 
             if (renderWish) {
-                content = <WishPhaseTwo/>;
+                content = <WishPhaseTwo handler={this.associationsHandler}/>;
             }
         } else if (phase === 3) {
             content = <ZRMPhaseThree handler={this.associationsHandler} chosenImage={this.state.currentImage}/>;
 
             if (renderWish) {
-                content = <WishPhaseThree handler={this.associationsHandler} chosenImage={image}/>;
+                content = <WishPhaseThree handler={this.associationsHandler} chosenImage={image} associations={this.state.associations}/>;
             }
         } else if (phase === 4) {
             content = <ZRMPhaseFour handler={this.mottoHandler} chosenImage={this.state.currentImage}

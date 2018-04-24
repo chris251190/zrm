@@ -13,8 +13,14 @@ export default class WishPhaseThree extends React.Component {
             <View>
                 <Text style={styles.homeTitle}>Write down positive resources that you associate with your wish
                     elements</Text>
-                <Text>Cat, Sun, Mountains, Dragon, Sunflower, Bear</Text>
-                <Text>Insert your ideas here:</Text>
+                <View style={{flex: 1,
+                    flexDirection: 'row',
+                    width: 300,
+                    flexWrap: 'wrap',
+                    alignItems: 'flex-start'}}>
+                    {this.props.associations.map(a => <Text>{a.key},</Text>)}
+                </View>
+                <Text>{"\n"}{"\n"}Insert your ideas here:</Text>
                 <TextInput
                     value={this.state.inputValue}
                     style={{backgroundColor: '#ededed', height: 30, marginBottom: 20}}
