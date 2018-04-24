@@ -80,24 +80,17 @@ export default class ZRMScreen extends React.Component {
                 <KeyboardAvoidingView style={styles.container} keyboardVerticalOffset={100} behavior="padding">
                     <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
                         <View style={styles.welcomeContainer}>
-                            <Image
-                                source={
-                                    __DEV__
-                                        ? require('../../assets/images/red-flag.jpg')
-                                        : require('../../assets/images/red-flag.jpg')
-                                }
-                                style={styles.welcomeImage}
-                            />
+                            {this.renderHeaderImage()}
                         </View>
 
                         <View style={styles.getStartedContainer}>
-                            <View style={{width:30}}>
+                            <View style={{width: 30}}>
                                 {this._renderBeforeArrow()}
                             </View>
 
                             <View style={{width: 300}}>{this._displayContent()}</View>
 
-                            <View style={{width:30}}>
+                            <View style={{width: 30}}>
                                 {this._renderNextArrow()}
                             </View>
                         </View>
@@ -105,6 +98,17 @@ export default class ZRMScreen extends React.Component {
                 </KeyboardAvoidingView>
             </GestureRecognizer>
         );
+    }
+
+    renderHeaderImage() {
+        return <Image
+            source={
+                __DEV__
+                    ? require('../../assets/images/red-flag.jpg')
+                    : require('../../assets/images/red-flag.jpg')
+            }
+            style={styles.welcomeImage}
+        />;
     }
 
     _renderNextArrow() {
