@@ -18,6 +18,7 @@ import ZRMPhaseOne from './zrm/ZRMPhaseOne';
 import {swipeDirections} from 'react-native-swipe-gestures';
 import GestureRecognizer from 'react-native-swipe-gestures';
 import WishPhaseOne from './wishelements/WishPhaseOne';
+import WishPhaseTwo from './wishelements/WishPhaseTwo';
 
 export default class ZRMScreen extends React.Component {
     constructor(props) {
@@ -133,7 +134,7 @@ export default class ZRMScreen extends React.Component {
     }
 
     shouldRenderNextArrow() {
-        return this.state.phase !== 0 && this.state.phase < 5 && this.state.phase !== 2 || (this.state.phase === 2 && this.state.currentImage !== null);
+        return this.state.phase !== 0 && this.state.phase < 5 && this.state.phase !== 2 || (this.state.phase === 2 && this.state.currentImage !== null || this.state.renderWishElements === true);
     }
 
     _renderBeforeArrow() {
@@ -162,6 +163,10 @@ export default class ZRMScreen extends React.Component {
             }
         } else if (phase === 2) {
             content = <ZRMPhaseTwo handler={this.currentImageHandler}/>;
+
+            if (renderWish) {
+                content = <WishPhaseTwo/>;
+            }
         } else if (phase === 3) {
             content = <ZRMPhaseThree handler={this.associationsHandler} chosenImage={this.state.currentImage}/>;
         } else if (phase === 4) {
