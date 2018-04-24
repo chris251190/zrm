@@ -137,7 +137,7 @@ export default class ZRMScreen extends React.Component {
     }
 
     shouldRenderNextArrow() {
-        return this.state.phase !== 0 && this.state.phase < 5 && this.state.phase !== 2 || (this.state.phase === 2 && this.state.currentImage !== null || this.state.renderWishElements === true);
+        return this.state.phase !== 0 && this.state.phase < 5 && this.state.phase !== 2 || (this.state.phase === 2 && this.state.currentImage !== null || this.state.renderWishElements === true && this.state.phase < 5);
     }
 
     _renderBeforeArrow() {
