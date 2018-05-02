@@ -31,11 +31,13 @@ export default class ZRMScreen extends React.Component {
             currentImage: null,
             motto: null,
             associations: null,
+            wishElements: null,
             renderWishElements: false,
         };
         this.currentImageHandler = this.currentImageHandler.bind(this);
         this.mottoHandler = this.mottoHandler.bind(this);
         this.associationsHandler = this.associationsHandler.bind(this);
+        this.wishElementsHandler = this.wishElementsHandler.bind(this);
     }
 
     currentImageHandler(chosenImage) {
@@ -54,6 +56,12 @@ export default class ZRMScreen extends React.Component {
     associationsHandler(associations) {
         this.setState({
             associations: associations,
+        });
+    }
+
+    wishElementsHandler(wishElements) {
+        this.setState({
+            wishElements: wishElements,
         });
     }
 
@@ -168,13 +176,13 @@ export default class ZRMScreen extends React.Component {
             content = <ZRMPhaseTwo handler={this.currentImageHandler}/>;
 
             if (renderWish) {
-                content = <WishPhaseTwo handler={this.associationsHandler}/>;
+                content = <WishPhaseTwo handler={this.wishElementsHandler}/>;
             }
         } else if (phase === 3) {
             content = <ZRMPhaseThree handler={this.associationsHandler} chosenImage={this.state.currentImage}/>;
 
             if (renderWish) {
-                content = <WishPhaseThree handler={this.associationsHandler} chosenImage={image} associations={this.state.associations}/>;
+                content = <WishPhaseThree handler={this.associationsHandler} chosenImage={image} associations={this.state.wishElements}/>;
             }
         } else if (phase === 4) {
             content = <ZRMPhaseFour handler={this.mottoHandler} chosenImage={this.state.currentImage}

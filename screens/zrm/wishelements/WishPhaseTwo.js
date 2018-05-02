@@ -4,7 +4,7 @@ import {Ionicons} from '@expo/vector-icons';
 
 export default class WishPhaseTwo extends React.Component {
     state = {
-        associations: [],
+        wishElements: [],
         inputValue: '',
     };
 
@@ -39,10 +39,10 @@ export default class WishPhaseTwo extends React.Component {
                 style={{backgroundColor: '#ededed', height: 30, marginBottom: 20}}
                 onChangeText={(inputValue) => this.setState({inputValue: inputValue})}
                 onSubmitEditing={() => {
-                    this.setState({associations: [...this.state.associations, {key: this.state.inputValue}]});
-                    this.props.handler([...this.state.associations, {key: this.state.inputValue}]);
+                    this.setState({wishElements: [...this.state.wishElements, {key: this.state.inputValue}]});
+                    this.props.handler([...this.state.wishElements, {key: this.state.inputValue}]);
                     this.setState({inputValue: ''});
-                    console.log(this.state.associations);
+                    console.log(this.state.wishElements);
                 }}/>
         </View>;
     }

@@ -58,16 +58,16 @@ export default class WishPhaseThree extends React.Component {
     }
 
     handlePress(item) {
-        let array = this.state.associations;
+        let array = this.state.wishElements;
         let index = array.indexOf(item);
         array.splice(index, 1);
 
         if (array.length === 0) {
-            this.setState({associations: []});
-            this.props.handler(this.state.associations);
+            this.setState({wishElements: []});
+            this.props.handler(this.state.wishElements);
         } else {
-            this.setState({associations: array});
-            this.props.handler(this.state.associations);
+            this.setState({wishElements: array});
+            this.props.handler(this.state.wishElements);
         }
     }
 
