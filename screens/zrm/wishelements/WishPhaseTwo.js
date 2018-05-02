@@ -32,7 +32,7 @@ export default class WishPhaseTwo extends React.Component {
     }
 
     renderCategory(item) {
-        return <View style={{height: 100}}>
+        return <View key={item.key.toString()} style={{height: 100}}>
             <Text>{item.category}</Text>
             <TextInput
                 value={this.state.inputValue}

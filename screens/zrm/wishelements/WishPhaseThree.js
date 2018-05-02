@@ -18,7 +18,7 @@ export default class WishPhaseThree extends React.Component {
                     width: 300,
                     flexWrap: 'wrap',
                     alignItems: 'flex-start'}}>
-                    {this.props.associations.map(a => <Text>{a.key},</Text>)}
+                    {this.props.associations.map(a => <Text key={a.key.toString()}>{a.key},</Text>)}
                 </View>
                 <Text>{"\n"}{"\n"}Insert your ideas here:</Text>
                 <TextInput
@@ -43,7 +43,7 @@ export default class WishPhaseThree extends React.Component {
     }
 
     renderListItem(item) {
-        return <View>
+        return <View key={item.key.toString()}>
             <Text style={styles.item}>
                 - {item.key}
             </Text>
