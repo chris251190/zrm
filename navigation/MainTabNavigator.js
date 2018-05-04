@@ -7,7 +7,6 @@ import Colors from '../constants/Colors';
 
 import HomeScreen from '../screens/HomeScreen';
 import ZRMScreen from '../screens/zrm/ZRMScreen';
-import DonateScreen from '../screens/DonateScreen';
 import ContactScreen from '../screens/ContactScreen';
 import InfoScreen from '../screens/InfoScreen';
 
@@ -21,9 +20,6 @@ export default TabNavigator(
         },
         Info: {
             screen: InfoScreen,
-        },
-        Donate: {
-            screen: DonateScreen,
         },
         Contact: {
             screen: ContactScreen,
@@ -52,12 +48,6 @@ export default TabNavigator(
                             Platform.OS === 'ios'
                                 ? `ios-information-circle${focused ? '' : '-outline'}`
                                 : 'md-information-circle';
-                        break;
-                    case 'Donate':
-                        iconName =
-                            Platform.OS === 'ios'
-                                ? `ios-cash${focused ? '' : '-outline'}`
-                                : 'md-cash';
                         break;
                     case 'Contact':
                         iconName =
