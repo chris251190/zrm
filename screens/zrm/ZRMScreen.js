@@ -1,15 +1,5 @@
 import React from 'react';
-import {
-    Image,
-    KeyboardAvoidingView,
-    Platform,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TouchableHighlight,
-    TouchableOpacity,
-    View,
-} from 'react-native';
+import {Image, KeyboardAvoidingView, Platform, ScrollView, StyleSheet, TouchableOpacity, View,} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 import ZRMPhaseTwo from './zrm/ZRMPhaseTwo';
 import ZRMPhaseThree from './zrm/ZRMPhaseThree';

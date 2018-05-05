@@ -1,6 +1,7 @@
 import React from 'react';
-import {FlatList, Image, Modal, StyleSheet, Text, TouchableHighlight, View,} from 'react-native';
+import {FlatList, Modal, StyleSheet, Text, TouchableHighlight, View,} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
+import {Image} from "react-native-expo-image-cache";
 
 export default class ZRMPhaseTwo extends React.Component {
     state = {
@@ -42,28 +43,30 @@ export default class ZRMPhaseTwo extends React.Component {
     }
 
     renderModal() {
+        const preview = {uri: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="};
+        const uri = this.state.currentImage;
         return <Modal
-                      animationType="slide"
-                      transparent={false}
-                      visible={this.state.modalVisible}
-                      onRequestClose={() => {
-                          alert('Modal has been closed.');
-                      }}>
+            animationType="slide"
+            transparent={false}
+            visible={this.state.modalVisible}
+            onRequestClose={() => {
+                alert('Modal has been closed.');
+            }}>
             <View style={{marginTop: 22}}>
                 <View style={{justifyContent: 'center', alignItems: 'center'}}>
                     <Text>Is this your image?</Text>
-                    <Image source={this.state.currentImage} style={styles.modalImage}/>
+                    <Image {...{preview, uri}} style={styles.modalImage}/>
                     <TouchableHighlight
                         onPress={() => {
                             this.setModalVisible(!this.state.modalVisible);
                         }}>
                         <Text>Close (X)</Text>
                     </TouchableHighlight>
-                    <TouchableHighlight style={{marginTop:10}}
-                        onPress={() => {
-                            this.props.handler(this.state.currentImage);
-                            this.setModalVisible(!this.state.modalVisible);
-                        }}>
+                    <TouchableHighlight style={{marginTop: 10}}
+                                        onPress={() => {
+                                            this.props.handler(this.state.currentImage);
+                                            this.setModalVisible(!this.state.modalVisible);
+                                        }}>
                         <Text>Choose (Y)</Text>
                     </TouchableHighlight>
                 </View>
@@ -72,34 +75,31 @@ export default class ZRMPhaseTwo extends React.Component {
     }
 
     renderImage(item) {
+        const preview = {uri: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="};
+        const uri = item.uri;
+
         return <TouchableHighlight onPress={() => {
             this.setModalVisible(true);
-            this.setCurrentImage(item.imageName);
+            this.setCurrentImage(item.uri);
         }}>
-            <Image key={item.key} source={item.imageName} style={styles.image}/>
+            <Image style={{height: 100, width: 100}} {...{preview, uri}} />
         </TouchableHighlight>;
     }
 };
 
 const imageData = [
-    {key: 1, imageName: require('../../../assets/images/angel.jpg')},
-    {key: 2, imageName: require('../../../assets/images/autopista.jpg')},
-    {key: 3, imageName: require('../../../assets/images/cheesecake.jpg')},
-    {key: 4, imageName: require('../../../assets/images/churros.jpg')},
-    {key: 5, imageName: require('../../../assets/images/flowers.jpg')},
-    {key: 6, imageName: require('../../../assets/images/guell.jpg')},
-    {key: 7, imageName: require('../../../assets/images/hafencity_1.jpg')},
-    {key: 8, imageName: require('../../../assets/images/hafencity_2.jpg')},
-    {key: 9, imageName: require('../../../assets/images/heartdoor.jpg')},
-    {key: 10, imageName: require('../../../assets/images/landscape.jpg')},
-    {key: 11, imageName: require('../../../assets/images/lion.jpg')},
-    {key: 12, imageName: require('../../../assets/images/nature.jpg')},
-    {key: 13, imageName: require('../../../assets/images/palmera.jpg')},
-    {key: 14, imageName: require('../../../assets/images/stairs.jpg')},
-    {key: 15, imageName: require('../../../assets/images/street.jpg')},
-    {key: 16, imageName: require('../../../assets/images/sunrise.jpg')},
-    {key: 17, imageName: require('../../../assets/images/town.jpg')},
-    {key: 18, imageName: require('../../../assets/images/windows.jpg')},
+    {key: 1, uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/E2EFF9A9-1B7B-4FDB-82C6-8FC6897F2AC5.jpeg?alt=media&token=a463ac95-131c-4a6f-92f0-92556fa5f51e"},
+    {key: 2, uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/FACC3E30-2D60-4A56-A4CD-FAE531527816.jpeg?alt=media&token=c99762b8-1b91-4f03-a81d-80c2cc5b0310"},
+    {key: 3, uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/E2EFF9A9-1B7B-4FDB-82C6-8FC6897F2AC5.jpeg?alt=media&token=a463ac95-131c-4a6f-92f0-92556fa5f51e"},
+    {key: 4, uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/E2EFF9A9-1B7B-4FDB-82C6-8FC6897F2AC5.jpeg?alt=media&token=a463ac95-131c-4a6f-92f0-92556fa5f51e"},
+    {key: 5, uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/E2EFF9A9-1B7B-4FDB-82C6-8FC6897F2AC5.jpeg?alt=media&token=a463ac95-131c-4a6f-92f0-92556fa5f51e"},
+    {key: 6, uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/E2EFF9A9-1B7B-4FDB-82C6-8FC6897F2AC5.jpeg?alt=media&token=a463ac95-131c-4a6f-92f0-92556fa5f51e"},
+    {key: 7, uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/E2EFF9A9-1B7B-4FDB-82C6-8FC6897F2AC5.jpeg?alt=media&token=a463ac95-131c-4a6f-92f0-92556fa5f51e"},
+    {key: 8, uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/E2EFF9A9-1B7B-4FDB-82C6-8FC6897F2AC5.jpeg?alt=media&token=a463ac95-131c-4a6f-92f0-92556fa5f51e"},
+    {key: 9, uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/E2EFF9A9-1B7B-4FDB-82C6-8FC6897F2AC5.jpeg?alt=media&token=a463ac95-131c-4a6f-92f0-92556fa5f51e"},
+    {key: 10, uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/E2EFF9A9-1B7B-4FDB-82C6-8FC6897F2AC5.jpeg?alt=media&token=a463ac95-131c-4a6f-92f0-92556fa5f51e"},
+    {key: 11, uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/E2EFF9A9-1B7B-4FDB-82C6-8FC6897F2AC5.jpeg?alt=media&token=a463ac95-131c-4a6f-92f0-92556fa5f51e"},
+    {key: 12, uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/E2EFF9A9-1B7B-4FDB-82C6-8FC6897F2AC5.jpeg?alt=media&token=a463ac95-131c-4a6f-92f0-92556fa5f51e"},
 ];
 
 const styles = StyleSheet.create({
@@ -113,7 +113,6 @@ const styles = StyleSheet.create({
     modalImage: {
         width: 400,
         height: 500,
-        resizeMode: 'contain',
     },
     header: {
         fontSize: 20,
