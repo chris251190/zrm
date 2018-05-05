@@ -152,7 +152,7 @@ export default class ZRMScreen extends React.Component {
     }
 
     shouldRenderBeforeArrow() {
-        return this.state.phase > 1;
+        return this.state.phase > 0;
     }
 
     _renderContent() {
