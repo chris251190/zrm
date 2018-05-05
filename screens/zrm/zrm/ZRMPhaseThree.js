@@ -1,6 +1,7 @@
 import React from 'react';
-import {FlatList, Image, Platform, StyleSheet, Text, TextInput, TouchableHighlight, View,} from 'react-native';
+import {FlatList, Platform, StyleSheet, Text, TextInput, TouchableHighlight, View,} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
+import {Image} from "react-native-expo-image-cache";
 
 export default class ZRMPhaseThree extends React.Component {
     state = {
@@ -9,10 +10,12 @@ export default class ZRMPhaseThree extends React.Component {
     };
 
     render() {
+        const preview = {uri: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="};
+        const uri = this.props.chosenImage;
         return (
             <View>
                 <Text style={styles.homeTitle}>Write down positive resources you see in the image</Text>
-                <Image source={this.props.chosenImage} style={styles.image}/>
+                <Image {...{preview, uri}} style={styles.image}/>
                 <Text>Insert your ideas here:</Text>
                 <TextInput
                     value={this.state.inputValue}
@@ -81,7 +84,6 @@ const styles = StyleSheet.create({
     image: {
         width: 300,
         height: 200,
-        resizeMode: 'contain',
         marginTop: 3,
         marginBottom: 20,
         marginLeft: -10,

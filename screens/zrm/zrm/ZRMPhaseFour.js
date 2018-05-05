@@ -1,6 +1,7 @@
 import React from 'react';
-import {FlatList, Image, StyleSheet, Text, TextInput, View,} from 'react-native';
+import {FlatList, StyleSheet, Text, TextInput, View,} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
+import {Image} from "react-native-expo-image-cache";
 
 export default class ZRMPhaseFour extends React.Component {
     state = {
@@ -8,9 +9,11 @@ export default class ZRMPhaseFour extends React.Component {
     };
 
     render() {
+        const preview = {uri: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="};
+        const uri = this.props.chosenImage;
         return (
             <View style={{height: 500}}>
-                <Image source={this.props.chosenImage} style={styles.image}/>
+                <Image {...{preview, uri}} style={styles.image}/>
 
                 <View>
                     <Text style={styles.text}>your favorite ideas:</Text>
@@ -55,7 +58,6 @@ const styles = StyleSheet.create({
     image: {
         width: 300,
         height: 200,
-        resizeMode: 'contain',
         marginTop: 3,
         marginBottom: 20,
         marginLeft: -10,

@@ -1,12 +1,15 @@
 import React from 'react';
-import {Image, StyleSheet, Text, View,} from 'react-native';
+import {StyleSheet, Text, View,} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
+import {Image} from "react-native-expo-image-cache";
 
 export default class ZRMPhaseFive extends React.Component {
     render() {
+        const preview = {uri: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="};
+        const uri = this.props.chosenImage;
         return (
             <View>
-                <Image source={this.props.chosenImage} style={styles.image}/>
+                <Image {...{preview, uri}} style={styles.image}/>
                 <Text style={{fontSize: 20}}>Your new motto:{"\n"}</Text>
                 <Text style={{fontSize: 20}}>'{this.props.motto}'{"\n"}</Text>
                 <Text>Further steps you can do to strengthen your new motto: {"\n"}</Text>
@@ -24,7 +27,6 @@ const styles = StyleSheet.create({
     image: {
         width: 300,
         height: 200,
-        resizeMode: 'contain',
         marginTop: 3,
         marginBottom: 20,
         marginLeft: -10,
