@@ -5,7 +5,8 @@ import {
     Platform,
     ScrollView,
     StyleSheet,
-    Text, TouchableHighlight,
+    Text,
+    TouchableHighlight,
     TouchableOpacity,
     View,
 } from 'react-native';
@@ -15,13 +16,7 @@ import ZRMPhaseThree from './zrm/ZRMPhaseThree';
 import ZRMPhaseFour from './zrm/ZRMPhaseFour';
 import ZRMPhaseFive from './zrm/ZRMPhaseFive';
 import ZRMPhaseOne from './zrm/ZRMPhaseOne';
-import {swipeDirections} from 'react-native-swipe-gestures';
-import GestureRecognizer from 'react-native-swipe-gestures';
-import WishPhaseOne from './wishelements/WishPhaseOne';
-import WishPhaseTwo from './wishelements/WishPhaseTwo';
-import WishPhaseThree from './wishelements/WishPhaseThree';
-import WishPhaseFour from './wishelements/WishPhaseFour';
-import WishPhaseFive from './wishelements/WishPhaseFive';
+import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
 
 export default class ZRMScreen extends React.Component {
     constructor(props) {
@@ -31,13 +26,10 @@ export default class ZRMScreen extends React.Component {
             currentImage: null,
             motto: null,
             associations: null,
-            wishElements: null,
-            renderWishElements: false,
         };
         this.currentImageHandler = this.currentImageHandler.bind(this);
         this.mottoHandler = this.mottoHandler.bind(this);
         this.associationsHandler = this.associationsHandler.bind(this);
-        this.wishElementsHandler = this.wishElementsHandler.bind(this);
     }
 
     currentImageHandler(chosenImage) {
@@ -56,12 +48,6 @@ export default class ZRMScreen extends React.Component {
     associationsHandler(associations) {
         this.setState({
             associations: associations,
-        });
-    }
-
-    wishElementsHandler(wishElements) {
-        this.setState({
-            wishElements: wishElements,
         });
     }
 
@@ -145,7 +131,15 @@ export default class ZRMScreen extends React.Component {
     }
 
     shouldRenderNextArrow() {
-        return this.state.phase !== 0 && this.state.phase < 5 && this.state.phase !== 2 || (this.state.phase === 2 && this.state.currentImage !== null || this.state.renderWishElements === true && this.state.phase < 5);
+        return this.isNotOnLastScreen() || this.imageIsSet();
+    }
+
+    isNotOnLastScreen() {
+        return this.state.phase < 4 && this.state.phase !== 1;
+    }
+
+    imageIsSet() {
+        return (this.state.phase === 1 && this.state.currentImage !== null);
     }
 
     _renderBeforeArrow() {
@@ -158,75 +152,31 @@ export default class ZRMScreen extends React.Component {
     }
 
     shouldRenderBeforeArrow() {
-        return this.state.phase > 0;
+        return this.state.phase > 1;
     }
 
     _renderContent() {
         let phase = this.state.phase;
-        let renderWish = this.state.renderWishElements;
         let content;
 
-        if (phase === 1) {
+        if (phase === 0) {
             content = <ZRMPhaseOne/>;
-
-            if (renderWish) {
-                content = <WishPhaseOne/>;
-            }
-        } else if (phase === 2) {
+        } else if (phase === 1) {
             content = <ZRMPhaseTwo handler={this.currentImageHandler}/>;
-
-            if (renderWish) {
-                content = <WishPhaseTwo handler={this.wishElementsHandler}/>;
-            }
-        } else if (phase === 3) {
+        } else if (phase === 2) {
             content = <ZRMPhaseThree handler={this.associationsHandler} chosenImage={this.state.currentImage}/>;
-
-            if (renderWish) {
-                content = <WishPhaseThree handler={this.associationsHandler} chosenImage={image} associations={this.state.wishElements}/>;
-            }
-        } else if (phase === 4) {
+        } else if (phase === 3) {
             content = <ZRMPhaseFour handler={this.mottoHandler} chosenImage={this.state.currentImage}
                                     associations={this.state.associations}/>;
-
-            if (renderWish) {
-                content = <WishPhaseFour handler={this.mottoHandler} chosenImage={image}
-                                         associations={this.state.associations}/>;
-            }
-        } else if (phase === 5) {
+        } else if (phase === 4) {
             content = <ZRMPhaseFive chosenImage={this.state.currentImage} motto={this.state.motto}/>;
-            if (renderWish) {
-                content = <WishPhaseFive chosenImage={image} motto={this.state.motto}/>;
-            }
         }
         return (
             <View>
-                {this._renderStart()}
                 {content}
             </View>
         );
     };
-
-    _renderStart() {
-        let content = null;
-
-        if (this.state.phase === 0) {
-            content = <View>
-                <TouchableHighlight onPress={() => {
-                    this.setState({renderWishElements: false});
-                    this._handleNext();
-                }}>
-                    <Text>ZRM</Text>
-                </TouchableHighlight>
-                <TouchableHighlight onPress={() => {
-                    this.setState({renderWishElements: true});
-                    this._handleNext();
-                }}>
-                    <Text>Wishelements</Text>
-                </TouchableHighlight>
-            </View>;
-        }
-        return content;
-    }
 
     _handleNext = () => {
         this.setState(previousState => {
@@ -240,8 +190,6 @@ export default class ZRMScreen extends React.Component {
         });
     }
 }
-
-const image = require('../../assets/images/autopista.jpg');
 
 const styles = StyleSheet.create({
     container: {

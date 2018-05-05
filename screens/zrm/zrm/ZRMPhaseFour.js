@@ -15,7 +15,7 @@ export default class ZRMPhaseFour extends React.Component {
                 <View>
                     <Text style={styles.text}>your favorite ideas:</Text>
                     <FlatList
-                        data={this.props.wishElements}
+                        data={this.props.associations}
                         renderItem={({item}) => <Text style={styles.text}>{item.key}</Text>}
                     />
 

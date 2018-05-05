@@ -4,7 +4,7 @@ import {Ionicons} from '@expo/vector-icons';
 
 export default class ZRMPhaseThree extends React.Component {
     state = {
-        wishElements: [],
+        associations: [],
         inputValue: '',
     };
 
@@ -19,15 +19,15 @@ export default class ZRMPhaseThree extends React.Component {
                     style={{backgroundColor: '#ededed', height: 30, marginBottom: 20}}
                     onChangeText={(inputValue) => this.setState({inputValue: inputValue})}
                     onSubmitEditing={() => {
-                        this.setState({wishElements: [...this.state.wishElements, {key: this.state.inputValue}]});
-                        this.props.handler([...this.state.wishElements, {key: this.state.inputValue}]);
+                        this.setState({associations: [...this.state.associations, {key: this.state.inputValue}]});
+                        this.props.handler([...this.state.associations, {key: this.state.inputValue}]);
                         this.setState({inputValue: ''});
                     }}/>
 
                 <View style={styles.container}>
                     <Text>your ideas:</Text>
                     <FlatList
-                        data={this.state.wishElements}
+                        data={this.state.associations}
                         renderItem={({item}) => this.renderListItem(item)}
                     />
                 </View>
@@ -51,16 +51,16 @@ export default class ZRMPhaseThree extends React.Component {
     }
 
     handlePress(item) {
-        let array = this.state.wishElements;
+        let array = this.state.associations;
         let index = array.indexOf(item);
         array.splice(index, 1);
 
         if (array.length === 0) {
-            this.setState({wishElements: []});
-            this.props.handler(this.state.wishElements);
+            this.setState({associations: []});
+            this.props.handler(this.state.associations);
         } else {
-            this.setState({wishElements: array});
-            this.props.handler(this.state.wishElements);
+            this.setState({associations: array});
+            this.props.handler(this.state.associations);
         }
     }
 
