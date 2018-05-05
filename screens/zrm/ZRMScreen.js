@@ -68,16 +68,17 @@ export default class ZRMScreen extends React.Component {
             directionalOffsetThreshold: 80
         };
         return (
-            <GestureRecognizer
-                onSwipe={(direction, state) => this.onSwipe(direction, state)}
-                config={config}
-                style={{
-                    flex: 1,
-                    backgroundColor: this.state.backgroundColor
-                }}
-            >
+
                 <KeyboardAvoidingView style={styles.container} keyboardVerticalOffset={100} behavior="padding">
                     <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+                        <GestureRecognizer
+                            onSwipe={(direction, state) => this.onSwipe(direction, state)}
+                            config={config}
+                            style={{
+                                flex: 1,
+                                backgroundColor: this.state.backgroundColor
+                            }}
+                        >
                         <View style={styles.welcomeContainer}>
                             {this.renderHeaderImage()}
                         </View>
@@ -93,9 +94,9 @@ export default class ZRMScreen extends React.Component {
                                 {this._renderNextArrow()}
                             </View>
                         </View>
+                        </GestureRecognizer>
                     </ScrollView>
                 </KeyboardAvoidingView>
-            </GestureRecognizer>
         );
     }
 
