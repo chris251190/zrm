@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8addc38-23d6-4a35-bd62-a8326e49badc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseFour.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseFour.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseTwo.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseTwo.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -42,10 +42,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ZRMPhaseFour.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ZRMPhaseFour.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseFour.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
+            <state relative-caret-position="345">
               <caret line="37" column="46" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -66,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ZRMPhaseTwo.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ZRMPhaseTwo.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseTwo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="82" column="43" lean-forward="true" selection-start-line="82" selection-start-column="43" selection-end-line="82" selection-end-column="43" />
+            <state relative-caret-position="22">
+              <caret line="56" column="79" selection-start-line="56" selection-start-column="79" selection-end-line="56" selection-end-column="79" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -171,12 +171,12 @@
         <option value="$PROJECT_DIR$/screens/components/BlurredImage.js" />
         <option value="$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseThree.js" />
         <option value="$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseFive.js" />
-        <option value="$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseTwo.js" />
         <option value="$PROJECT_DIR$/screens/ContactScreen.js" />
         <option value="$PROJECT_DIR$/screens/zrm/ZRMScreen.js" />
         <option value="$PROJECT_DIR$/screens/InfoScreen.js" />
         <option value="$PROJECT_DIR$/screens/HomeScreen.js" />
         <option value="$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseFour.js" />
+        <option value="$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseTwo.js" />
       </list>
     </option>
   </component>
@@ -329,7 +329,7 @@
       <workItem from="1525514261536" duration="4550000" />
       <workItem from="1525718646845" duration="3280000" />
       <workItem from="1525938517732" duration="1376000" />
-      <workItem from="1525939960721" duration="2427000" />
+      <workItem from="1525939960721" duration="3108000" />
     </task>
     <task id="LOCAL-00001" summary="use view instead of Text">
       <created>1523902409578</created>
@@ -349,21 +349,21 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116150000" />
+    <option name="totallyTimeSpent" value="116831000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="817" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Key Promoter X" order="3" weight="0.329296" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32020056" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32020056" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.33660588" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3513889" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3513889" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" id="Notes" order="4" weight="0.32879657" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -668,16 +668,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseTwo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="82" column="43" lean-forward="true" selection-start-line="82" selection-start-column="43" selection-end-line="82" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseThree.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -731,8 +721,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseFour.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="345">
           <caret line="37" column="46" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseTwo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="56" column="79" selection-start-line="56" selection-start-column="79" selection-end-line="56" selection-end-column="79" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

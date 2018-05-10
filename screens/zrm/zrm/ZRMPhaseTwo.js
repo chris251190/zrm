@@ -54,20 +54,20 @@ export default class ZRMPhaseTwo extends React.Component {
             }}>
             <View style={{marginTop: 22}}>
                 <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                    <Text>Is this your image?</Text>
+                    <Text style={{fontSize: 30, marginTop: 20, marginBottom: 20}}>Is this your image?</Text>
                     <Image {...{preview, uri}} style={styles.modalImage}/>
-                    <TouchableHighlight
-                        onPress={() => {
-                            this.setModalVisible(!this.state.modalVisible);
-                        }}>
-                        <Text>Close (X)</Text>
-                    </TouchableHighlight>
                     <TouchableHighlight style={{marginTop: 10}}
                                         onPress={() => {
                                             this.props.handler(this.state.currentImage);
                                             this.setModalVisible(!this.state.modalVisible);
                                         }}>
-                        <Text>Choose (Y)</Text>
+                        <Ionicons name="md-checkmark-circle" size={32} color="green"/>
+                    </TouchableHighlight>
+                    <TouchableHighlight
+                        onPress={() => {
+                            this.setModalVisible(!this.state.modalVisible);
+                        }}>
+                        <Ionicons name="md-close-circle" size={32} color="red"/>
                     </TouchableHighlight>
                 </View>
             </View>
