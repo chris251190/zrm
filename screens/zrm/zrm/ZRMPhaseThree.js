@@ -27,13 +27,11 @@ export default class ZRMPhaseThree extends React.Component {
                         this.setState({inputValue: ''});
                     }}/>
 
-                <View style={styles.container}>
                     <Text>your ideas:</Text>
                     <FlatList
                         data={this.state.associations}
                         renderItem={({item}) => this.renderListItem(item)}
                     />
-                </View>
             </View>
         );
     }
