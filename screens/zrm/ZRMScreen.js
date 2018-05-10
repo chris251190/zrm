@@ -1,5 +1,5 @@
 import React from 'react';
-import {KeyboardAvoidingView, Platform, ScrollView, StyleSheet, TouchableOpacity, View,} from 'react-native';
+import {KeyboardAvoidingView, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View,} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 import ZRMPhaseTwo from './zrm/ZRMPhaseTwo';
 import ZRMPhaseThree from './zrm/ZRMPhaseThree';
@@ -90,6 +90,7 @@ export default class ZRMScreen extends React.Component {
                             backgroundColor: this.state.backgroundColor
                         }}
                     >
+                        <View style={{height: 30, alignItems: 'center', justifyContent:'center'}}><Text>{this.state.phase+1}/5</Text></View>
                         <View style={styles.getStartedContainer}>
                             <View style={{width: 30}}>
                                 {this._renderBeforeArrow()}
@@ -191,7 +192,6 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     contentContainer: {
-        paddingTop: 30,
     },
     welcomeContainer: {
         alignItems: 'center',
