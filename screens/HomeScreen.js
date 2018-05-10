@@ -1,5 +1,5 @@
 import React from 'react';
-import {Platform, ScrollView, StyleSheet, Text, View,} from 'react-native';
+import {ScrollView, StyleSheet, Text, View,} from 'react-native';
 import {MonoText} from '../components/StyledText';
 import {Image} from "react-native-expo-image-cache";
 
