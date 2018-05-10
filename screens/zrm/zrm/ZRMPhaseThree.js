@@ -91,10 +91,6 @@ export default class ZRMPhaseThree extends React.Component {
             }}>
             <View style={{marginTop: 22}}>
                 <View>
-                    <FlatList
-                        data={ideas}
-                        renderItem={({item}) => this.renderModalItem(item.key)}
-                    />
 
                     <TouchableHighlight
                         onPress={() => {
@@ -102,6 +98,10 @@ export default class ZRMPhaseThree extends React.Component {
                         }}>
                         <Ionicons name={Platform.OS === 'ios' ? "ios-close" : "md-close"} size={30}/>
                     </TouchableHighlight>
+                    <FlatList
+                        data={ideas}
+                        renderItem={({item}) => this.renderModalItem(item.key)}
+                    />
                 </View>
             </View>
         </Modal>;
@@ -110,13 +110,18 @@ export default class ZRMPhaseThree extends React.Component {
     renderModalItem(item) {
         return <View style={styles.oneRow}>
             <Text>{item}</Text>
-            <TouchableHighlight onPress={() => {
+            <TouchableHighlight style={{
+                alignItems: 'center',
+                backgroundColor: '#DDDDDD',
+                padding: 5,
+                marginLeft: 20,
+                height: 30,
+            }} onPress={() => {
                 this.setState({associations: [...this.state.associations, {key: item}]});
                 this.props.handler([...this.state.associations, {key: item}]);
             }}>
-                <Ionicons style={{marginLeft: 30}}
-                          name={Platform.OS === 'ios' ? "ios-add" : "md-add"}
-                          size={30} color="black"/>
+                <Ionicons name={Platform.OS === 'ios' ? "ios-add" : "md-add"}
+                          size={20} color="black"/>
             </TouchableHighlight>
         </View>;
     }
@@ -185,7 +190,7 @@ const styles = StyleSheet.create({
     item: {
         flex: 0.8
     },
-    oneRow: {flex: 1, flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}
+    oneRow: {flex: 1, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginBottom: 20}
 });
 
 
