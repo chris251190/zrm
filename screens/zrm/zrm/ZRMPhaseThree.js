@@ -17,23 +17,37 @@ export default class ZRMPhaseThree extends React.Component {
                 <Text style={styles.homeTitle}>Write down positive resources you see in the image</Text>
                 <Image {...{preview, uri}} style={styles.image}/>
                 <Text>Insert your ideas here:</Text>
-                <TextInput
-                    value={this.state.inputValue}
-                    style={{backgroundColor: '#ededed', height: 30, marginBottom: 20}}
-                    onChangeText={(inputValue) => this.setState({inputValue: inputValue})}
-                    onSubmitEditing={() => {
-                        this.setState({associations: [...this.state.associations, {key: this.state.inputValue}]});
-                        this.props.handler([...this.state.associations, {key: this.state.inputValue}]);
-                        this.setState({inputValue: ''});
-                    }}/>
-
-                    <Text>your ideas:</Text>
-                    <FlatList
-                        data={this.state.associations}
-                        renderItem={({item}) => this.renderListItem(item)}
-                    />
+                <View style={{flexDirection: 'row'}}>
+                    <TextInput
+                        value={this.state.inputValue}
+                        style={{backgroundColor: '#ededed', height: 30, marginBottom: 20, marginRight: 20, flex: 0.9}}
+                        onChangeText={(inputValue) => this.setState({inputValue: inputValue})}
+                        onSubmitEditing={() => {
+                            this.setState({associations: [...this.state.associations, {key: this.state.inputValue}]});
+                            this.props.handler([...this.state.associations, {key: this.state.inputValue}]);
+                            this.setState({inputValue: ''});
+                        }}/>
+                    {this.isInputEmpty() && this.renderClearButton()}
+                </View>
+                <Text>your ideas:</Text>
+                <FlatList
+                    data={this.state.associations}
+                    renderItem={({item}) => this.renderListItem(item)}
+                />
             </View>
         );
+    }
+
+    isInputEmpty() {
+        return (this.state.inputValue !== null && this.state.inputValue !== '');
+    }
+
+    renderClearButton() {
+        return <TouchableHighlight onPress={() => {
+            this.setState({inputValue: ''});
+        }}>
+            <Ionicons name="md-close-circle" size={30} color="red"/>
+        </TouchableHighlight>;
     }
 
     renderListItem(item) {
