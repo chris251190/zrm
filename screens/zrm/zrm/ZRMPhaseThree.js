@@ -103,10 +103,10 @@ export default class ZRMPhaseThree extends React.Component {
 
     renderModalItem(item) {
         return <View style={styles.oneRow}>
-            <Text>{item.idea}</Text>
+            <Text>{item}</Text>
             <TouchableWithoutFeedback onPress={() => {
-                this.setState({associations: [...this.state.associations, {key: item.idea}]});
-                this.props.handler([...this.state.associations, {key: item.idea}]);
+                this.setState({associations: [...this.state.associations, {key: item}]});
+                this.props.handler([...this.state.associations, {key: item}]);
             }}>
                 <Ionicons style={{marginLeft: 30}} name="md-checkmark-circle" size={30} color="green"/>
             </TouchableWithoutFeedback>
