@@ -103,8 +103,8 @@ export default class ZRMPhaseThree extends React.Component {
 
     renderModalItem(item) {
         return <TouchableHighlight onPress={() => {
-            this.setState({associations: [...this.state.associations, {key: "Hey"}]});
-            this.props.handler([...this.state.associations, {key: "Hey"}]);
+            this.setState({associations: [...this.state.associations, {key: item.idea}]});
+            this.props.handler([...this.state.associations, {key: item.idea}]);
         }}>
             <Text>{item.idea}</Text>
         </TouchableHighlight>;
