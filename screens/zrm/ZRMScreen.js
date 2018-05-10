@@ -17,8 +17,7 @@ export default class ZRMScreen extends React.Component {
                 style={{
                     height: 50,
                     width: 80,
-                    marginTop: 30,
-                    marginBottom: 10
+                    marginTop: 20,
                 }}/>
         </View>,
     };

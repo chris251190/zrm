@@ -8,8 +8,8 @@ export default class InfoScreen extends React.Component {
             <Image uri="https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/icon.png?alt=media&token=47e4c825-522e-4efa-baec-4b85c4827ed5" style={{
                 height: 50,
                 width: 80,
-                marginTop: 30,
-                marginBottom: 10}}/>
+                marginTop: 20
+            }}/>
         </View>,
     };
 
