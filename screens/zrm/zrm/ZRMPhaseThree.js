@@ -20,7 +20,7 @@ export default class ZRMPhaseThree extends React.Component {
                 <View style={{flexDirection: 'row'}}>
                     <TextInput
                         value={this.state.inputValue}
-                        style={{backgroundColor: '#ededed', height: 30, marginBottom: 20, marginRight: 20, flex: 0.9}}
+                        style={{backgroundColor: '#ededed', height: 30, marginBottom: 20, marginRight: 20, flex: 1}}
                         onChangeText={(inputValue) => this.setState({inputValue: inputValue})}
                         onSubmitEditing={() => {
                             this.setState({associations: [...this.state.associations, {key: this.state.inputValue}]});
@@ -43,10 +43,8 @@ export default class ZRMPhaseThree extends React.Component {
     }
 
     renderClearButton() {
-        return <TouchableHighlight onPress={() => {
-            this.setState({inputValue: ''});
-        }}>
-            <Ionicons name="md-close-circle" size={30} color="red"/>
+        return <TouchableHighlight onPress={() => {this.setState({inputValue: ''});}}>
+            <Ionicons name={Platform.OS === 'ios' ? "ios-close" : "md-close"} size={30}/>
         </TouchableHighlight>;
     }
 
@@ -59,7 +57,7 @@ export default class ZRMPhaseThree extends React.Component {
                                 onPress={() => {
                                     this.handlePress(item);
                                 }}>
-                <Ionicons name={Platform.OS === 'ios' ? "ios-trash" : "md-trash"} size={20}/>
+                <Ionicons name={Platform.OS === 'ios' ? "ios-trash" : "md-trash"} size={25}/>
             </TouchableHighlight>
             {this.lineSeparator()}
         </View>;
@@ -80,12 +78,7 @@ export default class ZRMPhaseThree extends React.Component {
     }
 
     lineSeparator() {
-        return <View
-            style={{
-                borderBottomColor: 'black',
-                borderBottomWidth: 1,
-            }}
-        />;
+        return <View style={{borderBottomColor: 'black', borderBottomWidth: 1,}}/>;
     }
 };
 
