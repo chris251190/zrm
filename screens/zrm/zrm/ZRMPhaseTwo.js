@@ -88,147 +88,208 @@ export default class ZRMPhaseTwo extends React.Component {
 const imageData = [
     {
         key: 1,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/E2EFF9A9-1B7B-4FDB-82C6-8FC6897F2AC5.jpeg?alt=media&token=a463ac95-131c-4a6f-92f0-92556fa5f51e"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/E2EFF9A9-1B7B-4FDB-82C6-8FC6897F2AC5.jpeg?alt=media&token=a463ac95-131c-4a6f-92f0-92556fa5f51e",
+        ideas: ["frosch", "katze", "hund"]
     },
     {
         key: 2,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/FACC3E30-2D60-4A56-A4CD-FAE531527816.jpeg?alt=media&token=c99762b8-1b91-4f03-a81d-80c2cc5b0310"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/FACC3E30-2D60-4A56-A4CD-FAE531527816.jpeg?alt=media&token=c99762b8-1b91-4f03-a81d-80c2cc5b0310",
+        ideas: ["frosch", "katze", "hund"]
     },
     {
         key: 3,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/0CC93F61-4644-4D6F-8C9C-63B3F9D92184.jpeg?alt=media&token=a42c6095-0cb8-40ab-9e0a-fc30ce48db47"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/0CC93F61-4644-4D6F-8C9C-63B3F9D92184.jpeg?alt=media&token=a42c6095-0cb8-40ab-9e0a-fc30ce48db47",
+        ideas: ["frosch", "katze", "hund"]
     },
     {
         key: 4,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/2AD4AF30-473C-47F3-B6E6-B009EE29684C.jpeg?alt=media&token=9c774c08-e7d0-4809-942f-357866a26030"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/2AD4AF30-473C-47F3-B6E6-B009EE29684C.jpeg?alt=media&token=9c774c08-e7d0-4809-942f-357866a26030",
+        ideas: ["frosch", "katze", "hund"]
     },
     {
         key: 5,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/2B7C61D8-662B-4738-882F-0A7A47CA15FF.jpeg?alt=media&token=cee26099-4d90-42f7-b561-dc874b6c3633"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/2B7C61D8-662B-4738-882F-0A7A47CA15FF.jpeg?alt=media&token=cee26099-4d90-42f7-b561-dc874b6c3633",
+        ideas: ["frosch", "katze", "hund"]
     },
     {
         key: 6,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/2F8046B0-E977-45E7-B8EC-CEB314EB9783.jpeg?alt=media&token=841bfdbc-bcd1-4bb0-85d8-67ec5d7f0436"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/2F8046B0-E977-45E7-B8EC-CEB314EB9783.jpeg?alt=media&token=841bfdbc-bcd1-4bb0-85d8-67ec5d7f0436",
+        ideas: ["frosch", "katze", "hund"]
     },
     {
         key: 7,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/4D39C979-A571-4AF5-BE05-DA2714D67D15.jpeg?alt=media&token=1c48a878-9f06-4ca8-96b6-e1f3a25fe65c"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/4D39C979-A571-4AF5-BE05-DA2714D67D15.jpeg?alt=media&token=1c48a878-9f06-4ca8-96b6-e1f3a25fe65c",
+        ideas: ["frosch", "katze", "hund"]
     },
     {
         key: 8,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/7613EC0A-648F-4427-910C-974E6EF83504.jpeg?alt=media&token=3f100bd7-7724-419e-b19e-e9a8e71d521f"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/7613EC0A-648F-4427-910C-974E6EF83504.jpeg?alt=media&token=3f100bd7-7724-419e-b19e-e9a8e71d521f",
+        ideas: ["frosch", "katze", "hund"]
     },
     {
         key: 9,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/9C9FFA68-3105-41F0-B487-3FA10E601BDF.jpeg?alt=media&token=cba42fce-7a7b-4d09-9a9b-85613182766f"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/9C9FFA68-3105-41F0-B487-3FA10E601BDF.jpeg?alt=media&token=cba42fce-7a7b-4d09-9a9b-85613182766f",
+        ideas: ["frosch", "katze", "hund"]
     },
     {
         key: 10,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/AAA7C58C-E40C-4F4E-9A3C-8C5F52A327A7.jpeg?alt=media&token=bcb3c42b-e72f-4268-a965-861450fab1fe"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/AAA7C58C-E40C-4F4E-9A3C-8C5F52A327A7.jpeg?alt=media&token=bcb3c42b-e72f-4268-a965-861450fab1fe",
+        ideas: ["frosch", "katze", "hund"]
+
     },
     {
         key: 11,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/D123FF40-784E-4257-BA7D-B6285F5DCBFC.jpeg?alt=media&token=d1b3621b-11d0-47b3-afd1-0bd9aed3d8eb"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/D123FF40-784E-4257-BA7D-B6285F5DCBFC.jpeg?alt=media&token=d1b3621b-11d0-47b3-afd1-0bd9aed3d8eb",
+        ideas: ["frosch", "katze", "hund"]
+
     },
     {
         key: 12,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/F4DEDED2-5177-4398-A6A3-D4FA3356F6A8.jpeg?alt=media&token=d00e623c-d89c-47d4-b097-65d346cb6cb2"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/F4DEDED2-5177-4398-A6A3-D4FA3356F6A8.jpeg?alt=media&token=d00e623c-d89c-47d4-b097-65d346cb6cb2",
+        ideas: ["frosch", "katze", "hund"]
+
     },
     {
         key: 13,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/totoro.jpg?alt=media&token=0e01593f-14f1-4348-a472-2234bf0146b1"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/totoro.jpg?alt=media&token=0e01593f-14f1-4348-a472-2234bf0146b1",
+        ideas: ["frosch", "katze", "hund"]
     },
     {
         key: 15,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/splash.jpg?alt=media&token=219ef5b9-788e-43a1-8246-02a65b3f0363"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/splash.jpg?alt=media&token=219ef5b9-788e-43a1-8246-02a65b3f0363",
+        ideas: ["frosch", "katze", "hund"]
+
     },
     {
         key: 16,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/rose.jpg?alt=media&token=a602de14-98a3-4c0e-b36d-d538f10a417e"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/rose.jpg?alt=media&token=a602de14-98a3-4c0e-b36d-d538f10a417e",
+        ideas: ["frosch", "katze", "hund"]
+
     },
     {
         key: 17,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/regenbogen.jpg?alt=media&token=0986dfa6-4199-4b06-a46b-6a5e079dc535"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/regenbogen.jpg?alt=media&token=0986dfa6-4199-4b06-a46b-6a5e079dc535",
+        ideas: ["frosch", "katze", "hund"]
+
     },
     {
         key: 18,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/nachts.jpg?alt=media&token=3b9c4dc9-df86-4a8d-ba12-03035f0b0404"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/nachts.jpg?alt=media&token=3b9c4dc9-df86-4a8d-ba12-03035f0b0404",
+        ideas: ["frosch", "katze", "hund"]
+
     },
     {
         key: 19,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/light.jpg?alt=media&token=cd2b8aea-e745-411a-b3be-17c4a6aba89d"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/light.jpg?alt=media&token=cd2b8aea-e745-411a-b3be-17c4a6aba89d",
+        ideas: ["frosch", "katze", "hund"]
+
     },
     {
         key: 20,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/hund.jpg?alt=media&token=227b960f-2f43-445f-ada0-1b046344a199"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/hund.jpg?alt=media&token=227b960f-2f43-445f-ada0-1b046344a199",
+        ideas: ["frosch", "katze", "hund"]
+
     },
     {
         key: 21,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/himmel.jpg?alt=media&token=08ab8c9e-68bd-4fbe-bbdc-78fefd8b2377"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/himmel.jpg?alt=media&token=08ab8c9e-68bd-4fbe-bbdc-78fefd8b2377",
+        ideas: ["frosch", "katze", "hund"]
+
     },
     {
         key: 22,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/gundam.jpg?alt=media&token=3935a2d6-c1e4-465b-ac72-6a632b5e30f3"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/gundam.jpg?alt=media&token=3935a2d6-c1e4-465b-ac72-6a632b5e30f3",
+        ideas: ["frosch", "katze", "hund"]
+
     },
     {
         key: 23,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/gru%CC%88n.jpg?alt=media&token=1db9e44a-9b84-47ba-8145-657c353e5b8b"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/gru%CC%88n.jpg?alt=media&token=1db9e44a-9b84-47ba-8145-657c353e5b8b",
+        ideas: ["frosch", "katze", "hund"]
+
     },
     {
         key: 24,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/freunde.jpg?alt=media&token=468cd48a-89cf-4238-9e1d-212e24f5916b"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/freunde.jpg?alt=media&token=468cd48a-89cf-4238-9e1d-212e24f5916b",
+        ideas: ["frosch", "katze", "hund"]
+
     },
     {
         key: 25,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/dragonball.jpg?alt=media&token=56751507-e25a-420e-8398-7df30488b786"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/dragonball.jpg?alt=media&token=56751507-e25a-420e-8398-7df30488b786",
+        ideas: ["frosch", "katze", "hund"]
+
     },
     {
         key: 26,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/baum.jpg?alt=media&token=e13c3fa3-40f0-4f02-bc93-9adaa14f6dc1"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/baum.jpg?alt=media&token=e13c3fa3-40f0-4f02-bc93-9adaa14f6dc1",
+        ideas: ["frosch", "katze", "hund"]
+
     },
     {
         key: 27,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/19436461_1717795318514622_4266132070985629696_n.jpg?alt=media&token=fe9e112d-b0c0-4545-885b-feff49bcc1e8"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/19436461_1717795318514622_4266132070985629696_n.jpg?alt=media&token=fe9e112d-b0c0-4545-885b-feff49bcc1e8",
+        ideas: ["frosch", "katze", "hund"]
+
     },
     {
         key: 28,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/17268105_186646421836433_2542958373985320960_n.jpg?alt=media&token=b2642c37-fab0-45de-b969-1434c7c169c4"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/17268105_186646421836433_2542958373985320960_n.jpg?alt=media&token=b2642c37-fab0-45de-b969-1434c7c169c4",
+        ideas: ["frosch", "katze", "hund"]
+
     },
     {
         key: 29,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/welpe.jpg?alt=media&token=47aa78fb-ce12-4cc3-a983-6c85da2c07da"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/welpe.jpg?alt=media&token=47aa78fb-ce12-4cc3-a983-6c85da2c07da",
+        ideas: ["frosch", "katze", "hund"]
+
     },
     {
         key: 30,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/weite.jpg?alt=media&token=60664176-6959-4343-a449-c1fd5db65f2e"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/weite.jpg?alt=media&token=60664176-6959-4343-a449-c1fd5db65f2e",
+        ideas: ["frosch", "katze", "hund"]
+
     },
     {
         key: 31,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/veilchen.jpg?alt=media&token=e6eb2bf8-70b5-4a71-8a7d-060937582742"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/veilchen.jpg?alt=media&token=e6eb2bf8-70b5-4a71-8a7d-060937582742",
+        ideas: ["frosch", "katze", "hund"]
+
     },
     {
         key: 32,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/steinwand.jpg?alt=media&token=029beca4-451e-40fd-a4ef-7d60c5ac560c"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/steinwand.jpg?alt=media&token=029beca4-451e-40fd-a4ef-7d60c5ac560c",
+        ideas: ["frosch", "katze", "hund"]
+
     },
     {
         key: 33,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/rosewall.jpg?alt=media&token=f85aab29-241f-4d88-8d38-39ce42d5c73b"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/rosewall.jpg?alt=media&token=f85aab29-241f-4d88-8d38-39ce42d5c73b",
+        ideas: ["frosch", "katze", "hund"]
+
     },
     {
         key: 34,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/orchide.jpg?alt=media&token=32b6bc11-9ef8-4db2-8e72-d4df1b73cc25"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/orchide.jpg?alt=media&token=32b6bc11-9ef8-4db2-8e72-d4df1b73cc25",
+        ideas: ["frosch", "katze", "hund"]
+
     },
     {
         key: 35,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/friend.jpg?alt=media&token=2213a8b1-bb77-47da-9a3e-0182222c52f7"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/friend.jpg?alt=media&token=2213a8b1-bb77-47da-9a3e-0182222c52f7",
+        ideas: ["frosch", "katze", "hund"]
+
     },
     {
         key: 36,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/essen.jpg?alt=media&token=2fb8a947-fef7-4b8b-97c1-2e8e3b94a528"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/essen.jpg?alt=media&token=2fb8a947-fef7-4b8b-97c1-2e8e3b94a528",
+        ideas: ["frosch", "katze", "hund"]
+
     },
     {
         key: 37,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/blumen.jpg?alt=media&token=24167208-fa69-4f63-a0b6-803de3c429f3"
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/blumen.jpg?alt=media&token=24167208-fa69-4f63-a0b6-803de3c429f3",
+        ideas: ["frosch", "katze", "hund"]
     },
 
 

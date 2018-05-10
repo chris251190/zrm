@@ -164,7 +164,10 @@ export default class ZRMScreen extends React.Component {
         } else if (phase === 1) {
             content = <ZRMPhaseTwo handler={this.currentImageHandler}/>;
         } else if (phase === 2) {
-            content = <ZRMPhaseThree handler={this.associationsHandler} chosenImage={this.state.currentImage}/>;
+            content = <ZRMPhaseThree handler={this.associationsHandler} chosenImage={this.state.currentImage} ideas={[
+                {key: '1', idea: "In Kuchen rein"},
+                {key: '2', idea: "In Kuchen rein 2"},
+            ]}/>;
         } else if (phase === 3) {
             content = <ZRMPhaseFour handler={this.mottoHandler} chosenImage={this.state.currentImage}
                                     associations={this.state.associations}/>;

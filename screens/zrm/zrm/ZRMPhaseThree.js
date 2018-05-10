@@ -31,7 +31,7 @@ export default class ZRMPhaseThree extends React.Component {
                 <Text style={styles.homeTitle}>Write down positive resources you see in the image</Text>
                 <Image {...{preview, uri}} style={styles.image}/>
                 <View>
-                    {this.renderModal(ideas)}
+                    {this.renderModal(this.props.ideas)}
                     {this.renderNeedIdeasText()}
                 </View>
 
@@ -158,11 +158,6 @@ export default class ZRMPhaseThree extends React.Component {
         return <View style={{borderBottomColor: 'black', borderBottomWidth: 1,}}/>;
     }
 };
-
-const ideas = [
-    {key: '1', idea: "In Kuchen rein"},
-    {key: '2', idea: "In Kuchen rein 2"},
-];
 
 const styles = StyleSheet.create({
     image: {
