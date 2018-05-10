@@ -31,6 +31,13 @@ export default class InfoScreen extends React.Component {
                             style={styles.welcomeImage}
                         />
                     </View>
+                    <View
+                        style={{
+                            borderBottomColor: 'black',
+                            borderBottomWidth: 1,
+                            marginBottom: 10,
+                        }}
+                    />
 
                     <View style={{height: 300}}>
                         <WebView
@@ -75,7 +82,6 @@ const styles = StyleSheet.create({
     },
     welcomeContainer: {
         alignItems: 'center',
-        marginTop: 10,
-        marginBottom: 20,
+        marginBottom: 10,
     },
 });

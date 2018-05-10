@@ -69,19 +69,27 @@ export default class ZRMScreen extends React.Component {
         };
         return (
 
-                <KeyboardAvoidingView style={styles.container} keyboardVerticalOffset={100} behavior="padding">
-                    <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-                        <GestureRecognizer
-                            onSwipe={(direction, state) => this.onSwipe(direction, state)}
-                            config={config}
-                            style={{
-                                flex: 1,
-                                backgroundColor: this.state.backgroundColor
-                            }}
-                        >
+            <KeyboardAvoidingView style={styles.container} keyboardVerticalOffset={100} behavior="padding">
+                <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+                    <GestureRecognizer
+                        onSwipe={(direction, state) => this.onSwipe(direction, state)}
+                        config={config}
+                        style={{
+                            flex: 1,
+                            backgroundColor: this.state.backgroundColor
+                        }}
+                    >
                         <View style={styles.welcomeContainer}>
                             {this.renderHeaderImage()}
+
                         </View>
+                        <View
+                            style={{
+                                borderBottomColor: 'black',
+                                borderBottomWidth: 1,
+                                marginBottom: 10,
+                            }}
+                        />
 
                         <View style={styles.getStartedContainer}>
                             <View style={{width: 30}}>
@@ -94,9 +102,9 @@ export default class ZRMScreen extends React.Component {
                                 {this._renderNextArrow()}
                             </View>
                         </View>
-                        </GestureRecognizer>
-                    </ScrollView>
-                </KeyboardAvoidingView>
+                    </GestureRecognizer>
+                </ScrollView>
+            </KeyboardAvoidingView>
         );
     }
 
@@ -199,8 +207,7 @@ const styles = StyleSheet.create({
     },
     welcomeContainer: {
         alignItems: 'center',
-        marginTop: 10,
-        marginBottom: 20,
+        marginBottom: 10,
     },
     welcomeImage: {
         width: 100,

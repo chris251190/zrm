@@ -21,6 +21,13 @@ export default class HomeScreen extends React.Component {
                             style={styles.welcomeImage}
                         />
                     </View>
+                    <View
+                        style={{
+                            borderBottomColor: 'black',
+                            borderBottomWidth: 1,
+                            marginBottom: 10,
+                        }}
+                    />
 
                     <View style={styles.getStartedContainer}>
 
@@ -64,8 +71,7 @@ const styles = StyleSheet.create({
     },
     welcomeContainer: {
         alignItems: 'center',
-        marginTop: 10,
-        marginBottom: 20,
+        marginBottom: 10,
     },
     welcomeImage: {
         width: 100,
