@@ -2,10 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8addc38-23d6-4a35-bd62-a8326e49badc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/ContactScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/ContactScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/HomeScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/InfoScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/InfoScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/angel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/autopista.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/cheesecake.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/churros.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/flowers.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/guell.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/hafencity_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/hafencity_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/heartdoor.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/landscape.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/lion.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/me.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/nature.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/palmera.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/red-flag.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/stairs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/street.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/sunrise.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/town.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/windows.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/zrm/ZRMScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/zrm/ZRMScreen.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -25,8 +43,8 @@
       <file leaf-file-name="ZRMScreen.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+            <state relative-caret-position="1430">
+              <caret line="119" column="29" lean-forward="true" selection-start-line="119" selection-start-column="29" selection-end-line="119" selection-end-column="29" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -91,7 +109,8 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="112">
+              <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -226,12 +245,6 @@
             <path>
               <item name="zrm" type="b2602c69:ProjectViewProjectNode" />
               <item name="zrm" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zrm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zrm" type="462c0819:PsiDirectoryNode" />
               <item name="screens" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -332,7 +345,7 @@
       <workItem from="1525718646845" duration="3280000" />
       <workItem from="1525938517732" duration="1376000" />
       <workItem from="1525939960721" duration="4799000" />
-      <workItem from="1525950815565" duration="2185000" />
+      <workItem from="1525950815565" duration="2520000" />
     </task>
     <task id="LOCAL-00001" summary="use view instead of Text">
       <created>1523902409578</created>
@@ -352,23 +365,23 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120707000" />
+    <option name="totallyTimeSpent" value="121042000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="817" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Key Promoter X" order="3" weight="0.329296" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3252149" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.33660588" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3513889" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3252149" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32777777" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" id="Notes" order="4" weight="0.32879657" />
+      <window_info active="true" anchor="right" id="Notes" order="4" visible="true" weight="0.32879657" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Tail" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -379,7 +392,6 @@
       <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32838285" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -655,15 +667,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseThree.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1080">
@@ -731,10 +734,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+        <state relative-caret-position="1430">
+          <caret line="119" column="29" lean-forward="true" selection-start-line="119" selection-start-column="29" selection-end-line="119" selection-end-column="29" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

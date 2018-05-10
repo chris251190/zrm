@@ -107,17 +107,6 @@ export default class ZRMScreen extends React.Component {
         );
     }
 
-    renderHeaderImage() {
-        return <Image
-            source={
-                __DEV__
-                    ? require('../../assets/images/red-flag.jpg')
-                    : require('../../assets/images/red-flag.jpg')
-            }
-            style={styles.welcomeImage}
-        />;
-    }
-
     _renderNextArrow() {
         return this.shouldRenderNextArrow() ?
             <TouchableOpacity onPress={this._handleNext}>
