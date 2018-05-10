@@ -25,19 +25,8 @@ export default class ZRMPhaseFour extends React.Component {
                     <Text style={styles.text}>
                         {"\n"}
                         Please write down a sentence that represents your new motto. You can use the example sentences
-                        or create your own personal sentence.  {"\n"}{"\n"}
+                        or create your own personal sentence. {"\n"}{"\n"} </Text>
 
-                        Beginnings could be:{"\n"}
-                        I want to feel like ...{"\n"}
-                        I want to act like ...{"\n"}
-                        I want to be like ...  {"\n"}{"\n"}
-
-                        * Example for a new motto{"\n"}
-                        I want to feel like a bear that has thick fur.{"\n"}
-                        I want to act like a young woman on the Vespa, cool and with fullspeed.{"\n"}
-                        I want to be like the lotus and grow at my own pace.{"\n"}
-                        I want to go step for step at my own pace.  {"\n"}
-                    </Text>
                     <TextInput
                         style={{backgroundColor: '#ededed', height: 20}}
                         onChangeText={(motto) => {
@@ -45,6 +34,19 @@ export default class ZRMPhaseFour extends React.Component {
                             this.props.handler(motto);
                         }}
                         value={this.state.motto}/>
+
+                    <Text style={styles.text}>
+                        Beginnings could be:{"\n"}
+                        I want to feel like ...{"\n"}
+                        I want to act like ...{"\n"}
+                        I want to be like ... {"\n"}{"\n"}
+
+                        * Example for a new motto{"\n"}
+                        I want to feel like a bear that has thick fur.{"\n"}
+                        I want to act like a young woman on the Vespa, cool and with fullspeed.{"\n"}
+                        I want to be like the lotus and grow at my own pace.{"\n"}
+                        I want to go step for step at my own pace. {"\n"}
+                    </Text>
                 </View>
             </View>
         );
@@ -53,7 +55,7 @@ export default class ZRMPhaseFour extends React.Component {
 
 const styles = StyleSheet.create({
     text: {
-      fontSize: 10,
+        fontSize: 10,
     },
     image: {
         width: 300,
