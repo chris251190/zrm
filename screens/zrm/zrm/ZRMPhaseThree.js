@@ -83,9 +83,6 @@ export default class ZRMPhaseThree extends React.Component {
 };
 
 const styles = StyleSheet.create({
-    container: {
-        height: 150,
-    },
     image: {
         width: 300,
         height: 200,
