@@ -75,7 +75,7 @@ export default class ZRMPhaseThree extends React.Component {
         </TouchableWithoutFeedback>;
     }
 
-    renderModal(associations) {
+    renderModal(ideas) {
         return <Modal
             animationType="slide"
             transparent={false}
@@ -86,8 +86,8 @@ export default class ZRMPhaseThree extends React.Component {
             <View style={{marginTop: 22}}>
                 <View>
                     <FlatList
-                        data={associations}
-                        renderItem={({item}) => this.renderModalItem(item)}
+                        data={ideas}
+                        renderItem={({item}) => this.renderModalItem(item.key)}
                     />
 
                     <TouchableHighlight

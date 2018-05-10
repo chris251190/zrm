@@ -29,16 +29,24 @@ export default class ZRMScreen extends React.Component {
             currentImage: null,
             motto: null,
             associations: null,
+            ideas: null,
         };
         this.currentImageHandler = this.currentImageHandler.bind(this);
         this.mottoHandler = this.mottoHandler.bind(this);
         this.associationsHandler = this.associationsHandler.bind(this);
+        this.ideasHandler = this.ideasHandler.bind(this);
     }
 
     currentImageHandler(chosenImage) {
         this.setState({
             currentImage: chosenImage,
             phase: this.state.phase += 1,
+        });
+    }
+
+    ideasHandler(ideas) {
+        this.setState({
+            ideas: ideas,
         });
     }
 
@@ -82,7 +90,8 @@ export default class ZRMScreen extends React.Component {
         };
         const keyboardVerticalOffset = Platform.OS === 'ios' ? 75 : 0;
         return (
-            <KeyboardAvoidingView style={styles.container} keyboardVerticalOffset={keyboardVerticalOffset} behavior="padding">
+            <KeyboardAvoidingView style={styles.container} keyboardVerticalOffset={keyboardVerticalOffset}
+                                  behavior="padding">
                 <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
                     <GestureRecognizer
                         onSwipe={(direction, state) => this.onSwipe(direction, state)}
@@ -162,12 +171,10 @@ export default class ZRMScreen extends React.Component {
         if (phase === 0) {
             content = <ZRMPhaseOne/>;
         } else if (phase === 1) {
-            content = <ZRMPhaseTwo handler={this.currentImageHandler}/>;
+            content = <ZRMPhaseTwo imageHandler={this.currentImageHandler} ideasHandler={this.ideasHandler}/>;
         } else if (phase === 2) {
-            content = <ZRMPhaseThree handler={this.associationsHandler} chosenImage={this.state.currentImage} ideas={[
-                {key: '1', idea: "In Kuchen rein"},
-                {key: '2', idea: "In Kuchen rein 2"},
-            ]}/>;
+            content = <ZRMPhaseThree handler={this.associationsHandler} chosenImage={this.state.currentImage}
+                                     ideas={this.state.ideas}/>;
         } else if (phase === 3) {
             content = <ZRMPhaseFour handler={this.mottoHandler} chosenImage={this.state.currentImage}
                                     associations={this.state.associations}/>;
