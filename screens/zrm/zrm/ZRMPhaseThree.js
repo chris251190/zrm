@@ -57,7 +57,7 @@ export default class ZRMPhaseThree extends React.Component {
     }
 
     renderNeedIdeasText() {
-        return <TouchableHighlight onPress={() => {
+        return <TouchableWithoutFeedback onPress={() => {
             this.setModalVisible(true);
         }}>
             <View style={{
@@ -72,7 +72,7 @@ export default class ZRMPhaseThree extends React.Component {
                           size={30} color="blue"/>
                 <Text>Need ideas?</Text>
             </View>
-        </TouchableHighlight>;
+        </TouchableWithoutFeedback>;
     }
 
     renderModal(associations) {
