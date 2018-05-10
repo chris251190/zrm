@@ -87,7 +87,7 @@ export default class ZRMPhaseThree extends React.Component {
                 <View>
                     <FlatList
                         data={associations}
-                        renderItem={({item}) => <Text>{item.idea}</Text>}
+                        renderItem={({item}) => this.renderModalItem(item)}
                     />
 
                     <TouchableHighlight
@@ -99,6 +99,15 @@ export default class ZRMPhaseThree extends React.Component {
                 </View>
             </View>
         </Modal>;
+    }
+
+    renderModalItem(item) {
+        return <TouchableHighlight onPress={() => {
+            this.setState({associations: [...this.state.associations, {key: "Hey"}]});
+            this.props.handler([...this.state.associations, {key: "Hey"}]);
+        }}>
+            <Text>{item.idea}</Text>
+        </TouchableHighlight>;
     }
 
     isInputEmpty() {
@@ -148,8 +157,8 @@ export default class ZRMPhaseThree extends React.Component {
 };
 
 const ideas = [
-    {key:'1', idea: "In Kuchen rein"},
-    {key:'2', idea: "In Kuchen rein"},
+    {key: '1', idea: "In Kuchen rein"},
+    {key: '2', idea: "In Kuchen rein 2"},
 ];
 
 const styles = StyleSheet.create({
