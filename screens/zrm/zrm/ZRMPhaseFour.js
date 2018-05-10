@@ -1,5 +1,5 @@
 import React from 'react';
-import {FlatList, StyleSheet, Text, TextInput, View,} from 'react-native';
+import {FlatList, Platform, StyleSheet, Text, TextInput, TouchableHighlight, View,} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 import {Image} from "react-native-expo-image-cache";
 
@@ -27,13 +27,16 @@ export default class ZRMPhaseFour extends React.Component {
                         Please write down a sentence that represents your new motto. You can use the example sentences
                         or create your own personal sentence. {"\n"}{"\n"} </Text>
 
-                    <TextInput
-                        style={{backgroundColor: '#ededed', height: 20, marginTop: -10, marginBottom: 10}}
-                        onChangeText={(motto) => {
-                            this.setState({motto});
-                            this.props.handler(motto);
-                        }}
-                        value={this.state.motto}/>
+                    <View style={{flexDirection: 'row', marginBottom: 10, marginTop: -10, justifyContent: 'center'}}>
+                        <TextInput
+                            style={{backgroundColor: '#ededed', height: 20, flex: 0.9, marginRight: 10}}
+                            onChangeText={(motto) => {
+                                this.setState({motto});
+                                this.props.handler(motto);
+                            }}
+                            value={this.state.motto}/>
+                        {this.state.motto !== null && this.state.motto !== '' && this.renderClearButton()}
+                    </View>
 
                     <Text style={styles.text}>
                         Beginnings could be:{"\n"}
@@ -50,6 +53,14 @@ export default class ZRMPhaseFour extends React.Component {
                 </View>
             </View>
         );
+    }
+
+    renderClearButton() {
+        return <TouchableHighlight onPress={() => {
+            this.setState({motto: ''});
+        }}>
+            <Ionicons name={Platform.OS === 'ios' ? "ios-close" : "md-close"} size={30}/>
+        </TouchableHighlight>;
     }
 };
 
