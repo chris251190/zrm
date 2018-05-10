@@ -1,25 +1,18 @@
 import React from 'react';
-import {Image, Platform, ScrollView, StyleSheet, Text, View,} from 'react-native';
+import {Platform, ScrollView, StyleSheet, Text, View,} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
+import {Image} from "react-native-expo-image-cache";
 
 export default class ContactScreen extends React.Component {
-    static navigationOptions = {
-        header: null,
-    };
 
     render() {
+        const preview = {uri: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="};
+        const uri = "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/7ED76BF4-3CBA-4C79-B2D7-4E31E6DF6DE4.jpeg?alt=media&token=0635cbcf-31ab-405e-afa8-c4fd13768644";
         return (
             <View style={styles.container}>
                 <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
                     <View style={styles.welcomeContainer}>
-                        <Image
-                            source={
-                                __DEV__
-                                    ? require('../assets/images/me.jpg')
-                                    : require('../assets/images/me.jpg')
-                            }
-                            style={styles.welcomeImage}
-                        />
+                        <Image {...{preview, uri}} style={styles.welcomeImage}/>
                     </View>
 
                     <View style={styles.getStartedContainer}>
@@ -78,9 +71,8 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
     welcomeImage: {
-        width: 300,
+        width: 200,
         height: 200,
-        resizeMode: 'contain',
         marginTop: 3,
         marginLeft: -10,
     },
