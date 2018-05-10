@@ -80,8 +80,9 @@ export default class ZRMScreen extends React.Component {
             velocityThreshold: 0.3,
             directionalOffsetThreshold: 80
         };
+        const keyboardVerticalOffset = Platform.OS === 'ios' ? 75 : 0;
         return (
-            <KeyboardAvoidingView style={styles.container} behavior="padding">
+            <KeyboardAvoidingView style={styles.container} keyboardVerticalOffset={keyboardVerticalOffset} behavior="padding">
                 <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
                     <GestureRecognizer
                         onSwipe={(direction, state) => this.onSwipe(direction, state)}

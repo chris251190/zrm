@@ -26,7 +26,7 @@ export default class ZRMPhaseFive extends React.Component {
 const styles = StyleSheet.create({
     image: {
         width: 300,
-        height: 200,
+        height: 300,
         marginTop: 3,
         marginBottom: 20,
     },
