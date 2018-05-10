@@ -1,5 +1,14 @@
 import React from 'react';
-import {FlatList, Modal, Platform, StyleSheet, Text, TextInput, TouchableHighlight, View,} from 'react-native';
+import {
+    FlatList,
+    Modal,
+    Platform,
+    StyleSheet,
+    Text,
+    TextInput,
+    TouchableHighlight,
+    View,
+} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 import {Image} from "react-native-expo-image-cache";
 
@@ -22,17 +31,8 @@ export default class ZRMPhaseThree extends React.Component {
                 <Text style={styles.homeTitle}>Write down positive resources you see in the image</Text>
                 <Image {...{preview, uri}} style={styles.image}/>
                 <View>
-                    {this.renderModal()}
-                    <TouchableHighlight onPress={() => {
-                        this.setModalVisible(true);
-                    }}>
-                        <View style={{flex: 1, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginBottom: 10}}>
-                            <Ionicons style={{marginRight: 10}}
-                                      name={Platform.OS === 'ios' ? "ios-basket" : "md-basket"}
-                                      size={30} color="blue"/>
-                            <Text>Need ideas?</Text>
-                        </View>
-                    </TouchableHighlight>
+                    {this.renderModal(ideas)}
+                    {this.renderNeedIdeasText()}
                 </View>
 
                 <Text>Your ideas:</Text>
@@ -56,7 +56,26 @@ export default class ZRMPhaseThree extends React.Component {
         );
     }
 
-    renderModal() {
+    renderNeedIdeasText() {
+        return <TouchableHighlight onPress={() => {
+            this.setModalVisible(true);
+        }}>
+            <View style={{
+                flex: 1,
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginBottom: 10
+            }}>
+                <Ionicons style={{marginRight: 10}}
+                          name={Platform.OS === 'ios' ? "ios-basket" : "md-basket"}
+                          size={30} color="blue"/>
+                <Text>Need ideas?</Text>
+            </View>
+        </TouchableHighlight>;
+    }
+
+    renderModal(associations) {
         return <Modal
             animationType="slide"
             transparent={false}
@@ -66,7 +85,10 @@ export default class ZRMPhaseThree extends React.Component {
             }}>
             <View style={{marginTop: 22}}>
                 <View>
-                    <Text>Hello World!</Text>
+                    <FlatList
+                        data={associations}
+                        renderItem={({item}) => <Text>{item.idea}</Text>}
+                    />
 
                     <TouchableHighlight
                         onPress={() => {
@@ -124,6 +146,11 @@ export default class ZRMPhaseThree extends React.Component {
         return <View style={{borderBottomColor: 'black', borderBottomWidth: 1,}}/>;
     }
 };
+
+const ideas = [
+    {key:'1', idea: "In Kuchen rein"},
+    {key:'2', idea: "In Kuchen rein"},
+];
 
 const styles = StyleSheet.create({
     image: {
