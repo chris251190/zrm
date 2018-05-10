@@ -36,24 +36,28 @@ export default class ZRMPhaseThree extends React.Component {
                 </View>
 
                 <Text>Your ideas:</Text>
-                <View style={{flexDirection: 'row'}}>
-                    <TextInput
-                        value={this.state.inputValue}
-                        style={{backgroundColor: '#ededed', height: 30, marginBottom: 10, marginRight: 20, flex: 1}}
-                        onChangeText={(inputValue) => this.setState({inputValue: inputValue})}
-                        onSubmitEditing={() => {
-                            this.setState({associations: [...this.state.associations, {key: this.state.inputValue}]});
-                            this.props.handler([...this.state.associations, {key: this.state.inputValue}]);
-                            this.setState({inputValue: ''});
-                        }}/>
-                    {this.isInputEmpty() && this.renderClearButton()}
-                </View>
+                {this.renderTextInput()}
                 <FlatList
                     data={this.state.associations}
                     renderItem={({item}) => this.renderListItem(item)}
                 />
             </View>
         );
+    }
+
+    renderTextInput() {
+        return <View style={{flexDirection: 'row'}}>
+            <TextInput
+                value={this.state.inputValue}
+                style={{backgroundColor: '#ededed', height: 30, marginBottom: 10, marginRight: 20, flex: 1}}
+                onChangeText={(inputValue) => this.setState({inputValue: inputValue})}
+                onSubmitEditing={() => {
+                    this.setState({associations: [...this.state.associations, {key: this.state.inputValue}]});
+                    this.props.handler([...this.state.associations, {key: this.state.inputValue}]);
+                    this.setState({inputValue: ''});
+                }}/>
+            {this.isInputEmpty() && this.renderClearButton()}
+        </View>;
     }
 
     renderNeedIdeasText() {
@@ -126,16 +130,17 @@ export default class ZRMPhaseThree extends React.Component {
     }
 
     renderListItem(item) {
-        return <View style={styles.oneRow}>
-            <Text style={styles.item}>
-                - {item.key}
-            </Text>
-            <TouchableWithoutFeedback style={{alignSelf: 'flex-end'}}
-                                onPress={() => {
-                                    this.handlePress(item);
-                                }}>
-                <Ionicons name={Platform.OS === 'ios' ? "ios-trash" : "md-trash"} size={25}/>
-            </TouchableWithoutFeedback>
+        return <View style={{marginTop:10}}>
+            <View style={{flex: 1, flexDirection: 'row'}}>
+                <Text style={styles.item}>
+                    - {item.key}
+                </Text>
+                <TouchableWithoutFeedback onPress={() => {
+                    this.handlePress(item);
+                }}>
+                    <Ionicons name={Platform.OS === 'ios' ? "ios-trash" : "md-trash"} size={25}/>
+                </TouchableWithoutFeedback>
+            </View>
             {this.lineSeparator()}
         </View>;
     }
@@ -155,7 +160,7 @@ export default class ZRMPhaseThree extends React.Component {
     }
 
     lineSeparator() {
-        return <View style={{borderBottomColor: 'black', borderBottomWidth: 1,}}/>;
+        return <View style={{borderBottomColor: 'black', borderBottomWidth: 1}}/>;
     }
 };
 
@@ -174,8 +179,7 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
     item: {
-        marginTop: 15,
-        flex: 0.5
+        flex: 0.8
     },
     oneRow: {flex: 1, flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}
 });
