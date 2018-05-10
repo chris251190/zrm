@@ -6,7 +6,7 @@ import {
     StyleSheet,
     Text,
     TextInput,
-    TouchableHighlight,
+    TouchableHighlight, TouchableWithoutFeedback,
     View,
 } from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
@@ -102,12 +102,15 @@ export default class ZRMPhaseThree extends React.Component {
     }
 
     renderModalItem(item) {
-        return <TouchableHighlight onPress={() => {
-            this.setState({associations: [...this.state.associations, {key: item.idea}]});
-            this.props.handler([...this.state.associations, {key: item.idea}]);
-        }}>
+        return <View style={styles.oneRow}>
             <Text>{item.idea}</Text>
-        </TouchableHighlight>;
+            <TouchableWithoutFeedback onPress={() => {
+                this.setState({associations: [...this.state.associations, {key: item.idea}]});
+                this.props.handler([...this.state.associations, {key: item.idea}]);
+            }}>
+                <Ionicons style={{marginLeft: 30}} name="md-checkmark-circle" size={30} color="green"/>
+            </TouchableWithoutFeedback>
+        </View>;
     }
 
     isInputEmpty() {
@@ -123,16 +126,16 @@ export default class ZRMPhaseThree extends React.Component {
     }
 
     renderListItem(item) {
-        return <View>
+        return <View style={styles.oneRow}>
             <Text style={styles.item}>
                 - {item.key}
             </Text>
-            <TouchableHighlight style={{alignSelf: 'flex-end'}}
+            <TouchableWithoutFeedback style={{alignSelf: 'flex-end'}}
                                 onPress={() => {
                                     this.handlePress(item);
                                 }}>
                 <Ionicons name={Platform.OS === 'ios' ? "ios-trash" : "md-trash"} size={25}/>
-            </TouchableHighlight>
+            </TouchableWithoutFeedback>
             {this.lineSeparator()}
         </View>;
     }
@@ -177,7 +180,9 @@ const styles = StyleSheet.create({
     },
     item: {
         marginTop: 15,
+        flex: 0.5
     },
+    oneRow: {flex: 1, flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}
 });
 
 
