@@ -69,8 +69,8 @@
       <file leaf-file-name="ZRMPhaseTwo.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseTwo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="56" column="79" selection-start-line="56" selection-start-column="79" selection-end-line="56" selection-end-column="79" />
+            <state relative-caret-position="311">
+              <caret line="69" column="55" selection-start-line="69" selection-start-column="55" selection-end-line="69" selection-end-column="55" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -90,8 +90,8 @@
       <file leaf-file-name="ContactScreen.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/screens/ContactScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="80" lean-forward="true" selection-start-line="15" selection-start-column="80" selection-end-line="15" selection-end-column="80" />
+            <state relative-caret-position="96">
+              <caret line="32" selection-start-line="32" selection-end-line="33" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -329,7 +329,7 @@
       <workItem from="1525514261536" duration="4550000" />
       <workItem from="1525718646845" duration="3280000" />
       <workItem from="1525938517732" duration="1376000" />
-      <workItem from="1525939960721" duration="3108000" />
+      <workItem from="1525939960721" duration="3936000" />
     </task>
     <task id="LOCAL-00001" summary="use view instead of Text">
       <created>1523902409578</created>
@@ -349,7 +349,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116831000" />
+    <option name="totallyTimeSpent" value="117659000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="817" extended-state="0" />
@@ -695,16 +695,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screens/ContactScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="80" lean-forward="true" selection-start-line="15" selection-start-column="80" selection-end-line="15" selection-end-column="80" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/screens/InfoScreen.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="349">
@@ -729,10 +719,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/screens/ContactScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="32" selection-start-line="32" selection-end-line="33" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseTwo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="56" column="79" selection-start-line="56" selection-start-column="79" selection-end-line="56" selection-end-column="79" />
+        <state relative-caret-position="311">
+          <caret line="69" column="55" selection-start-line="69" selection-start-column="55" selection-end-line="69" selection-end-column="55" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

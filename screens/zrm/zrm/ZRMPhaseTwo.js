@@ -52,24 +52,23 @@ export default class ZRMPhaseTwo extends React.Component {
             onRequestClose={() => {
                 alert('Modal has been closed.');
             }}>
-            <View style={{marginTop: 22}}>
-                <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                    <Text style={{fontSize: 30, marginTop: 20, marginBottom: 20}}>Is this your image?</Text>
-                    <Image {...{preview, uri}} style={styles.modalImage}/>
-                    <TouchableHighlight style={{marginTop: 10}}
-                                        onPress={() => {
-                                            this.props.handler(this.state.currentImage);
-                                            this.setModalVisible(!this.state.modalVisible);
-                                        }}>
-                        <Ionicons name="md-checkmark-circle" size={32} color="green"/>
-                    </TouchableHighlight>
-                    <TouchableHighlight
-                        onPress={() => {
-                            this.setModalVisible(!this.state.modalVisible);
-                        }}>
-                        <Ionicons name="md-close-circle" size={32} color="red"/>
-                    </TouchableHighlight>
-                </View>
+            <View style={{justifyContent: 'center', alignItems: 'center'}}>
+                <Text style={{fontSize: 30, marginTop: 50, marginBottom: 30}}>Is this your image?</Text>
+                <Image {...{preview, uri}} style={styles.modalImage}/>
+            </View>
+            <View style={{flex: 1, flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
+                <TouchableHighlight
+                    onPress={() => {
+                        this.setModalVisible(!this.state.modalVisible);
+                    }}>
+                    <Ionicons style={{marginRight: 30}} name="md-close-circle" size={70} color="red"/>
+                </TouchableHighlight>
+                <TouchableHighlight onPress={() => {
+                    this.props.handler(this.state.currentImage);
+                    this.setModalVisible(!this.state.modalVisible);
+                }}>
+                    <Ionicons style={{marginLeft: 30}} name="md-checkmark-circle" size={70} color="green"/>
+                </TouchableHighlight>
             </View>
         </Modal>;
     }
