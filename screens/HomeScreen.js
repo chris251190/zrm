@@ -35,10 +35,8 @@ export default class HomeScreen extends React.Component {
 
                         <Text style={styles.getStartedText}>When you want to have more Background Information of what ZRM is and how and why
                             it works, click on</Text>
-                        <MonoText style={styles.codeHighlightText}>'Info'</MonoText>
 
-                        <Text style={styles.getStartedText}>There is also the possibility to donate for this app. For this go to </Text>
-                        <MonoText style={styles.codeHighlightText}>'Donate'</MonoText>
+                        <MonoText style={styles.codeHighlightText}>'Info'</MonoText>
 
                         <Text style={styles.getStartedText}>If you want to know more about the developer, then click on </Text>
                         <MonoText style={styles.codeHighlightText}>'Contact'</MonoText>
