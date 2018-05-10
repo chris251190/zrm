@@ -13,7 +13,7 @@ export default class ZRMScreen extends React.Component {
     static navigationOptions = {
         header: <View style={{alignItems: 'center', backgroundColor: '#f2f2f2'}}>
             <Image
-                uri="https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/red-flag.jpg?alt=media&token=bbcf6dfa-24cb-4118-8829-60274378e6a8"
+                uri="https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/icon.png?alt=media&token=167d3333-03d4-429b-ac4e-041a1770db79"
                 style={{
                     height: 50,
                     width: 50,
