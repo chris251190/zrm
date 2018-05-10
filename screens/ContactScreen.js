@@ -2,6 +2,7 @@ import React from 'react';
 import {Platform, ScrollView, StyleSheet, Text, View,} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 import {Image} from "react-native-expo-image-cache";
+import {WebBrowser} from "expo";
 
 export default class ContactScreen extends React.Component {
 
@@ -33,21 +34,41 @@ export default class ContactScreen extends React.Component {
                             <Ionicons
                                 name={"logo-instagram"}
                                 size={50}
-                                style={{marginRight: 10, width: 50}}/>
+                                style={{marginRight: 10, width: 50}}
+                                onPress={() => this._handleOpenWithWebBrowser("instagram")}
+                            />
                             <Ionicons
                                 name={"logo-github"}
                                 size={50}
-                                style={{marginRight: 10, width: 50}}/>
+                                style={{marginRight: 10, width: 50}}
+                                onPress={() => this._handleOpenWithWebBrowser("github")}/>
                             <Ionicons
                                 name={"logo-facebook"}
                                 size={50}
-                                style={{marginBottom: -3, width: 50}}/>
+                                style={{marginBottom: -3, width: 50}}
+                                onPress={() => this._handleOpenWithWebBrowser("facebook")}
+                            />
                         </View>
                     </View>
                 </ScrollView>
             </View>
         );
     }
+
+    _handleOpenWithWebBrowser = (logo) => {
+        let url = 'https://expo.io';
+        if (logo === 'instagram') {
+            url = 'https://www.instagram.com/clehr.90/';
+        }
+        if (logo === 'github') {
+            url = 'https://github.com/chris251190';
+        }
+        if (logo === 'facebook') {
+            url = 'https://www.facebook.com/christian.lehr.54';
+        }
+        WebBrowser.openBrowserAsync(url);
+    }
+
 }
 
 const styles = StyleSheet.create({
