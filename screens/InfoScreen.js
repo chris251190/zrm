@@ -1,5 +1,5 @@
 import React from 'react';
-import {Platform, ScrollView, StyleSheet, View, WebView,} from 'react-native';
+import {ScrollView, StyleSheet, View, WebView,} from 'react-native';
 import {Image} from "react-native-expo-image-cache";
 
 export default class InfoScreen extends React.Component {
@@ -19,7 +19,6 @@ export default class InfoScreen extends React.Component {
                 <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
                     <View style={{height: 300}}>
                         <WebView
-                            style={styles.WebViewContainer}
                             javaScriptEnabled={true}
                             domStorageEnabled={true}
                             source={{uri: 'https://www.youtube.com/embed/Ab3bw1mGXUM'}}
@@ -28,7 +27,6 @@ export default class InfoScreen extends React.Component {
 
                     <View style={{height: 300}}>
                         <WebView
-                            style={styles.WebViewContainer}
                             javaScriptEnabled={true}
                             domStorageEnabled={true}
                             source={{uri: 'https://www.youtube.com/embed/ideJm4BsskA'}}
@@ -45,21 +43,9 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#fff',
     },
-    WebViewContainer: {
-        marginTop: (Platform.OS == 'ios') ? 20 : 0,
-    },
-    welcomeImage: {
-        width: 100,
-        height: 80,
-        resizeMode: 'contain',
-        marginTop: 3,
-        marginLeft: -10,
-    },
     contentContainer: {
-        paddingTop: 30,
     },
     welcomeContainer: {
         alignItems: 'center',
-        marginBottom: 10,
     },
 });
