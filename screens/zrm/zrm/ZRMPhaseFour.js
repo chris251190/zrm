@@ -56,6 +56,7 @@ export default class ZRMPhaseFour extends React.Component {
     renderClearButton() {
         return <TouchableHighlight onPress={() => {
             this.setState({motto: ''});
+            this.props.handler('');
         }}>
             <Ionicons name={Platform.OS === 'ios' ? "ios-close" : "md-close"} size={30}/>
         </TouchableHighlight>;
