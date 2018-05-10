@@ -11,12 +11,15 @@ import {Image} from "react-native-expo-image-cache";
 
 export default class ZRMScreen extends React.Component {
     static navigationOptions = {
-        header: <View style={{alignItems: 'center', backgroundColor:'#f2f2f2'}}>
-            <Image uri="https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/red-flag.jpg?alt=media&token=bbcf6dfa-24cb-4118-8829-60274378e6a8" style={{
-                height: 50,
-                width: 50,
-                marginTop: 30,
-                marginBottom: 10}}/>
+        header: <View style={{alignItems: 'center', backgroundColor: '#f2f2f2'}}>
+            <Image
+                uri="https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/red-flag.jpg?alt=media&token=bbcf6dfa-24cb-4118-8829-60274378e6a8"
+                style={{
+                    height: 50,
+                    width: 50,
+                    marginTop: 30,
+                    marginBottom: 10
+                }}/>
         </View>,
     };
 
@@ -90,7 +93,11 @@ export default class ZRMScreen extends React.Component {
                             backgroundColor: this.state.backgroundColor
                         }}
                     >
-                        <View style={{height: 30, alignItems: 'center', justifyContent:'center'}}><Text>{this.state.phase+1}/5</Text></View>
+                        <View style={{
+                            height: 30,
+                            alignItems: 'center',
+                            justifyContent: 'center'
+                        }}><Text>{this.state.phase + 1}/5</Text></View>
                         <View style={styles.getStartedContainer}>
                             <View style={{width: 30}}>
                                 {this._renderBeforeArrow()}
@@ -119,15 +126,19 @@ export default class ZRMScreen extends React.Component {
     }
 
     shouldRenderNextArrow() {
-        return this.isNotOnLastScreen() || this.imageIsSet();
+        return this.isNotOnLastScreen() || this.imageIsSet() || this.isMottoSetOnScreenFour();
+    }
+
+    isMottoSetOnScreenFour() {
+        return this.state.motto !== null && this.state.phase === 3;
     }
 
     isNotOnLastScreen() {
-        return this.state.phase < 4 && this.state.phase !== 1;
+        return this.state.phase < 4 && this.state.phase !== 1 && this.state.phase !== 3;
     }
 
     imageIsSet() {
-        return (this.state.phase === 1 && this.state.currentImage !== null);
+        return this.state.phase === 1 && this.state.currentImage !== null;
     }
 
     _renderBeforeArrow() {
@@ -191,8 +202,7 @@ const styles = StyleSheet.create({
         lineHeight: 19,
         textAlign: 'center',
     },
-    contentContainer: {
-    },
+    contentContainer: {},
     welcomeContainer: {
         alignItems: 'center',
         marginBottom: 10,
