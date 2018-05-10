@@ -1,5 +1,7 @@
 import React from 'react';
 import {
+    Button,
+    CheckBox,
     FlatList,
     Modal,
     Platform,
@@ -108,12 +110,14 @@ export default class ZRMPhaseThree extends React.Component {
     renderModalItem(item) {
         return <View style={styles.oneRow}>
             <Text>{item}</Text>
-            <TouchableWithoutFeedback onPress={() => {
+            <TouchableHighlight onPress={() => {
                 this.setState({associations: [...this.state.associations, {key: item}]});
                 this.props.handler([...this.state.associations, {key: item}]);
             }}>
-                <Ionicons style={{marginLeft: 30}} name="md-checkmark-circle" size={30} color="green"/>
-            </TouchableWithoutFeedback>
+                <Ionicons style={{marginLeft: 30}}
+                          name={Platform.OS === 'ios' ? "ios-add" : "md-add"}
+                          size={30} color="black"/>
+            </TouchableHighlight>
         </View>;
     }
 
@@ -130,7 +134,7 @@ export default class ZRMPhaseThree extends React.Component {
     }
 
     renderListItem(item) {
-        return <View style={{marginTop:10}}>
+        return <View style={{marginTop: 10}}>
             <View style={{flex: 1, flexDirection: 'row'}}>
                 <Text style={styles.item}>
                     - {item.key}
