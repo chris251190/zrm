@@ -28,7 +28,7 @@ export default class ZRMPhaseFour extends React.Component {
                         or create your own personal sentence. {"\n"}{"\n"} </Text>
 
                     <TextInput
-                        style={{backgroundColor: '#ededed', height: 20}}
+                        style={{backgroundColor: '#ededed', height: 20, marginTop: -10, marginBottom: 10}}
                         onChangeText={(motto) => {
                             this.setState({motto});
                             this.props.handler(motto);
