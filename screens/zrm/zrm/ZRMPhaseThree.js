@@ -1,5 +1,5 @@
 import React from 'react';
-import {FlatList, Platform, StyleSheet, Text, TextInput, TouchableHighlight, View,} from 'react-native';
+import {FlatList, Modal, Platform, StyleSheet, Text, TextInput, TouchableHighlight, View,} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 import {Image} from "react-native-expo-image-cache";
 
@@ -7,7 +7,12 @@ export default class ZRMPhaseThree extends React.Component {
     state = {
         associations: [],
         inputValue: '',
+        modalVisible: false,
     };
+
+    setModalVisible(visible) {
+        this.setState({modalVisible: visible});
+    }
 
     render() {
         const preview = {uri: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="};
@@ -16,6 +21,20 @@ export default class ZRMPhaseThree extends React.Component {
             <View>
                 <Text style={styles.homeTitle}>Write down positive resources you see in the image</Text>
                 <Image {...{preview, uri}} style={styles.image}/>
+                <View>
+                    {this.renderModal()}
+                    <TouchableHighlight onPress={() => {
+                        this.setModalVisible(true);
+                    }}>
+                        <View style={{flex: 1, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginBottom: 10}}>
+                            <Ionicons style={{marginRight: 10}}
+                                      name={Platform.OS === 'ios' ? "ios-basket" : "md-basket"}
+                                      size={30} color="blue"/>
+                            <Text>Need ideas?</Text>
+                        </View>
+                    </TouchableHighlight>
+                </View>
+
                 <Text>Your ideas:</Text>
                 <View style={{flexDirection: 'row'}}>
                     <TextInput
@@ -37,12 +56,37 @@ export default class ZRMPhaseThree extends React.Component {
         );
     }
 
+    renderModal() {
+        return <Modal
+            animationType="slide"
+            transparent={false}
+            visible={this.state.modalVisible}
+            onRequestClose={() => {
+                alert('Modal has been closed.');
+            }}>
+            <View style={{marginTop: 22}}>
+                <View>
+                    <Text>Hello World!</Text>
+
+                    <TouchableHighlight
+                        onPress={() => {
+                            this.setModalVisible(!this.state.modalVisible);
+                        }}>
+                        <Ionicons name={Platform.OS === 'ios' ? "ios-close" : "md-close"} size={30}/>
+                    </TouchableHighlight>
+                </View>
+            </View>
+        </Modal>;
+    }
+
     isInputEmpty() {
         return (this.state.inputValue !== null && this.state.inputValue !== '');
     }
 
     renderClearButton() {
-        return <TouchableHighlight onPress={() => {this.setState({inputValue: ''});}}>
+        return <TouchableHighlight onPress={() => {
+            this.setState({inputValue: ''});
+        }}>
             <Ionicons name={Platform.OS === 'ios' ? "ios-close" : "md-close"} size={30}/>
         </TouchableHighlight>;
     }
