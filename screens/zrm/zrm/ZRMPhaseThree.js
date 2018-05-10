@@ -16,11 +16,11 @@ export default class ZRMPhaseThree extends React.Component {
             <View>
                 <Text style={styles.homeTitle}>Write down positive resources you see in the image</Text>
                 <Image {...{preview, uri}} style={styles.image}/>
-                <Text>Insert your ideas here:</Text>
+                <Text>Your ideas:</Text>
                 <View style={{flexDirection: 'row'}}>
                     <TextInput
                         value={this.state.inputValue}
-                        style={{backgroundColor: '#ededed', height: 30, marginBottom: 20, marginRight: 20, flex: 1}}
+                        style={{backgroundColor: '#ededed', height: 30, marginBottom: 10, marginRight: 20, flex: 1}}
                         onChangeText={(inputValue) => this.setState({inputValue: inputValue})}
                         onSubmitEditing={() => {
                             this.setState({associations: [...this.state.associations, {key: this.state.inputValue}]});
@@ -29,7 +29,6 @@ export default class ZRMPhaseThree extends React.Component {
                         }}/>
                     {this.isInputEmpty() && this.renderClearButton()}
                 </View>
-                <Text>your ideas:</Text>
                 <FlatList
                     data={this.state.associations}
                     renderItem={({item}) => this.renderListItem(item)}
