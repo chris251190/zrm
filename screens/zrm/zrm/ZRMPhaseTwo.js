@@ -25,7 +25,6 @@ export default class ZRMPhaseTwo extends React.Component {
                     flex: 1,
                     flexDirection: 'column',
                     width: 300,
-                    height: 500,
                     flexWrap: 'wrap',
                     alignItems: 'flex-start'
                 }}>
@@ -135,6 +134,104 @@ const imageData = [
         key: 12,
         uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/F4DEDED2-5177-4398-A6A3-D4FA3356F6A8.jpeg?alt=media&token=d00e623c-d89c-47d4-b097-65d346cb6cb2"
     },
+    {
+        key: 13,
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/totoro.jpg?alt=media&token=0e01593f-14f1-4348-a472-2234bf0146b1"
+    },
+    {
+        key: 15,
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/splash.jpg?alt=media&token=219ef5b9-788e-43a1-8246-02a65b3f0363"
+    },
+    {
+        key: 16,
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/rose.jpg?alt=media&token=a602de14-98a3-4c0e-b36d-d538f10a417e"
+    },
+    {
+        key: 17,
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/regenbogen.jpg?alt=media&token=0986dfa6-4199-4b06-a46b-6a5e079dc535"
+    },
+    {
+        key: 18,
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/nachts.jpg?alt=media&token=3b9c4dc9-df86-4a8d-ba12-03035f0b0404"
+    },
+    {
+        key: 19,
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/light.jpg?alt=media&token=cd2b8aea-e745-411a-b3be-17c4a6aba89d"
+    },
+    {
+        key: 20,
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/hund.jpg?alt=media&token=227b960f-2f43-445f-ada0-1b046344a199"
+    },
+    {
+        key: 21,
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/himmel.jpg?alt=media&token=08ab8c9e-68bd-4fbe-bbdc-78fefd8b2377"
+    },
+    {
+        key: 22,
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/gundam.jpg?alt=media&token=3935a2d6-c1e4-465b-ac72-6a632b5e30f3"
+    },
+    {
+        key: 23,
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/gru%CC%88n.jpg?alt=media&token=1db9e44a-9b84-47ba-8145-657c353e5b8b"
+    },
+    {
+        key: 24,
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/freunde.jpg?alt=media&token=468cd48a-89cf-4238-9e1d-212e24f5916b"
+    },
+    {
+        key: 25,
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/dragonball.jpg?alt=media&token=56751507-e25a-420e-8398-7df30488b786"
+    },
+    {
+        key: 26,
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/baum.jpg?alt=media&token=e13c3fa3-40f0-4f02-bc93-9adaa14f6dc1"
+    },
+    {
+        key: 27,
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/19436461_1717795318514622_4266132070985629696_n.jpg?alt=media&token=fe9e112d-b0c0-4545-885b-feff49bcc1e8"
+    },
+    {
+        key: 28,
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/17268105_186646421836433_2542958373985320960_n.jpg?alt=media&token=b2642c37-fab0-45de-b969-1434c7c169c4"
+    },
+    {
+        key: 29,
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/welpe.jpg?alt=media&token=47aa78fb-ce12-4cc3-a983-6c85da2c07da"
+    },
+    {
+        key: 30,
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/weite.jpg?alt=media&token=60664176-6959-4343-a449-c1fd5db65f2e"
+    },
+    {
+        key: 31,
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/veilchen.jpg?alt=media&token=e6eb2bf8-70b5-4a71-8a7d-060937582742"
+    },
+    {
+        key: 32,
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/steinwand.jpg?alt=media&token=029beca4-451e-40fd-a4ef-7d60c5ac560c"
+    },
+    {
+        key: 33,
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/rosewall.jpg?alt=media&token=f85aab29-241f-4d88-8d38-39ce42d5c73b"
+    },
+    {
+        key: 34,
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/orchide.jpg?alt=media&token=32b6bc11-9ef8-4db2-8e72-d4df1b73cc25"
+    },
+    {
+        key: 35,
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/friend.jpg?alt=media&token=2213a8b1-bb77-47da-9a3e-0182222c52f7"
+    },
+    {
+        key: 36,
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/essen.jpg?alt=media&token=2fb8a947-fef7-4b8b-97c1-2e8e3b94a528"
+    },
+    {
+        key: 37,
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/blumen.jpg?alt=media&token=24167208-fa69-4f63-a0b6-803de3c429f3"
+    },
+
+
 ];
 
 const styles = StyleSheet.create({
