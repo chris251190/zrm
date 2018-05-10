@@ -7,7 +7,7 @@ import {WebBrowser} from "expo";
 export default class ContactScreen extends React.Component {
     static navigationOptions = {
         header: <View style={{alignItems: 'center', backgroundColor:'#f2f2f2'}}>
-            <Image uri="https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/icon.png?alt=media&token=167d3333-03d4-429b-ac4e-041a1770db79" style={{
+            <Image uri="https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/icon.png?alt=media&token=64bda094-4522-4377-b9ca-ef16f69b7d3d" style={{
                 height: 50,
                 width: 50,
                 marginTop: 30,
