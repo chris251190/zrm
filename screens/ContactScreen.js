@@ -5,6 +5,15 @@ import {Image} from "react-native-expo-image-cache";
 import {WebBrowser} from "expo";
 
 export default class ContactScreen extends React.Component {
+    static navigationOptions = {
+        header: <View style={{alignItems: 'center', backgroundColor:'#f2f2f2'}}>
+            <Image uri="https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/red-flag.jpg?alt=media&token=bbcf6dfa-24cb-4118-8829-60274378e6a8" style={{width: 70,
+                height: 50,
+                width: 50,
+                marginTop: 30,
+                marginBottom: 10}}/>
+        </View>,
+    };
 
     render() {
         const preview = {uri: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="};

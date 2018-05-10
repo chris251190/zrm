@@ -1,33 +1,24 @@
 import React from 'react';
-import {Image, Platform, ScrollView, StyleSheet, Text, View,} from 'react-native';
+import {Platform, ScrollView, StyleSheet, Text, View,} from 'react-native';
 import {MonoText} from '../components/StyledText';
+import {Image} from "react-native-expo-image-cache";
 
 export default class HomeScreen extends React.Component {
     static navigationOptions = {
-        header: null,
+        header: <View style={{alignItems: 'center', backgroundColor:'#f2f2f2'}}>
+            <Image uri="https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/red-flag.jpg?alt=media&token=bbcf6dfa-24cb-4118-8829-60274378e6a8" style={{width: 70,
+                height: 50,
+                width: 50,
+                marginTop: 30,
+                marginBottom: 10}}/>
+        </View>,
     };
 
     render() {
         return (
             <View style={styles.container}>
                 <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-                    <View style={styles.welcomeContainer}>
-                        <Image
-                            source={
-                                __DEV__
-                                    ? require('../assets/images/red-flag.jpg')
-                                    : require('../assets/images/red-flag.jpg')
-                            }
-                            style={styles.welcomeImage}
-                        />
-                    </View>
-                    <View
-                        style={{
-                            borderBottomColor: 'black',
-                            borderBottomWidth: 1,
-                            marginBottom: 10,
-                        }}
-                    />
+
 
                     <View style={styles.getStartedContainer}>
 
@@ -40,12 +31,14 @@ export default class HomeScreen extends React.Component {
                         <Text style={styles.getStartedText}>When you want to dive in directly click on</Text>
                         <MonoText style={styles.codeHighlightText}>'ZRM'</MonoText>
 
-                        <Text style={styles.getStartedText}>When you want to have more Background Information of what ZRM is and how and why
+                        <Text style={styles.getStartedText}>When you want to have more Background Information of what
+                            ZRM is and how and why
                             it works, click on</Text>
 
                         <MonoText style={styles.codeHighlightText}>'Info'</MonoText>
 
-                        <Text style={styles.getStartedText}>If you want to know more about the developer, then click on </Text>
+                        <Text style={styles.getStartedText}>If you want to know more about the developer, then click
+                            on </Text>
                         <MonoText style={styles.codeHighlightText}>'Contact'</MonoText>
                     </View>
                 </ScrollView>

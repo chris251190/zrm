@@ -1,44 +1,22 @@
 import React from 'react';
-import {
-    Image,
-    Platform,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View, WebView,
-} from 'react-native';
-import {WebBrowser} from 'expo';
-
-import {MonoText} from '../components/StyledText';
+import {Platform, ScrollView, StyleSheet, View, WebView,} from 'react-native';
+import {Image} from "react-native-expo-image-cache";
 
 export default class InfoScreen extends React.Component {
     static navigationOptions = {
-        header: null,
+        header: <View style={{alignItems: 'center', backgroundColor:'#f2f2f2'}}>
+            <Image uri="https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/red-flag.jpg?alt=media&token=bbcf6dfa-24cb-4118-8829-60274378e6a8" style={{width: 70,
+                height: 50,
+                width: 50,
+                marginTop: 30,
+                marginBottom: 10}}/>
+        </View>,
     };
 
     render() {
         return (
             <View style={styles.container}>
                 <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-                    <View style={styles.welcomeContainer}>
-                        <Image
-                            source={
-                                __DEV__
-                                    ? require('../assets/images/red-flag.jpg')
-                                    : require('../assets/images/red-flag.jpg')
-                            }
-                            style={styles.welcomeImage}
-                        />
-                    </View>
-                    <View
-                        style={{
-                            borderBottomColor: 'black',
-                            borderBottomWidth: 1,
-                            marginBottom: 10,
-                        }}
-                    />
-
                     <View style={{height: 300}}>
                         <WebView
                             style={styles.WebViewContainer}

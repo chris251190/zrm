@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, KeyboardAvoidingView, Platform, ScrollView, StyleSheet, TouchableOpacity, View,} from 'react-native';
+import {KeyboardAvoidingView, Platform, ScrollView, StyleSheet, TouchableOpacity, View,} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 import ZRMPhaseTwo from './zrm/ZRMPhaseTwo';
 import ZRMPhaseThree from './zrm/ZRMPhaseThree';
@@ -7,8 +7,19 @@ import ZRMPhaseFour from './zrm/ZRMPhaseFour';
 import ZRMPhaseFive from './zrm/ZRMPhaseFive';
 import ZRMPhaseOne from './zrm/ZRMPhaseOne';
 import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
+import {Image} from "react-native-expo-image-cache";
 
 export default class ZRMScreen extends React.Component {
+    static navigationOptions = {
+        header: <View style={{alignItems: 'center', backgroundColor:'#f2f2f2'}}>
+            <Image uri="https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/red-flag.jpg?alt=media&token=bbcf6dfa-24cb-4118-8829-60274378e6a8" style={{width: 70,
+                height: 50,
+                width: 50,
+                marginTop: 30,
+                marginBottom: 10}}/>
+        </View>,
+    };
+
     constructor(props) {
         super(props);
         this.state = {
@@ -79,18 +90,6 @@ export default class ZRMScreen extends React.Component {
                             backgroundColor: this.state.backgroundColor
                         }}
                     >
-                        <View style={styles.welcomeContainer}>
-                            {this.renderHeaderImage()}
-
-                        </View>
-                        <View
-                            style={{
-                                borderBottomColor: 'black',
-                                borderBottomWidth: 1,
-                                marginBottom: 10,
-                            }}
-                        />
-
                         <View style={styles.getStartedContainer}>
                             <View style={{width: 30}}>
                                 {this._renderBeforeArrow()}
