@@ -116,13 +116,9 @@ export default class ZRMPhaseThree extends React.Component {
                         height: 30,
                     }} onPress={() => {
                         this.setState({
-                            associations: [...this.state.associations, {
-                                key: this.state.currentItem.key,
-                                positive: "30",
-                                negative: "60"
-                            }]
+                            associations: this.updateObjectInArray(this.state.associations, this.state.currentItem.key, "10", "3")
                         });
-                        this.props.handler([...this.state.associations, {key: this.state.currentItem.key, positive: "30", negative: "60"}]);
+                        this.props.handler(this.updateObjectInArray(this.state.associations, this.state.currentItem.key, "10", "3"));
                     }}>
                         <Ionicons name={Platform.OS === 'ios' ? "ios-add" : "md-add"}
                                   size={20} color="black"/>
@@ -131,6 +127,21 @@ export default class ZRMPhaseThree extends React.Component {
                 </View>
             </View>
         </Modal>;
+    }
+
+    updateObjectInArray(array, key, positiveValue, negativeValue) {
+        return array.map( (item) => {
+            if(item.key !== key) {
+                // This isn't the item we care about - keep it as-is
+                return item;
+            }else {
+                return {
+                    ...item,
+                    ...item, positive: positiveValue, negative: negativeValue
+                };
+            }
+            // Otherwise, this is the one we want - return an updated value
+        });
     }
 
     renderIdeasModal(ideas) {
