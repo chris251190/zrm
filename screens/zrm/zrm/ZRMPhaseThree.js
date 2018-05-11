@@ -33,7 +33,7 @@ export default class ZRMPhaseThree extends React.Component {
                 <Text style={styles.homeTitle}>Write down positive resources you see in the image</Text>
                 <Image {...{preview, uri}} style={styles.image}/>
                 <View>
-                    {this.renderModal(this.props.ideas)}
+                    {this.renderIdeasModal(this.props.ideas)}
                     {this.renderNeedIdeasText()}
                 </View>
 
@@ -81,7 +81,7 @@ export default class ZRMPhaseThree extends React.Component {
         </TouchableWithoutFeedback>;
     }
 
-    renderModal(ideas) {
+    renderIdeasModal(ideas) {
         return <Modal
             animationType="slide"
             transparent={false}
@@ -147,6 +147,11 @@ export default class ZRMPhaseThree extends React.Component {
                 <TouchableWithoutFeedback onPress={() => {
                     this.handlePress(item);
                 }}>
+                    <Ionicons style={{flex:0.3}} name={Platform.OS === 'ios' ? "ios-add" : "md-add"} size={25}/>
+                </TouchableWithoutFeedback>
+                <TouchableWithoutFeedback onPress={() => {
+                    this.handlePress(item);
+                }}>
                     <Ionicons name={Platform.OS === 'ios' ? "ios-trash" : "md-trash"} size={25}/>
                 </TouchableWithoutFeedback>
             </View>
@@ -188,7 +193,7 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
     item: {
-        flex: 0.8
+        flex: 0.6
     },
     oneRow: {flex: 1, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginBottom: 20}
 });
