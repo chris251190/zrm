@@ -2,7 +2,7 @@ import React from 'react';
 import {
     FlatList,
     Modal,
-    Platform,
+    Platform, Slider,
     StyleSheet,
     Text,
     TextInput,
@@ -20,6 +20,8 @@ export default class ZRMPhaseThree extends React.Component {
         ideasModalVisible: false,
         scaleModalVisible: false,
         currentItem: null,
+        currentPositiveMarker: 0,
+        currentNegativeMarker: 0,
     };
 
     setModalVisible(visible) {
@@ -91,6 +93,22 @@ export default class ZRMPhaseThree extends React.Component {
         </TouchableWithoutFeedback>;
     }
 
+    changePositiveMarker(value) {
+        this.setState(() => {
+            return {
+                currentPositiveMarker: value,
+            };
+        });
+    }
+
+    changeNegativeMarker(value) {
+        this.setState(() => {
+            return {
+                currentNegativeMarker: value,
+            };
+        });
+    }
+
     renderScaleModal() {
         return <Modal
             animationType="slide"
@@ -108,6 +126,24 @@ export default class ZRMPhaseThree extends React.Component {
                         <Ionicons name={Platform.OS === 'ios' ? "ios-close" : "md-close"} size={30}/>
                     </TouchableHighlight>
 
+                    <Text>+</Text>
+                    <Text>{this.state.currentPositiveMarker}</Text>
+                    <Slider
+                        step={1}
+                        maximumValue={100}
+                        onValueChange={this.changePositiveMarker.bind(this)}
+                        value={this.state.currentPositiveMarker}
+                    />
+
+                    <Text>-</Text>
+                    <Text>{this.state.currentNegativeMarker}</Text>
+                    <Slider
+                        step={1}
+                        maximumValue={100}
+                        onValueChange={this.changeNegativeMarker.bind(this)}
+                        value={this.state.currentNegativeMarker}
+                    />
+
                     <TouchableHighlight style={{
                         alignItems: 'center',
                         backgroundColor: '#DDDDDD',
@@ -116,14 +152,14 @@ export default class ZRMPhaseThree extends React.Component {
                         height: 30,
                     }} onPress={() => {
                         this.setState({
-                            associations: this.updateObjectInArray(this.state.associations, this.state.currentItem.key, "10", "3")
+                            associations: this.updateObjectInArray(this.state.associations, this.state.currentItem.key, this.state.currentPositiveMarker, this.state.currentNegativeMarker)
                         });
-                        this.props.handler(this.updateObjectInArray(this.state.associations, this.state.currentItem.key, "10", "3"));
+                        this.props.handler(this.updateObjectInArray(this.state.associations, this.state.currentItem.key, this.state.currentPositiveMarker, this.state.currentNegativeMarker));
+                        this.setScaleModalVisible(!this.state.scaleModalVisible);
                     }}>
                         <Ionicons name={Platform.OS === 'ios' ? "ios-add" : "md-add"}
                                   size={20} color="black"/>
                     </TouchableHighlight>
-                    <Text>Scale 1 Scale 2</Text>
                 </View>
             </View>
         </Modal>;
@@ -205,7 +241,7 @@ export default class ZRMPhaseThree extends React.Component {
         return <View style={{marginTop: 10}}>
             <View style={{flex: 1, flexDirection: 'row'}}>
                 <Text style={styles.item}>
-                    - {item.key} scale: +{item.positive}, -{item.negative}
+                    - {item.key} +{item.positive}, -{item.negative}
                 </Text>
                 <TouchableWithoutFeedback onPress={() => {
                     this.setScaleModalVisible(true);
