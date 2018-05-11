@@ -18,11 +18,11 @@ export default class ZRMPhaseThree extends React.Component {
     state = {
         associations: [],
         inputValue: '',
-        modalVisible: false,
+        ideasModalVisible: false,
     };
 
     setModalVisible(visible) {
-        this.setState({modalVisible: visible});
+        this.setState({ideasModalVisible: visible});
     }
 
     render() {
@@ -85,7 +85,7 @@ export default class ZRMPhaseThree extends React.Component {
         return <Modal
             animationType="slide"
             transparent={false}
-            visible={this.state.modalVisible}
+            visible={this.state.ideasModalVisible}
             onRequestClose={() => {
                 alert('Modal has been closed.');
             }}>
@@ -94,7 +94,7 @@ export default class ZRMPhaseThree extends React.Component {
 
                     <TouchableHighlight
                         onPress={() => {
-                            this.setModalVisible(!this.state.modalVisible);
+                            this.setModalVisible(!this.state.ideasModalVisible);
                         }}>
                         <Ionicons name={Platform.OS === 'ios' ? "ios-close" : "md-close"} size={30}/>
                     </TouchableHighlight>
