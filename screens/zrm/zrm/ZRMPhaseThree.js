@@ -1,14 +1,13 @@
 import React from 'react';
 import {
-    Button,
-    CheckBox,
     FlatList,
     Modal,
     Platform,
     StyleSheet,
     Text,
     TextInput,
-    TouchableHighlight, TouchableWithoutFeedback,
+    TouchableHighlight,
+    TouchableWithoutFeedback,
     View,
 } from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
@@ -19,10 +18,15 @@ export default class ZRMPhaseThree extends React.Component {
         associations: [],
         inputValue: '',
         ideasModalVisible: false,
+        scaleModalVisible: false,
     };
 
     setModalVisible(visible) {
         this.setState({ideasModalVisible: visible});
+    }
+
+    setScaleModalVisible(visible) {
+        this.setState({scaleModalVisible: visible});
     }
 
     render() {
@@ -34,6 +38,7 @@ export default class ZRMPhaseThree extends React.Component {
                 <Image {...{preview, uri}} style={styles.image}/>
                 <View>
                     {this.renderIdeasModal(this.props.ideas)}
+                    {this.renderScaleModal()}
                     {this.renderNeedIdeasText()}
                 </View>
 
@@ -79,6 +84,29 @@ export default class ZRMPhaseThree extends React.Component {
                 <Text>Need ideas?</Text>
             </View>
         </TouchableWithoutFeedback>;
+    }
+
+    renderScaleModal() {
+        return <Modal
+            animationType="slide"
+            transparent={false}
+            visible={this.state.scaleModalVisible}
+            onRequestClose={() => {
+                alert('Modal has been closed.');
+            }}>
+            <View style={{marginTop: 22}}>
+                <View>
+
+                    <TouchableHighlight
+                        onPress={() => {
+                            this.setScaleModalVisible(!this.state.scaleModalVisible);
+                        }}>
+                        <Ionicons name={Platform.OS === 'ios' ? "ios-close" : "md-close"} size={30}/>
+                    </TouchableHighlight>
+                    <Text>Scale 1 Scale 2</Text>
+                </View>
+            </View>
+        </Modal>;
     }
 
     renderIdeasModal(ideas) {
@@ -145,7 +173,7 @@ export default class ZRMPhaseThree extends React.Component {
                     - {item.key}
                 </Text>
                 <TouchableWithoutFeedback onPress={() => {
-                    this.handlePress(item);
+                    this.setScaleModalVisible(true);
                 }}>
                     <Ionicons style={{flex:0.3}} name={Platform.OS === 'ios' ? "ios-add" : "md-add"} size={25}/>
                 </TouchableWithoutFeedback>
