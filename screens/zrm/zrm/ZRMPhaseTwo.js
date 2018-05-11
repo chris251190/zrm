@@ -118,7 +118,7 @@ const imageData = [
     },
     {
         key: 5,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/2B7C61D8-662B-4738-882F-0A7A47CA15FF.jpeg?alt=media&token=cee26099-4d90-42f7-b561-dc874b6c3633",
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/angel.JPG?alt=media&token=84b9a2a2-7087-4613-a84c-8d176f2a915f",
         ideas: [{key: "frosch"}, {key: "katze"}, {key: "hund"}]
 
     },
@@ -136,7 +136,7 @@ const imageData = [
     },
     {
         key: 8,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/7613EC0A-648F-4427-910C-974E6EF83504.jpeg?alt=media&token=3f100bd7-7724-419e-b19e-e9a8e71d521f",
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/autopista.JPG?alt=media&token=09f242c8-486a-450b-b1c7-6a936a5052f7",
         ideas: [{key: "frosch"}, {key: "katze"}, {key: "hund"}]
 
     },
@@ -168,6 +168,12 @@ const imageData = [
     {
         key: 13,
         uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/totoro.jpg?alt=media&token=0e01593f-14f1-4348-a472-2234bf0146b1",
+        ideas: [{key: "frosch"}, {key: "katze"}, {key: "hund"}]
+
+    },
+    {
+        key: 14,
+        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/paintings.JPG?alt=media&token=37218b91-ef78-4eb8-80ef-341499992be3",
         ideas: [{key: "frosch"}, {key: "katze"}, {key: "hund"}]
 
     },
@@ -295,22 +301,16 @@ const imageData = [
     },
     {
         key: 35,
-        uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/friend.jpg?alt=media&token=2213a8b1-bb77-47da-9a3e-0182222c52f7",
-        ideas: [{key: "frosch"}, {key: "katze"}, {key: "hund"}]
-
-    },
-    {
-        key: 36,
         uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/essen.jpg?alt=media&token=2fb8a947-fef7-4b8b-97c1-2e8e3b94a528",
         ideas: [{key: "frosch"}, {key: "katze"}, {key: "hund"}]
 
     },
     {
-        key: 37,
+        key: 36,
         uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/blumen.jpg?alt=media&token=24167208-fa69-4f63-a0b6-803de3c429f3",
         ideas: [{key: "frosch"}, {key: "katze"}, {key: "hund"}]
 
-    },
+    }
 
 
 ];
