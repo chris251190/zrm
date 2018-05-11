@@ -19,10 +19,15 @@ export default class ZRMPhaseThree extends React.Component {
         inputValue: '',
         ideasModalVisible: false,
         scaleModalVisible: false,
+        currentItem: null,
     };
 
     setModalVisible(visible) {
         this.setState({ideasModalVisible: visible});
+    }
+
+    setCurrentItem(currentItem) {
+        this.setState({currentItem: currentItem});
     }
 
     setScaleModalVisible(visible) {
@@ -96,12 +101,31 @@ export default class ZRMPhaseThree extends React.Component {
             }}>
             <View style={{marginTop: 22}}>
                 <View>
-
                     <TouchableHighlight
                         onPress={() => {
                             this.setScaleModalVisible(!this.state.scaleModalVisible);
                         }}>
                         <Ionicons name={Platform.OS === 'ios' ? "ios-close" : "md-close"} size={30}/>
+                    </TouchableHighlight>
+
+                    <TouchableHighlight style={{
+                        alignItems: 'center',
+                        backgroundColor: '#DDDDDD',
+                        padding: 5,
+                        marginLeft: 20,
+                        height: 30,
+                    }} onPress={() => {
+                        this.setState({
+                            associations: [...this.state.associations, {
+                                key: this.state.currentItem.key,
+                                positive: "30",
+                                negative: "60"
+                            }]
+                        });
+                        this.props.handler([...this.state.associations, {key: this.state.currentItem.key, positive: "30", negative: "60"}]);
+                    }}>
+                        <Ionicons name={Platform.OS === 'ios' ? "ios-add" : "md-add"}
+                                  size={20} color="black"/>
                     </TouchableHighlight>
                     <Text>Scale 1 Scale 2</Text>
                 </View>
@@ -170,12 +194,13 @@ export default class ZRMPhaseThree extends React.Component {
         return <View style={{marginTop: 10}}>
             <View style={{flex: 1, flexDirection: 'row'}}>
                 <Text style={styles.item}>
-                    - {item.key}
+                    - {item.key} scale: +{item.positive}, -{item.negative}
                 </Text>
                 <TouchableWithoutFeedback onPress={() => {
                     this.setScaleModalVisible(true);
+                    this.setCurrentItem(item);
                 }}>
-                    <Ionicons style={{flex:0.3}} name={Platform.OS === 'ios' ? "ios-add" : "md-add"} size={25}/>
+                    <Ionicons style={{flex: 0.3}} name={Platform.OS === 'ios' ? "ios-add" : "md-add"} size={25}/>
                 </TouchableWithoutFeedback>
                 <TouchableWithoutFeedback onPress={() => {
                     this.handlePress(item);
