@@ -2,6 +2,8 @@ import React from 'react';
 import {FlatList, Platform, StyleSheet, Text, TextInput, TouchableHighlight, View,} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 import {Image} from "react-native-expo-image-cache";
+import PlusNumber from "../../components/PlusNumber";
+import MinusNumber from "../../components/MinusNumber";
 
 export default class ZRMPhaseFour extends React.Component {
     state = {
@@ -18,7 +20,7 @@ export default class ZRMPhaseFour extends React.Component {
                 <Text style={styles.text}>your favorite ideas:</Text>
                 <FlatList
                     data={this.props.associations}
-                    renderItem={({item}) => <Text style={styles.text}>- {item.key}</Text>}
+                    renderItem={({item}) => <Text style={styles.text}>- {item.key} <PlusNumber number={item.positive}/><MinusNumber number={item.negative}/></Text>}
                 />
 
                 <Text style={styles.text}>
