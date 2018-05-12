@@ -113,25 +113,25 @@ const imageData = [
     {
         key: 4,
         uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/2AD4AF30-473C-47F3-B6E6-B009EE29684C.jpeg?alt=media&token=9c774c08-e7d0-4809-942f-357866a26030",
-        ideas: [{key: "frosch"}, {key: "katze"}, {key: "hund"}]
+        ideas: [{key: "wide"}, {key: "sunrise"}, {key: "mountains"}, {key: "be free"}, {key: "sky"}, {key: "colorful"}]
 
     },
     {
         key: 5,
         uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/angel.JPG?alt=media&token=84b9a2a2-7087-4613-a84c-8d176f2a915f",
-        ideas: [{key: "frosch"}, {key: "katze"}, {key: "hund"}]
+        ideas: [{key: "angel"}, {key: "on top"}, {key: "almighty"}, {key: "light"}, {key: "fly"}, {key: "soul"}]
 
     },
     {
         key: 6,
         uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/2F8046B0-E977-45E7-B8EC-CEB314EB9783.jpeg?alt=media&token=841bfdbc-bcd1-4bb0-85d8-67ec5d7f0436",
-        ideas: [{key: "frosch"}, {key: "katze"}, {key: "hund"}]
+        ideas: [{key: "enjoy"}, {key: "sweet"}, {key: "have fun in life"}, {key: "travel"}, {key: "culture"}, {key: "relax"}, {key: "take your time"}]
 
     },
     {
         key: 7,
         uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/4D39C979-A571-4AF5-BE05-DA2714D67D15.jpeg?alt=media&token=1c48a878-9f06-4ca8-96b6-e1f3a25fe65c",
-        ideas: [{key: "frosch"}, {key: "katze"}, {key: "hund"}]
+        ideas: [{key: "be free"}, {key: "achieved it all"}, {key: "life is an adventure"}, {key: "travel"}, {key: "enjoy"}]
 
     },
     {
