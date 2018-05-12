@@ -168,7 +168,7 @@ const imageData = [
     {
         key: 13,
         uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/totoro.jpg?alt=media&token=0e01593f-14f1-4348-a472-2234bf0146b1",
-        ideas: [{key: "frosch"}, {key: "katze"}, {key: "hund"}]
+        ideas: [{key: "childhood"}, {key: "totoro"}, {key: "smile"}, {key: "be young again"}, {key: "dream"}]
 
     },
     {
