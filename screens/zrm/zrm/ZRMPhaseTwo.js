@@ -96,7 +96,7 @@ const imageData = [
     {
         key: 1,
         uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/E2EFF9A9-1B7B-4FDB-82C6-8FC6897F2AC5.jpeg?alt=media&token=a463ac95-131c-4a6f-92f0-92556fa5f51e",
-        ideas: [{key: "frosch"}, {key: "katze"}, {key: "hund"}]
+        ideas: [{key: "fly"}, {key: "be free"}, {key: "I'm like a bird"}, {key: "soul"}, {key: "to be on top of things"}]
     },
     {
         key: 2,

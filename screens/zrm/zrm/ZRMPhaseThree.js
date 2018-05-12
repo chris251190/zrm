@@ -199,6 +199,7 @@ export default class ZRMPhaseThree extends React.Component {
                         }}>
                         <Ionicons name={Platform.OS === 'ios' ? "ios-close" : "md-close"} size={30}/>
                     </TouchableHighlight>
+                    <Text style={{marginBottom: 20, marginLeft: 20}}>Others had following ideas, maybe some fit for you too!:</Text>
                     <FlatList
                         data={ideas}
                         renderItem={({item}) => this.renderModalItem(item.key)}
