@@ -12,6 +12,8 @@ import {
 } from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 import {Image} from "react-native-expo-image-cache";
+import PlusNumber from "../../components/PlusNumber";
+import MinusNumber from "../../components/MinusNumber";
 
 export default class ZRMPhaseThree extends React.Component {
     state = {
@@ -242,8 +244,8 @@ export default class ZRMPhaseThree extends React.Component {
             <View style={{flex: 1, flexDirection: 'row'}}>
                 <Text style={styles.item}>
                     <Text>- {item.key}</Text>
-                    <PositiveNumber number={item.positive}/>
-                    <NegativeNumber number={item.negative}/>
+                    <PlusNumber number={item.positive}/>
+                    <MinusNumber number={item.negative}/>
                 </Text>
                 <TouchableWithoutFeedback onPress={() => {
                     this.setScaleModalVisible(true);
@@ -279,9 +281,6 @@ export default class ZRMPhaseThree extends React.Component {
         return <View style={{borderBottomColor: 'black', borderBottomWidth: 1}}/>;
     }
 };
-
-const PositiveNumber = ({number}) => {return number !== undefined && <Text style={{color: 'green'}}> +{number}<Text style={{color:'black'}}>, </Text></Text>};
-const NegativeNumber = ({number}) => {return number !== undefined && <Text style={{color: 'red'}}> -{number}</Text>};
 
 const styles = StyleSheet.create({
     image: {
