@@ -137,7 +137,7 @@ const imageData = [
     {
         key: 8,
         uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/autopista.JPG?alt=media&token=09f242c8-486a-450b-b1c7-6a936a5052f7",
-        ideas: [{key: "frosch"}, {key: "katze"}, {key: "hund"}]
+        ideas: [{key: "distance"}, {key: "overview"}, {key: "sunset"}, {key: "guide your way"}, {key: "to find your way"}, {key: "have a direction to go"}, {key: "orientation"}]
 
     },
     {
