@@ -241,7 +241,7 @@ export default class ZRMPhaseThree extends React.Component {
         return <View style={{marginTop: 10}}>
             <View style={{flex: 1, flexDirection: 'row'}}>
                 <Text style={styles.item}>
-                    - {item.key} +{item.positive}, -{item.negative}
+                    - {item.key} {item.positive !== undefined && '+' + item.positive + ', -' + item.negative}
                 </Text>
                 <TouchableWithoutFeedback onPress={() => {
                     this.setScaleModalVisible(true);
