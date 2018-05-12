@@ -180,9 +180,7 @@ const imageData = [
     {
         key: 15,
         uri: "https://firebasestorage.googleapis.com/v0/b/zrmapp-ca71d.appspot.com/o/splash.jpg?alt=media&token=219ef5b9-788e-43a1-8246-02a65b3f0363",
-        ideas: [{key: "frosch"}, {key: "katze"}, {key: "hund"}]
-
-
+        ideas: [{key: "light"}, {key: "you have done it!"}, {key: "sea of flowers"}, {key: "wide fields"}]
     },
     {
         key: 16,
