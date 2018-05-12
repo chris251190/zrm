@@ -102,8 +102,8 @@
       <file leaf-file-name="ZRMPhaseTwo.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseTwo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="103" column="76" selection-start-line="103" selection-start-column="76" selection-end-line="103" selection-end-column="76" />
+            <state relative-caret-position="229">
+              <caret line="109" column="150" selection-start-line="109" selection-start-column="150" selection-end-line="109" selection-end-column="150" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -362,7 +362,7 @@
       <workItem from="1525950815565" duration="8987000" />
       <workItem from="1525972574466" duration="728000" />
       <workItem from="1526058919943" duration="10331000" />
-      <workItem from="1526124801592" duration="4852000" />
+      <workItem from="1526124801592" duration="5056000" />
     </task>
     <task id="LOCAL-00001" summary="use view instead of Text">
       <created>1523902409578</created>
@@ -382,7 +382,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165615000" />
+    <option name="totallyTimeSpent" value="165819000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="817" extended-state="0" />
@@ -394,8 +394,8 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.33472222" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3513889" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49892932" visible="true" weight="0.34025788" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3513889" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49892932" visible="true" weight="0.34025788" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32777777" />
       <window_info id="Structure" order="1" sideWeight="0.5010707" side_tool="true" weight="0.3252149" />
@@ -758,8 +758,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseTwo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="103" column="76" selection-start-line="103" selection-start-column="76" selection-end-line="103" selection-end-column="76" />
+        <state relative-caret-position="229">
+          <caret line="109" column="150" selection-start-line="109" selection-start-column="150" selection-end-line="109" selection-end-column="150" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
