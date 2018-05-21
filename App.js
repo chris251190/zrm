@@ -4,6 +4,24 @@ import {AppLoading, Asset, Font} from 'expo';
 import {Ionicons} from '@expo/vector-icons';
 import RootNavigation from './navigation/RootNavigation';
 import * as firebase from 'firebase';
+import { translate } from 'react-i18next';
+import { StackNavigator } from 'react-navigation';
+// the previous created file
+import i18n from './i18n';
+
+const Stack = StackNavigator({
+    RootNavigation: { screen: RootNavigation },
+});
+
+// Wrapping a stack with translation hoc asserts we get new render on language change
+// the hoc is set to only trigger rerender on languageChanged
+const WrappedStack = () => {
+    return <Stack screenProps={{ t: i18n.getFixedT() }} />;
+}
+const ReloadAppOnLanguageChange = translate('common', {
+    bindI18n: 'languageChanged',
+    bindStore: false
+})(WrappedStack);
 
 export default class App extends React.Component {
     state = {
@@ -35,7 +53,7 @@ export default class App extends React.Component {
             return (
                 <View style={styles.container}>
                     {Platform.OS === 'ios' && <StatusBar barStyle="default"/>}
-                    <RootNavigation/>
+                        <ReloadAppOnLanguageChange />
                 </View>
             );
         }

@@ -1,8 +1,10 @@
 import React from 'react';
-import {ScrollView, StyleSheet, Text, View,} from 'react-native';
+import {Button, ScrollView, StyleSheet, Text, View,} from 'react-native';
 import {MonoText} from '../components/StyledText';
 import {Image} from "react-native-expo-image-cache";
+import { translate } from 'react-i18next';
 
+@translate(['home', 'common'], { wait: true })
 export default class HomeScreen extends React.Component {
     static navigationOptions = {
         header: <View style={{alignItems: 'center', backgroundColor:'#f2f2f2'}}>
@@ -15,10 +17,23 @@ export default class HomeScreen extends React.Component {
     };
 
     render() {
+        const { t, i18n, navigation } = this.props;
+
         return (
             <View style={styles.container}>
                 <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-
+                    <View style={styles.container}>
+                        <Text>{t('common:currentLanguage', { lng: i18n.language })}</Text>
+                        <Button
+                            onPress={() => { i18n.changeLanguage('en') }}
+                            title={t('common:actions.toggleToEnglish')}
+                        />
+                        <Button
+                            onPress={() => { i18n.changeLanguage('de') }}
+                            title={t('common:actions.toggleToGerman')}
+                        />
+                        <Text style={styles.separate}>{t('introduction')}</Text>
+                    </View>
 
                     <View style={styles.getStartedContainer}>
 
