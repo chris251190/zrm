@@ -56,6 +56,7 @@ export default class ZRMPhaseThree extends React.Component {
                 <FlatList
                     data={this.state.associations}
                     renderItem={({item}) => this.renderListItem(item)}
+                    keyExtractor={(item, index) => index}
                 />
             </View>
         );
@@ -192,7 +193,6 @@ export default class ZRMPhaseThree extends React.Component {
             }}>
             <View style={{marginTop: 22}}>
                 <View>
-
                     <TouchableHighlight
                         onPress={() => {
                             this.setModalVisible(!this.state.ideasModalVisible);
@@ -202,7 +202,8 @@ export default class ZRMPhaseThree extends React.Component {
                     <Text style={{marginBottom: 20, marginLeft: 20}}>Others had following ideas, maybe some fit for you too!:</Text>
                     <FlatList
                         data={ideas}
-                        renderItem={({item}) => this.renderModalItem(item.key)}
+                        renderItem={({item}) => this.renderModalItem(item)}
+                        keyExtractor={(item, index) => index.toString()}
                     />
                 </View>
             </View>

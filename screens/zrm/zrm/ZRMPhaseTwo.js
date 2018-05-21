@@ -2,13 +2,38 @@ import React from 'react';
 import {FlatList, Modal, StyleSheet, Text, TouchableHighlight, View,} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 import {Image} from "react-native-expo-image-cache";
+import * as firebase from 'firebase';
 
 export default class ZRMPhaseTwo extends React.Component {
     state = {
         modalVisible: false,
         currentImage: null,
         ideas: null,
+        imageData: null
     };
+
+    listenForItems(itemsRef) {
+        itemsRef.on('value', (snap) => {
+
+            // get children as an array
+            var items = [];
+            snap.forEach((child) => {
+                items.push({
+                    uri: child.val().uri,
+                    ideas: child.val().ideas.split(","),
+                });
+            });
+
+            this.setState({
+                imageData: items
+            });
+
+        });
+    }
+
+    componentDidMount(){
+        this.listenForItems(firebase.database().ref('images/'));
+    }
 
     setModalVisible(visible) {
         this.setState({modalVisible: visible});
@@ -37,8 +62,9 @@ export default class ZRMPhaseTwo extends React.Component {
                         {this.renderModal()}
                     </View>
                     <FlatList
-                        data={imageData}
+                        data={this.state.imageData}
                         renderItem={({item}) => this.renderImage(item)}
+                        keyExtractor={(item, index) => index}
                         numColumns={3}
                     />
                 </View>
