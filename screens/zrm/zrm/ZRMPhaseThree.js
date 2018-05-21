@@ -56,7 +56,7 @@ export default class ZRMPhaseThree extends React.Component {
                 <FlatList
                     data={this.state.associations}
                     renderItem={({item}) => this.renderListItem(item)}
-                    keyExtractor={(item, index) => index}
+                    keyExtractor={(item, index) => index.toString()}
                 />
             </View>
         );
