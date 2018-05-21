@@ -32,16 +32,13 @@ export default class HomeScreen extends React.Component {
                             onPress={() => { i18n.changeLanguage('de') }}
                             title={t('common:actions.toggleToGerman')}
                         />
-                        <Text style={styles.separate}>{t('introduction')}</Text>
                     </View>
 
                     <View style={styles.getStartedContainer}>
 
-                        <View><Text style={styles.homeTitle}>Welcome to the ZRM App!</Text></View>
+                        <View><Text style={styles.homeTitle}>{t('home:heading')}</Text></View>
 
-                        <Text style={styles.introduction}>This is an app to guide you through the process of ZRM
-                            (Zürcher Ressourcenmodell). It is
-                            a process which uses images and symbols to increase self management abilities.</Text>
+                        <Text style={styles.introduction}>{t('home:introduction')}</Text>
 
                         <Text style={styles.getStartedText}>When you want to dive in directly click on</Text>
                         <MonoText style={styles.codeHighlightText}>'ZRM'</MonoText>

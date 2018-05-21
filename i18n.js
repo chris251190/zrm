@@ -21,12 +21,11 @@ i18n
         resources: {
             en: {
                 home: {
-                    title: 'Welcome',
-                    introduction: 'This text comes from i18next and is provided in english.'
-                },
-                page2: {
-                    title: 'Page 2',
-                    introduction: 'This text on page two.'
+                    heading: 'Welcome to the ZRM App!',
+                    introduction: 'This is an app to guide you through the process of ZRM\n' +
+                    '                            (Zürcher Ressourcenmodell). It is\n' +
+                    '                            a process which uses images and symbols to increase self management abilities.',
+
                 },
                 common: {
                     currentLanguage: 'The current language is "{{lng}}"',
@@ -40,12 +39,8 @@ i18n
             },
             de: {
                 home: {
-                    title: 'Willkommen',
-                    introduction: 'Dieser Text ist von i18next und ist in deutsch.'
-                },
-                page2: {
-                    title: 'Seite 2',
-                    introduction: 'Text auf Seite 2'
+                    heading: 'Willkommen zur ZRM App!',
+                    introduction: 'Dies ist eine App, um dich durch den Prozess des ZRM zu führen. Es ist ein Prozess, der mit Hilfe von Bildern und Symbolen das Selbstmanagement steigern soll.',
                 },
                 common: {
                     currentLanguage: 'Die Sprache ist auf "{{lng}}" gesetzt',
