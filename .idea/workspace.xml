@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8addc38-23d6-4a35-bd62-a8326e49badc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseThree.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseThree.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseTwo.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseTwo.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ZRMPhaseThree.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ZRMPhaseThree.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseThree.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="58" column="67" selection-start-line="58" selection-start-column="67" selection-end-line="58" selection-end-column="67" />
+            <state relative-caret-position="-3296">
+              <caret line="61" column="10" lean-forward="true" selection-start-line="61" selection-start-column="10" selection-end-line="61" selection-end-column="10" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -45,8 +45,8 @@
       <file leaf-file-name="ZRMPhaseFour.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseFour.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
+            <state relative-caret-position="135">
+              <caret line="65" column="2" lean-forward="true" selection-start-line="65" selection-start-column="2" selection-end-line="65" selection-end-column="2" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -66,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ZRMPhaseTwo.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ZRMPhaseTwo.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseTwo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-695">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="279">
+              <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -207,8 +207,8 @@
         <option value="$PROJECT_DIR$/App.js" />
         <option value="$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseOne.js" />
         <option value="$PROJECT_DIR$/screens/zrm/ZRMScreen.js" />
-        <option value="$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseTwo.js" />
         <option value="$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseThree.js" />
+        <option value="$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseTwo.js" />
       </list>
     </option>
   </component>
@@ -386,7 +386,7 @@
       <workItem from="1526496510702" duration="182000" />
       <workItem from="1526661030522" duration="411000" />
       <workItem from="1526760886268" duration="86000" />
-      <workItem from="1526885423855" duration="6482000" />
+      <workItem from="1526885423855" duration="8058000" />
     </task>
     <task id="LOCAL-00001" summary="use view instead of Text">
       <created>1523902409578</created>
@@ -406,7 +406,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174842000" />
+    <option name="totallyTimeSpent" value="176418000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -710,16 +710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseFour.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -758,6 +748,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseThree.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3296">
+          <caret line="61" column="10" lean-forward="true" selection-start-line="61" selection-start-column="10" selection-end-line="61" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseFour.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="65" column="2" lean-forward="true" selection-start-line="65" selection-start-column="2" selection-end-line="65" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/screens/zrm/ZRMScreen.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
@@ -770,18 +780,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseTwo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-695">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screens/zrm/zrm/ZRMPhaseThree.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="58" column="67" selection-start-line="58" selection-start-column="67" selection-end-line="58" selection-end-column="67" />
+        <state relative-caret-position="279">
+          <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

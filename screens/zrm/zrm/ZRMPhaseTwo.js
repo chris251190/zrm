@@ -20,7 +20,7 @@ export default class ZRMPhaseTwo extends React.Component {
             snap.forEach((child) => {
                 items.push({
                     uri: child.val().uri,
-                    ideas: child.val().ideas.split(","),
+                    ideas: child.val().ideas.toString().split(","),
                 });
             });
 
