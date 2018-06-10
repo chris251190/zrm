@@ -20,6 +20,9 @@
     "react-navigation": "1.5.10"
   },
   "devDependencies": {
-    "jest-expo": "^26.0.0"
+    "i": "^0.3.6",
+    "jest-expo": "^27.0.1",
+    "npm": "^6.1.0",
+    "or": "^0.2.0"
   }
 }
